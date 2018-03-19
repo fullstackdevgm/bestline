@@ -1,0 +1,194 @@
+-------- SHADE META ------------
+Style Name	TEXT	1
+Width	NUMBER	1
+Length	NUMBER	1
+Return	NUMBER	1
+Widths	NUMBER	1
+Notes TEXT	1
+Headerboard Depth	NUMBER	1
+Shade Price	NUMBER	1
+PleatedSoftCasualStringingNotes	TEXT	1
+Notes	TEXT	1
+Seamstress Notes	TEXT	1
+Ring Notes	TEXT	1
+shadeShape	TEXT	1
+
+--------- MATERIALS OPTIONS & DATA -----------
+Fabric Name	TEXT	1
+Fabric Color	TEXT	1
+Lining	TEXT	1
+Lining Color	TEXT	1
+Fabric Repeat	NUMBER	1
+
+Ring Type	TEXT	1
+Stringing Type	TEXT	1
+Cord Length	NUMBER	1
+Cord Position	TEXT	1
+Tassel Color	TEXT	1
+Wood Size	NUMBER	1
+Mount	TEXT	1
+
+RodType	TEXT	1
+RodDeduction	TEXT	1
+
+--------- CALCULATED -----------
+Panels Spacing Difference	NUMBER	1
+PanelCount	NUMBER	1
+PanelsDisplay	TEXT	1
+PanelsSum	TEXT	1
+PanelsCount	NUMBER	1
+PanelsSkirtPointer	TEXT	1
+DoubleTukPanels	TEXT	1
+TripleTukPanels	TEXT	1
+HeightToSoftCasuals	TEXT	1
+RingsDivisor	TEXT	1
+RingsCount	NUMBER	1
+PanelSpacingAdjusted	TEXT	1
+WidthPlusReturn	NUMBER	1
+Panels For Double Tuk	TEXT	1
+Panels	TEXT	1
+Panels For Triple Tuk	TEXT	1
+
+--------- FROM SHADE SPECS -----------
+
+TopPanelSpacing	NUMBER	1
+PanelSpacing	NUMBER	1
+OuterRingsSpacing TEXT	1
+WidthMinusOuterRings	NUMBER	1
+RingSpacing	NUMBER	1
+RingsRowMinimum	TEXT	1
+Wood Width	NUMBER	1
+Wood Depth NUMBER	1
+TDBU Deduction Cord Lock	NUMBER	1
+TDBU Deduction Clutch	NUMBER	1
+TDBU Deduction Motorized	NUMBER	1
+TDBU Deduction	NUMBER	1
+Round Total Price	NUMBER	1
+Actual Linear Feet TEXT	TEXT	1
+Shade Price Minus Upcharge	NUMBER	1
+Shade_Type	TEXT	1
+PanelCountDefault	NUMBER	1
+StyleCode	TEXT	1
+CutLengthAdd2	NUMBER	1
+CutLengthFormula	TEXT	1
+CutLengthAdd	NUMBER	1
+Width Plus	NUMBER	1
+Width Times	NUMBER	1
+Length Plus	NUMBER	1
+Length Times	NUMBER	1
+
+*** These are option or shade style specific, not in a good way ***
+Soft Fold Space Amount	TEXT	1
+ValanceMinimum	NUMBER	1
+
+--------- POINTS AND REPOSITORY ------------------
+
+CheckOutStatus	TEXT	1
+CheckOutButtonText	NUMBER	1
+CheckOutUser	TEXT	1
+PointValue	NUMBER	1
+Shade Value	NUMBER	1
+
+--------- Calculations ------------------
+
+Actual Height Feet	NUMBER	1
+Adjusted Height Feet	NUMBER	1
+Actual Square Feet	NUMBER	1
+Adjusted Square Feet	NUMBER	1
+Adjusted Width	NUMBER	1
+Adjusted Height	NUMBER	1
+Actual Linear Feet	TEXT	1
+Adjusted Linear Feet	NUMBER	1
+Width Plus Calc	NUMBER	1
+Length Plus Calc	NUMBER	1
+Yardage	NUMBER	1
+Shade Number	TEXT	1
+Line Feet Width	NUMBER	1
+Total Options Count	NUMBER	1
+Number	NUMBER	1
+Line Feet Height	NUMBER	1
+Fabric Width	NUMBER	1
+
+
+--------- BOOLEANS ------------------
+ifValanceOption	TEXT	1
+ifBalloonReturn	TEXT	1
+ifTopDownBottomUp	TEXT	1
+ifBottomUp	NUMBER	1
+ifWeltingOrCording	TEXT	1
+ifDustCap	TEXT	1
+ifAustrian	NUMBER	1
+ifTopDownBottomUpText	TEXT	1
+ifSideTabsTicketCount	NUMBER	1
+ifSideTabsTicketHBDepth	NUMBER	1
+ifSoftFold	NUMBER	1
+ifSideTabsText	TEXT	1
+ifPoufy	TEXT	1
+ifPoufyDisplayStringing	TEXT	1
+ifSoftCasual	TEXT	1
+ifSoftCasualDisplayStringing	TEXT	1
+ifDecorativeDisplayStringing	TEXT	1
+ifDecorative	NUMBER	1
+ifBanding	TEXT	1
+ifTrim	TEXT	1
+ifCordForward	TEXT	1
+ifBackFlapValance	TEXT	1
+ifLiningCutLength	NUMBER	1
+ifFabric3CutLength	NUMBER	1
+ifFabric4CutLength	NUMBER	1
+ifFabric3Widths	NUMBER	1
+ifFabric4Widths	NUMBER	1
+ifBlackout	TEXT	1
+ifDeco Fold	NUMBER	1
+ifSideTabs	NUMBER	1
+
+
+------- MFG Fields ----------
+MFG_Length	NUMBER	1
+MFG_modLength	NUMBER	1
+MFG_Width	NUMBER	1
+MFG_Return	TEXT	1
+MFG_LengthPoufAdjust	NUMBER	1
+MFG_LengthRodAdjust	NUMBER	1
+
+
+------- INV Fields ----------
+SquareYds_Inv	NUMBER	1
+ShadePrice_Inv	NUMBER	1
+LengthMultiply_Inv	NUMBER	1
+LengthPlus_Inv	NUMBER	1
+WidthPlus_Inv	NUMBER	1
+WidthMultiply_Inv	NUMBER	1
+PoufAdjustment_Inv	NUMBER	1
+LengthPlusCalc_inv	NUMBER	1
+Cuts_Inv	NUMBER	1
+Yds_Inv	NUMBER	1
+Fabric Upcharge	NUMBER	1
+FabricPrice_Inv	NUMBER	1
+Total_Inv	NUMBER	1
+HeightAdj_inv	NUMBER	1
+WidthAdj_inv	NUMBER	1
+CutLengthAdd_inv	NUMBER	1
+ShadePriceOverride_Inv	NUMBER	1
+FabricPriceOverride_Inv	NUMBER	1
+ShadePrice_ShadeSpecs_Inv	NUMBER	1
+FabricPrice_parts_Inv	TEXT	1
+OptionPriceOverride_Inv	NUMBER	1
+Valance_Price	NUMBER	1
+Pricing_Type	TEXT	1
+Total Price	NUMBER	1
+
+- There exists the ability to override/modify a shade price. 
+
+- A shade has a base fabric and lining but could incorporate 1 to n other fabrics (bestline or COM)
+
+- A shade may or may not include a valance.  It is basically a separate item but in FMP it is sorta integrated.
+
+- A fabric has width, repeat and price per ft values.
+
+- Should be able to spawn notes on certain fields/layouts.  These fields/layouts may be specific to certain options/fabrics/styles and should be available or not dynamically.
+
+- Styles and options have individual price values that make up the whole of the shade price.  These values come from shadeSpecs and optionSpecs.
+
+- Shades have associated shapes.  This is a future epic.
+

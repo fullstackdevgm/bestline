@@ -1,0 +1,367 @@
+<svg class="svgContainer" version="1.1"
+    ng-show="shade"
+    bestline-svg-pan-zoom zoom-enabled="false" fit="1" center="1" contain="1" max-zoom="3" pan-zoom="panZoom">
+
+    <svg x="0" y="0" style="overflow: visible;" width="100" height="100" viewbox="0 0 100 100">
+
+        <rect stroke="none" opacity="0" width="100" height="100" />
+        <g>
+            <svg x="0" y="0"  style="overflow: visible;" preserveAspectRatio="xMidYMid meet" width="100" height="100"
+                bestline-viewbox="0 0 {[{ shade.layout.columns.viewBoxRight.x }]} {[{ shade.layout.rows.bottom.y }]}" >
+
+                <defs>
+                    <!-- fabric definitions -->
+                    <pattern height="1" width="1" x="0" y="0" viewbox="0 0 1 1" preserveAspectRatio="xMidYMid slice"
+                        ng-repeat="fabric in orderLine.fabrics"
+                        id="{[{ fabric.type.type }]}Fabric">
+                        <image xlink:href="" height="1" width="1" x="0" y="0" ng-if="fabric.fabric.image" ng-attr-xlink:href="{[{ '/uploads/fabrics/' + fabric.fabric.image }]}" preserveAspectRatio="xMidYMid slice"/>
+                    </pattern>
+
+                    <g id="tassel" transform="translate(-0.5 0.3) rotate(45 0.5 0.5)">
+                        <path fill="none" stroke="black" stroke-width="{[{ shade.lineWidth }]}" d="
+                                M0,0
+                                c 0.3 0.2, 0.5 1, 0.2 1.2
+                        "/>
+                        <path fill="none" stroke="black" stroke-width="{[{ shade.lineWidth }]}" d="
+                            M0,0
+                            L.7,1"
+                        />
+                        <path fill="none" stroke="black" stroke-width="{[{ shade.lineWidth }]}" d="
+                            M0,0
+                            L1,.7"
+                        />
+                        <path fill="none" stroke="black" stroke-width="{[{ shade.lineWidth }]}" d="
+                                M0,0
+                                c 0.2 0.3, 1 0.5, 1.2 0.2
+                        "/>
+                    </g>
+                </defs>
+
+                <!-- valance -->
+                <g ng-if="shade.hasValance">
+                    <rect fill="url(#faceFabric)" stroke="#000000" stroke-width="{[{ shade.lineWidth }]}"
+                        ng-attr-x="{[{ shade.drawing.valance.x }]}"
+                        ng-attr-y="{[{ shade.drawing.valance.y }]}"
+                        ng-attr-width="{[{ shade.drawing.valance.width }]}"
+                        ng-attr-height="{[{ shade.drawing.valance.height }]}"
+                    />
+                    <polygon fill="url(#faceFabric)" stroke="#000000"
+                        ng-if="shade.valanceReturn > 0"
+                        stroke-width="{[{ shade.lineWidth }]}"
+                        ng-attr-points="
+                            {[{ shade.drawing.valance.return.x1 }]}, {[{ shade.drawing.valance.return.y1 }]}
+                            {[{ shade.drawing.valance.return.x2 }]}, {[{ shade.drawing.valance.return.y2 }]}
+                            {[{ shade.drawing.valance.return.x3 }]}, {[{ shade.drawing.valance.return.y3 }]}
+                            {[{ shade.drawing.valance.return.x4 }]}, {[{ shade.drawing.valance.return.y4 }]}
+                        "
+                    />
+                </g>
+
+                <!-- headerboards -->
+                <g>
+                    <!-- headerboard -->
+                    <rect fill="url(#faceFabric)" stroke="#000000" stroke-width="{[{ shade.lineWidth }]}"
+                        ng-attr-x="{[{ shade.drawing.headerboard.x }]}"
+                        ng-attr-y="{[{ shade.drawing.headerboard.y }]}"
+                        ng-attr-width="{[{ shade.drawing.headerboard.width }]}"
+                        ng-attr-height="{[{ shade.drawing.headerboard.height }]}"
+                    />
+
+                    <!-- valance_headerboard -->
+                    <rect fill="url(#faceFabric)" stroke="#000000" stroke-width="{[{ shade.lineWidth }]}"
+                        ng-attr-x="{[{ shade.drawing.valanceHeaderboard.x }]}"
+                        ng-attr-y="{[{ shade.drawing.valanceHeaderboard.y }]}"
+                        ng-attr-width="{[{ shade.drawing.valanceHeaderboard.width }]}"
+                        ng-attr-height="{[{ shade.drawing.valanceHeaderboard.height }]}"
+                    />
+                </g>
+
+                <!-- trapezoid -->
+                <polygon fill="url(#faceFabric)" stroke="#000000" stroke-width="{[{ shade.lineWidth }]}"
+                    ng-if="shade.isTrapezoid"
+                    ng-attr-points="{[{ shade.drawing.trapezoid.x1 }]},{[{ shade.drawing.trapezoid.y1 }]} {[{ shade.drawing.trapezoid.x2 }]},{[{ shade.drawing.trapezoid.y2 }]} {[{ shade.drawing.trapezoid.x3 }]},{[{ shade.drawing.trapezoid.y3 }]} {[{ shade.drawing.trapezoid.x4 }]},{[{ shade.drawing.trapezoid.y4 }]}"
+                />
+
+                <!-- rectangle -->
+                <rect fill="url(#faceFabric)" stroke="#000000" stroke-width="{[{ shade.lineWidth }]}"
+                    ng-if="shade.shape === 'Square' || shade.shape === 'TDBU/BU'"
+                    ng-attr-x="{[{ shade.drawing.square.x }]}"
+                    ng-attr-y="{[{ shade.drawing.square.y }]}"
+                    ng-attr-width="{[{ shade.drawing.square.width }]}"
+                    ng-attr-height="{[{ shade.drawing.square.height }]}"
+                />
+
+                <!-- top line for most shapes except pcloud, square, and trapezoid -->
+                <line stroke="black"
+                    ng-show="shade.drawing.topLine.show"
+                    ng-attr-x1="{[{ shade.drawing.topLine.x1 }]}"
+                    ng-attr-y1="{[{ shade.drawing.topLine.y1 }]}"
+                    ng-attr-x2="{[{ shade.drawing.topLine.x2 }]}"
+                    ng-attr-y2="{[{ shade.drawing.topLine.y2 }]}"
+                    stroke-width="{[{ shade.lineWidth }]}"
+                />
+
+                <!-- embellishment -->
+                <g>
+                    <!-- square embellishment -->
+                    <g ng-if="shade.isSquare && shade.embellishmentOption">
+                        <!-- square filled embellishment -->
+                        <g ng-if="shade.embellishmentOption.shape === 'filled'">
+                            <!-- bottom embellishment -->
+                            <g ng-if="shade.embellishmentSizing.size_bottom > 0">
+                                <rect style="fill:url(#embellishmentFabric)" stroke="#000000" stroke-width="{[{ shade.lineWidth }]}" fill-opacity="1"
+                                    ng-if="shade.drawing.embellishment_bottom.backgroundImage"
+                                    ng-attr-x="{[{ shade.drawing.embellishment_bottom.x }]}"
+                                    ng-attr-y="{[{ shade.drawing.embellishment_bottom.y }]}"
+                                    ng-attr-width="{[{ shade.drawing.embellishment_bottom.width }]}"
+                                    ng-attr-height="{[{ shade.drawing.embellishment_bottom.height }]}"
+                                ></rect>
+                            </g>
+                            <!-- sides embellishment -->
+                            <g ng-if="shade.embellishmentSizing.size_sides > 0">
+                                <!-- left side -->
+                                <g>
+                                    <rect style="fill:url(#embellishmentFabric)" stroke="#000000" stroke-width="{[{ shade.lineWidth }]}" fill-opacity="1"
+                                        ng-if="shade.drawing.embellishment_sides_left.backgroundImage"
+                                        ng-attr-x="{[{ shade.drawing.embellishment_sides_left.x }]}"
+                                        ng-attr-y="{[{ shade.drawing.embellishment_sides_left.y }]}"
+                                        ng-attr-width="{[{ shade.drawing.embellishment_sides_left.width }]}"
+                                        ng-attr-height="{[{ shade.drawing.embellishment_sides_left.height }]}"
+                                    ></rect>
+                                </g>
+                                <!-- left side -->
+                                <g>
+                                    <rect style="fill:url(#embellishmentFabric)" stroke="#000000" stroke-width="{[{ shade.lineWidth }]}" fill-opacity="1"
+                                        ng-if="shade.drawing.embellishment_sides_right.backgroundImage"
+                                        ng-attr-x="{[{ shade.drawing.embellishment_sides_right.x }]}"
+                                        ng-attr-y="{[{ shade.drawing.embellishment_sides_right.y }]}"
+                                        ng-attr-width="{[{ shade.drawing.embellishment_sides_right.width }]}"
+                                        ng-attr-height="{[{ shade.drawing.embellishment_sides_right.height }]}"
+                                    ></rect>
+                                </g>
+                            </g>
+                        </g>
+
+                        <g ng-if="shade.embellishmentOption.shape !== 'filled'">
+
+                            <!-- bottom line for embellishment -->
+                            <path fill="none" stroke="transparent" alignment-baseline="baseline" stroke-width="{[{ shade.lineWidth }]}"
+                                bestline-calculate-trim-points="shade.drawing.embellishment_bottom"
+                                ng-attr-d="
+                                    M{[{ shade.drawing.embellishment_bottom.x }]},{[{ shade.drawing.embellishment_bottom.y }]}
+                                    l{[{ shade.drawing.embellishment_bottom.width }]}, 0
+                                "
+                            />
+                            <!-- tassel embellishments -->
+                            <use xlink:href="#tassel"
+                                ng-repeat="trimPoint in shade.drawing.embellishment_bottom.trimPoints"
+                                ng-if="shade.embellishmentOption.shape === 'tassel'"
+                                ng-attr-x="{[{ trimPoint.x }]}" ng-attr-y="{[{ trimPoint.y }]}"
+                                ng-attr-transform="{[{ shadeColumn.transform }]}"
+                            />
+                        </g>
+                    </g>
+                    <!-- balloon or cloud embellishment -->
+                    <g ng-if="shade.isRoundedBottom && shade.embellishmentOption">
+
+                        <g ng-if="shade.embellishmentOption.shape === 'filled'">
+                            <!-- rounded banding/trim embellishment -->
+                            <g ng-repeat="shadeColumn in shade.columns | filter:filterRoundShape"
+                                ng-attr-transform="translate({[{ shadeColumn.x }]}, {[{ shadeColumn.y }]})">
+                                <path fill="url(#embellishmentFabric)" stroke="black" stroke-width="{[{ shade.lineWidth }]}" alignment-baseline="baseline"
+                                    ng-attr-d="
+                                        M 0,0
+                                        c
+                                            {[{ shadeColumn.width * .13 }]},{[{ shadeColumn.skirtHeight * 1.3 }]}
+                                            {[{ shadeColumn.width * .87 }]},{[{ shadeColumn.skirtHeight * 1.3 }]}
+                                            {[{ shadeColumn.width }]},0
+                                        L {[{ shadeColumn.width }]}, {[{ shadeColumn.embellishment.height }]}
+                                        c
+                                            {[{ -shadeColumn.width * .13 }]},{[{ shadeColumn.skirtHeight * 1.3 }]}
+                                            {[{ -shadeColumn.width * .87 }]},{[{ shadeColumn.skirtHeight * 1.3 }]}
+                                            {[{ -shadeColumn.width }]}, 0
+                                        L 0,0
+                                        Z
+                                    "
+                                />
+                            </g>
+                            <!-- doghalf embellishment -->
+                            <g ng-attr-transform="translate({[{ shadeColumn.x }]}, {[{ shadeColumn.y }]})"
+                                ng-repeat="shadeColumn in shade.columns | filter:{ shape: 'doghalf'}:true">
+                                <!-- doghalf left -->
+                                <path fill="url(#embellishmentFabric)" stroke="black" stroke-width="{[{ shade.lineWidth }]}" alignment-baseline="baseline"
+                                    ng-attr-transform="{[{ shadeColumn.transform }]}"
+                                    ng-attr-d="
+                                        M0,0
+                                        l 0, {[{ shadeColumn.embellishment.height }]}
+                                        c
+                                            {[{ shadeColumn.width * 0.12 }]},{[{ shadeColumn.skirtHeight * 0.65 }]}
+                                            {[{ shadeColumn.width * .55 }]},{[{ shadeColumn.skirtHeight }]}
+                                            {[{ shadeColumn.width }]},{[{ shadeColumn.skirtHeight }]}
+                                        l 0, {[{ -shadeColumn.embellishment.height }]}
+                                        C
+                                            {[{ shadeColumn.width * .55 }]},{[{ shadeColumn.skirtHeight }]}
+                                            {[{ shadeColumn.width * 0.12 }]},{[{ shadeColumn.skirtHeight * 0.65 }]}
+                                            0,0
+                                        Z
+                                    "
+                                />
+                            </g>
+                        </g>
+                    </g>
+                </g>
+
+                <!-- ring lines -->
+                <g ng-attr-transform="translate({[{ ring.x }]}, {[{ ring.y }]})"
+                    ng-repeat="ring in shade.rings">
+                    <line stroke-linecap="round" stroke="#dddddd" x1="0" y1="0" x2="0"
+                        ng-attr-y2="{[{ ring.height }]}"
+                        stroke-width="{[{ shade.lineWidth }]}"
+                        stroke-dasharray="{[{ ring.dasharray }]}"
+                    />
+                </g>
+
+                <!-- vertical shape divider line -->
+                <g ng-attr-transform="translate({[{ divider.x }]}, {[{ divider.y }]})"
+                    ng-repeat="divider in shade.shapeDividers | filter:filterBlackVertical">
+                    <line stroke-linecap="round" stroke="black" x1="0" y1="0" x2="0"
+                        ng-attr-y2="{[{ divider.height }]}"
+                        stroke-width="{[{ shade.lineWidth }]}"
+                    />
+                </g>
+
+                <!-- vertical line for cloud designs -->
+                <g ng-attr-transform="translate({[{ divider.x }]}, {[{ divider.y }]})" ng-repeat="divider in shade.shapeDividers | filter:filterCloud">
+
+                    <path fill="none" stroke="black" alignment-baseline="baseline"
+                        stroke-width="{[{ shade.lineWidth }]}"
+                        ng-show="divider.dontShow !== 'right'"
+                        ng-attr-d="M0,0C{[{ shade.spacing * .4 }]},{[{ divider.height * .58917}]},{[{ shade.spacing * .4 }]},{[{ divider.height }]},0,{[{ divider.height }]}"
+                    />
+                    <path fill="none" stroke="black" stroke-width="{[{ shade.lineWidth }]}" alignment-baseline="baseline"
+                        ng-show="divider.dontShow !== 'left'"
+                        ng-attr-d="M0,0C{[{ -shade.spacing * .4 }]},{[{ divider.height * .58917}]},{[{ -shade.spacing * .4 }]},{[{ divider.height }]},0,{[{ divider.height }]}"
+                    />
+                </g>
+
+                <!-- panel lines -->
+                <g ng-attr-transform="translate({[{ panel.x }]}, {[{ panel.y }]})" ng-repeat="panel in shade.panels">
+                    <line stroke="#bbbbbb" stroke-linecap="round" stroke-width="{[{ shade.lineWidth }]}" stroke-dasharray="0, {[{ shade.lineWidth * 2 }]}"
+                        ng-attr-x1="0"
+                        ng-attr-y1="0"
+                        ng-attr-x2="{[{ panel.width }]}"
+                        ng-attr-y2="0"
+                    />
+                </g>
+
+                <!-- bottom lines for cloud and balloon shapes -->
+                <g ng-if="shade.isRoundedBottom">
+                    <!-- rounded bottom column lines -->
+                    <g ng-repeat="shadeColumn in shade.columns | filter:filterRoundShape"
+                        ng-attr-transform="translate({[{ shadeColumn.x }]}, {[{ shadeColumn.y }]})" >
+                        <path fill="none" stroke="black" stroke-width="{[{ shade.lineWidth }]}" alignment-baseline="baseline"
+                            ng-show="shadeColumn.shape === 'Austrian'"
+                            ng-attr-d="M{[{ shadeColumn.width * .27715 }]},{[{ shadeColumn.skirtHeight * .3 }]}c0,0,{[{ shadeColumn.width * .19038 }]},{[{ shadeColumn.skirtHeight * .5 }]},{[{ shadeColumn.width * .40378 }]},0"/>
+                        <path fill="none" stroke="black" stroke-width="{[{ shade.lineWidth }]}" alignment-baseline="baseline"
+                            ng-show="shadeColumn.shape === 'Austrian'"
+                            ng-attr-d="M{[{ shadeColumn.width * 0.23583 }]},{[{ shadeColumn.skirtHeight * .4 }]}c0,0,{[{ shadeColumn.width * 0.22386 }]},{[{ shadeColumn.skirtHeight * .6 }]},{[{ shadeColumn.width * .50002 }]},0"/>
+                        <path fill="none" stroke="black" stroke-width="{[{ shade.lineWidth }]}" alignment-baseline="baseline"
+                            bestline-calculate-trim-points="shadeColumn"
+                            ng-attr-d="
+                                M0,0
+                                c
+                                    {[{ shadeColumn.width * .13 }]},{[{ shadeColumn.skirtHeight * 1.3 }]}
+                                    {[{ shadeColumn.width * .87 }]},{[{ shadeColumn.skirtHeight * 1.3 }]}
+                                    {[{ shadeColumn.width }]},0
+                            "
+                        />
+
+                        <!-- tassel embellishments -->
+                        <use xlink:href="#tassel"
+                            ng-repeat="trimPoint in shadeColumn.trimPoints"
+                            ng-if="shade.embellishmentOption.shape === 'tassel'"
+                            ng-attr-x="{[{ trimPoint.x }]}" ng-attr-y="{[{ trimPoint.y }]}"
+                            ng-attr-transform="{[{ shadeColumn.transform }]}"
+                        />
+                    </g>
+
+                    <!-- rounded bottom column doghalf lines -->
+                    <g ng-attr-transform="translate({[{ shadeColumn.x }]}, {[{ shadeColumn.y }]})"
+                        ng-repeat="shadeColumn in shade.columns | filter:{ shape: 'doghalf'}:true">
+                        <path fill="none" stroke="black" stroke-width="{[{ shade.lineWidth }]}" alignment-baseline="baseline"
+                            bestline-calculate-trim-points="shadeColumn"
+                            ng-attr-transform="{[{ shadeColumn.transform }]}"
+                            ng-attr-d="
+                                M0,0
+                                c
+                                    {[{ shadeColumn.width * 0.12 }]},{[{ shadeColumn.skirtHeight * 0.65 }]}
+                                    {[{ shadeColumn.width * .55 }]},{[{ shadeColumn.skirtHeight }]}
+                                    {[{ shadeColumn.width }]},{[{ shadeColumn.skirtHeight }]}
+                            "
+                        />
+
+                        <!-- tassel embellishments -->
+                        <use xlink:href="#tassel"
+                            ng-repeat="trimPoint in shadeColumn.trimPoints"
+                            ng-if="shade.embellishmentOption.shape === 'tassel'"
+                            ng-attr-x="{[{ trimPoint.x }]}" ng-attr-y="{[{ trimPoint.y }]}"
+                            ng-attr-transform="{[{ shadeColumn.transform }]}"
+                        />
+                    </g>
+                </g>
+
+                <!-- second line for scloud and pcloud -->
+                <line stroke="black"
+                    ng-show="shade.isCloud"
+                    ng-attr-x1="{[{ shade.drawing.cloudHorizontal.x1 }]}"
+                    ng-attr-y1="{[{ shade.drawing.cloudHorizontal.y1 }]}"
+                    ng-attr-x2="{[{ shade.drawing.cloudHorizontal.x2 }]}"
+                    ng-attr-y2="{[{ shade.drawing.cloudHorizontal.y2 }]}"
+                    stroke-width="{[{ shade.lineWidth }]}"
+                />
+
+                <!-- scloud top -->
+                <g ng-attr-transform="translate({[{ shadeColumn.x }]}, {[{ shade.layout.rows.shape.y }]})" ng-repeat="shadeColumn in shade.columns | filter:{ shape: 'SCloud'}:true">
+                    <line stroke="black" stroke-width="{[{ shade.lineWidth }]}" ng-attr-x1="{[{ shadeColumn.width * 0 }]}" y1="0" ng-attr-x2="{[{ shadeColumn.width * .25 }]}" ng-attr-y2="{[{ shade.spacing }]}"/>
+                    <line stroke="black" stroke-width="{[{ shade.lineWidth }]}" ng-attr-x1="{[{ shadeColumn.width * .25 }]}" y1="0" ng-attr-x2="{[{ shadeColumn.width * 0 }]}" ng-attr-y2="{[{ shade.spacing }]}"/>
+                    <line stroke="black" stroke-width="{[{ shade.lineWidth }]}" ng-attr-x1="{[{ shadeColumn.width * .25 }]}" y1="0" ng-attr-x2="{[{ shadeColumn.width * .5 }]}" ng-attr-y2="{[{ shade.spacing }]}"/>
+                    <line stroke="black" stroke-width="{[{ shade.lineWidth }]}" ng-attr-x1="{[{ shadeColumn.width * .5 }]}" y1="0" ng-attr-x2="{[{ shadeColumn.width * .25 }]}" ng-attr-y2="{[{ shade.spacing }]}"/>
+                    <line stroke="black" stroke-width="{[{ shade.lineWidth }]}" ng-attr-x1="{[{ shadeColumn.width * .5 }]}" y1="0" ng-attr-x2="{[{ shadeColumn.width * .75 }]}" ng-attr-y2="{[{ shade.spacing }]}"/>
+                    <line stroke="black" stroke-width="{[{ shade.lineWidth }]}" ng-attr-x1="{[{ shadeColumn.width * .75 }]}" y1="0" ng-attr-x2="{[{ shadeColumn.width * .5 }]}" ng-attr-y2="{[{ shade.spacing }]}"/>
+                    <line stroke="black" stroke-width="{[{ shade.lineWidth }]}" ng-attr-x1="{[{ shadeColumn.width * .75 }]}" y1="0" ng-attr-x2="{[{ shadeColumn.width }]}" ng-attr-y2="{[{ shade.spacing }]}"/>
+                    <line stroke="black" stroke-width="{[{ shade.lineWidth }]}" ng-attr-x1="{[{ shadeColumn.width }]}" y1="0" ng-attr-x2="{[{ shadeColumn.width * .75 }]}" ng-attr-y2="{[{ shade.spacing }]}"/>
+                </g>
+
+                <!-- pcloud top -->
+                <g ng-attr-transform="translate({[{ shadeColumn.x }]}, {[{ shade.layout.rows.shape.y }]})" ng-repeat="shadeColumn in shade.columns | filter:{ shape: 'PCloud'}:true">
+                    <path fill="none" stroke="black" stroke-width="{[{ shade.lineWidth }]}" alignment-baseline="baseline"
+                        ng-attr-d="M0,0c0,0,{[{ shadeColumn.width * 0.09991 }]},{[{ shade.spacing * .4 }]},{[{ shadeColumn.width * 0.19983 }]},0"
+                    />
+                    <path fill="none" stroke="black" stroke-width="{[{ shade.lineWidth }]}" alignment-baseline="baseline"
+                        ng-attr-d="M{[{ shadeColumn.width * 0.19983 }]},0c0,0,{[{ shadeColumn.width * 0.09991 }]},{[{ shade.spacing * .4 }]},{[{ shadeColumn.width * 0.19983 }]},0"
+                    />
+                    <path fill="none" stroke="black" stroke-width="{[{ shade.lineWidth }]}" alignment-baseline="baseline"
+                        ng-attr-d="M{[{ shadeColumn.width * 0.40008 }]},0c0,0,{[{ shadeColumn.width * 0.09991 }]},{[{ shade.spacing * .4 }]},{[{ shadeColumn.width * 0.19983 }]},0"
+                    />
+                    <path fill="none" stroke="black" stroke-width="{[{ shade.lineWidth }]}" alignment-baseline="baseline"
+                        ng-attr-d="M{[{ shadeColumn.width * 0.59991 }]},0c0,0,{[{ shadeColumn.width * 0.09991 }]},{[{ shade.spacing * .4 }]},{[{ shadeColumn.width * 0.19983 }]},0"
+                    />
+                    <path fill="none" stroke="black" stroke-width="{[{ shade.lineWidth }]}" alignment-baseline="baseline"
+                        ng-attr-d="M{[{ shadeColumn.width * 0.79975 }]},0c0,0,{[{ shadeColumn.width * 0.09991 }]},{[{ shade.spacing * .4 }]},{[{ shadeColumn.width * 0.19983 }]},0"
+                    />
+                </g>
+
+                <!-- pcloud mid line-->
+                <line stroke="black" stroke-width="{[{ shade.lineWidth }]}"
+                    ng-show="shade.shape === 'PCloud'"
+                    ng-attr-x1="{[{ shade.drawing.pcloudMiddleLine.x1 }]}"
+                    ng-attr-y1="{[{ shade.drawing.pcloudMiddleLine.y1 }]}"
+                    ng-attr-x2="{[{ shade.drawing.pcloudMiddleLine.x2 }]}"
+                    ng-attr-y2="{[{ shade.drawing.pcloudMiddleLine.y2 }]}"
+                />
+
+                <bestline-svg-measurement measurements="shade.measurements"/>
+            </svg>
+        </g>
+    </svg>
+</svg>

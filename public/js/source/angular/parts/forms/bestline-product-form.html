@@ -1,0 +1,255 @@
+<div ng-form="productForm" class="directives productForm">
+  <h2>
+    <span ng-hide="vmProductForm.loadingData">
+      <span ng-show="product.id">Edit Product: {[{ product.name }]}</span>
+      <span ng-hide="product.id">New Product: {[{ product.name }]}</span>
+    </span>
+    <span ng-show="vmProductForm.loadingData">
+      <i class="fa fa-circle-o-notch fa-spin"></i>
+    </span>
+  </h2>
+
+  <div bestline-api-errors="vmProductForm.apiErrors"></div>
+
+  <div ng-if="!vmProductForm.loadingData">
+
+  <div class="row">
+    <div class="col-xs-12">
+      <div class="form-group" ng-class="{'has-error': (vmProductForm.showFormErrors && productForm.name.$invalid)}">
+        <label>Name <span ng-show="vmProductForm.showFormErrors && productForm.name.$error.required" class="text-danger">is required</span></label>
+        <input class="form-control input-sm" type="text" name="name" ng-required="true" ng-model="product.name"/>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-xs-4">
+      <div class="form-group">
+        <label>Shape</label>
+        <select class="form-control"
+          ng-model="product.shape"
+          ng-options="shape for shape in vmProductForm.selectOptions.shapes">
+          <option value="">Select a shape...</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="col-xs-8">
+      <div class="form-group">
+        <label> Attributes</label><br/>
+        <label class="checkbox-inline">
+          <input type="checkbox" name="is_frontslat" ng-true-value="1" ng-false-value="0" ng-model="product.is_frontslat">Is Frontslat?
+          <span bestline-tooltip>Alters cut length using formula "Length + Headerboard + 6" (same as casual)</span>
+        </label>
+        <label class="checkbox-inline">
+          <input type="checkbox" name="is_casual" ng-true-value="1" ng-false-value="0" ng-model="product.is_casual">Is Casual?
+          <span bestline-tooltip>Alters cut length using formula "Length + Headerboard + 6" (same as frontslat)</span>
+        </label>
+        <label class="checkbox-inline">
+          <input type="checkbox" name="is_poufy" ng-true-value="1" ng-false-value="0" ng-model="product.is_poufy">Is Poufy?
+          <span bestline-tooltip>Forces a shade to have an "adjustment".  Allows a height adjustment if the shade has one.</span>
+        </label>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="row"></div>
+    <div class="well">
+      <div class="row">
+        <div class="col-md-4">
+          <h4 class="b-margin b-top-0">Pricing</h4>
+          <div class="form-group">
+            <label>Base Price</label>
+            <input class="form-control input-sm" type="text" step="any" name="base_price" ng-model="product.base_price"/>
+          </div>
+          <div class="form-group">
+            <label>Pricing Type</label>
+            <select class="form-control"
+              ng-model="product.pricing_type"
+              ng-options="typeSlug as typeName for (typeSlug, typeName) in vmProductForm.selectOptions.pricing_types">
+              <option value="">Select a pricing type...</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Price Plus Percentage</label>
+            <input class="form-control input-sm" type="text" name="price_plus_percentage" ng-model="product.price_plus_percentage"/>
+          </div>
+        </div>
+
+        <div class="col-md-8">
+          <div bestline-company-prices bc-prices="vmProductForm.companyPrices" bc-parent="product" bc-options="vmProductForm.companyPricesOptions" ng-hide="vmEdit.isCom" class="well well-white"></div>
+        </div>
+      </div>
+    </div>
+    </div>
+
+    <div class="well">
+      <div class="row">
+        <div class="col-xs-6">
+          <h4>Panels</h4>
+          <div class="row">
+            <div class="form-group col-md-6">
+              <label>Panel Height Max</label>
+              <input class="form-control input-sm" type="text" name="panel_height_max" ng-model="product.panel_height_max"/>
+            </div>
+            <div class="form-group col-md-6">
+              <label>Panel Height Min</label>
+              <input class="form-control input-sm" type="text" name="panel_height_min" ng-model="product.panel_height_min"/>
+            </div>
+          </div>
+          <div class="row">
+            <div class="form-group col-md-6">
+              <label>Panel Height Override </label>
+              <span bestline-tooltip>If there is a value, it overrides the panel height standard of 5"</span>
+              <input class="form-control input-sm" type="text" name="panel_height_override" ng-model="product.panel_height_override"/>
+            </div>
+            <div class="form-group col-md-6">
+              <label>Panel Skirt Override </label>
+              <span bestline-tooltip>If there is a value, it overrides the skirt standard of 2"</span>
+              <input class="form-control input-sm" type="text" name="panel_skirt_override" ng-model="product.panel_skirt_override"/>
+            </div>
+          </div>
+          <div class="row">
+            <div class="form-group col-md-6">
+              <label>Panels To Pouf</label>
+              <input class="form-control input-sm" type="text" name="poufy_panels_to_pouf" ng-model="product.poufy_panels_to_pouf"/>
+            </div>
+            <div class="form-group col-md-6">
+              <label>Panels To Rod</label>
+              <input class="form-control input-sm" type="text" name="poufy_panels_to_rod" ng-model="product.poufy_panels_to_rod"/>
+            </div>
+          </div>
+          <div class="row">
+            <div class="form-group col-md-6">
+              <label>Panel Rod Type</label>
+              <select class="form-control"
+                ng-model="product.rod_type"
+                ng-options="typeSlug as typeName for (typeSlug, typeName) in vmProductForm.selectOptions.rod_types">
+                <option value="">Select a rod type...</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-6">
+          <h4>Rings</h4>
+          <div class="form-group" ng-class="{'has-error': (vmProductForm.showFormErrors && productForm.ring_type_id.$invalid)}">
+            <label>Ring Type <span ng-show="vmProductForm.showFormErrors && productForm.ring_type_id.$error.required" class="text-danger">is required</span></label>
+            <select class="form-control" name="ring_type_id"
+              ng-model="product.ring_type_id"
+              ng-options="type.id as type.description for (key, type) in vmProductForm.selectOptions.ring_types"
+              ng-required="true">
+              <option value="">Select a ring type...</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label>Ring Divisor</label>
+            <input class="form-control input-sm" type="text" name="ring_divisor" ng-model="product.ring_divisor"/>
+          </div>
+          <div class="form-group">
+            <label>Ring From Edge</label>
+            <input class="form-control input-sm" type="text" name="ring_from_edge" ng-model="product.ring_from_edge"/>
+          </div>
+          <div class="form-group">
+            <label>Ring Minimum</label>
+            <input class="form-control input-sm" type="text" name="ring_minimum" ng-model="product.ring_minimum"/>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="well">
+      <div class="row">
+        <div class="col-xs-6">
+          <h4>TDBU Option Deductions</h4>
+
+          <div class="form-group">
+            <label>Clutch Deduction</label>
+            <input class="form-control input-sm" type="text" name="clutch_deduction" ng-model="product.clutch_deduction"/>
+          </div>
+
+          <div class="form-group">
+            <label>Cord Lock Deduction</label>
+            <input class="form-control input-sm" type="text" name="cord_lock_deduction" ng-model="product.cord_lock_deduction"/>
+          </div>
+
+          <div class="form-group">
+            <label>Motorized Deduction</label>
+            <input class="form-control input-sm" type="text" name="motorized_deduction" ng-model="product.motorized_deduction"/>
+          </div>
+        </div>
+
+        <div class="col-xs-6">
+          <h4>Cutting</h4>
+          <div class="form-group">
+            <label>Cut Length Formula</label>
+            <select class="form-control"
+              ng-model="product.product_cut_length_formula_id"
+              ng-options="formula.id as formula.name for (key, formula) in vmProductForm.selectOptions.cut_length_formulas">
+              <option value="">Select a cut length formula...</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Cut Length Add</label>
+            <input class="form-control input-sm" type="text" name="cut_length_add" ng-model="product.cut_length_add"/>
+          </div>
+          <div class="form-group">
+            <label>Length Plus</label>
+            <input class="form-control input-sm" type="text" name="length_plus" ng-model="product.length_plus"/>
+          </div>
+          <div class="form-group">
+            <label>Length Times</label>
+            <input class="form-control input-sm" type="text" name="length_times" ng-model="product.length_times"/>
+          </div>
+
+          <div class="form-group">
+            <label>Width Plus</label>
+            <input class="form-control input-sm" type="text" name="width_plus" ng-model="product.width_plus"/>
+          </div>
+          <div class="form-group">
+            <label>Width Plus Lining</label>
+            <input class="form-control input-sm" type="text" name="width_plus_lining" ng-model="product.width_plus_lining"/>
+          </div>
+          <div class="form-group">
+            <label>Width Times</label>
+            <input class="form-control input-sm" type="text" name="width_times" ng-model="product.width_times"/>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  <div bestline-api-errors="product.apiErrors"></div>
+
+  <div class="row b-margin b-bottom" ng-hide="vmProductForm.loadingData">
+    <div class="col-md-6">
+      <span ng-hide="product.busy">
+        <a class="btn btn-sm btn-default text-danger" href=""
+          ng-hide="vmProductForm.showDeleteConfirm"
+          ng-click="vmProductForm.showDeleteConfirm = true">
+          Delete
+        </a>
+        <a class="btn btn-sm btn-danger" href=""
+          ng-show="vmProductForm.showDeleteConfirm"
+          ng-click="vmProductForm.deleteProduct(product)">
+          Really Delete?
+        </a>
+      </span>
+    </div>
+    <div class="col-md-6">
+      <div class="text-right">
+        <div ng-hide="product.busy">
+          <a class="btn btn-sm btn-default" title="" href="" ng-click="vmProductForm.cancelEdit()">Cancel</a>
+          <a class="btn btn-sm btn-primary" title="" href="" ng-click="vmProductForm.saveProduct(product, productForm)">Save</a>
+          <a class="btn btn-sm btn-primary" title="" href="" ng-click="vmProductForm.saveProductAndClose(product, productForm)">Save & Close</a>
+        </div>
+        <div ng-show="product.busy">
+          <i class="fa fa-circle-o-notch fa-spin fa-2x"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>

@@ -1,0 +1,59 @@
+<div st-table="vmTable.stFilteredFabrics"
+    st-safe-src="fabricTableRows">
+    <div class="row">
+        <div class="col-md-3 padding-top"><input st-search placeholder="Search" class="input-sm form-control b-margin b-bottom" type="search"/></div>
+        <div class="col-md-4 pull-right text-right"><div st-pagination st-items-by-page="10" st-displayed-pages="4"></div></div>
+    </div>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Image</th>
+                <th st-sort="pattern">Pattern - Color <i class="fa fa-sort"></i></th>
+                <th st-sort="owner_company.name" ng-show="fabricTableOptions.showColumns.company">Company <i class="fa fa-sort"></i></th>
+                <th st-sort="sidemark" ng-show="fabricTableOptions.showColumns.sidemark">Sidemark <i class="fa fa-sort"></i></th>
+                <th ng-show="fabricTableOptions.showColumns.com">COM</th>
+                <th>On Hand</th>
+                <th>Minimum Qty</th>
+                <th>Ticket Number</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+        	<tr ng-repeat="fabric in vmTable.stFilteredFabrics">
+        		<td>
+        			<img style="height: 40px;" ng-if="fabric.image" ng-src="/uploads/fabrics/{[{ fabric.image }]}">
+        		</td>
+        		<td>
+        			<span>{[{ fabric.name }]}</span>
+        		</td>
+        		<td ng-show="fabricTableOptions.showColumns.company">{[{ fabric.owner_company.name }]}</td>
+        		<td ng-show="fabricTableOptions.showColumns.sidemark">{[{ fabric.sidemark }]}</td>
+        		<td ng-show="fabricTableOptions.showColumns.com">
+        			<span ng-if="fabric.owner_company_id">YES</span>
+        		</td>
+        		<td>{[{ fabric.quantity }]}</td>
+        		<td>{[{ fabric.minimum_qty }]}</td>
+        		<td>{[{ fabric.ticket_number }]}</td>
+        		<td>
+                    <span ng-if="fabric.owner_company_id">
+                        <a href='/inventory/fabric/edit/{[{ fabric.id }]}?com=1&print=1' target="_blank" class='btn btn-xs  btn-default'>print</a>
+                        <a ng-if="fabric.owner_company_id" href='/inventory/fabric/edit/{[{ fabric.id }]}?com=1' class='btn btn-xs btn-success'>edit</a>
+                    </span>
+                    <span ng-if="!fabric.owner_company_id">
+                        <a href='/inventory/fabric/edit/{[{ fabric.id }]}?print=1' target="_blank" class='btn btn-xs btn-default'>print</a>
+                        <a href='/inventory/fabric/edit/{[{ fabric.id }]}' class='btn btn-xs btn-success'>edit</a>
+                    </span>
+        			<a href='/inventory/fabric/delete/{[{ fabric.id }]}' class='btn btn-xs btn-danger'>delete</a>
+        		</td>
+        	</tr>
+        	<tr ng-show="vmTable.stFilteredFabrics.length === 0">
+        		<td colspan="7">There are no fabrics.</td>
+        	</tr>
+        </tbody>
+    </table>
+    <div class="row">
+        <div class="col-md-12 text-center">
+            <div st-pagination st-items-by-page="10" st-displayed-pages="4"></div>
+        </div>
+    </div>
+</div>

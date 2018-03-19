@@ -1,0 +1,232 @@
+<div class="directives contact subitem" 
+	ng-form="contactForm" bestline-isolate-form
+	ng-class='{deleted: bcf.contact.deleted}'>
+	<div class="info">
+		<div class="actions">
+			<span ng-show="bcf.contact.updating"><i class="fa fa-circle-o-notch fa-spin"></i></span>
+			<i class="remove fa fa-remove text-danger" title="Undo Edits" ng-show="!bcf.contact.id" ng-click="deleteContact(bcf.contact, contactForm)"></i>
+			<i class="cancel fa fa-remove" title="Undo Edits" ng-click="cancelEdit(bcf.contact, contactForm)" ng-show="bcf.contact.id && bcf.contact.editing"></i>
+		</div>
+	</div>
+	
+	<div class="summary pointer" ng-click="startEdit(bcf.contact, contactForm, 'emails,phone_numbers')" ng-show="!bcf.contact.editing">
+		<div class="actions">
+			<span ng-show="bcf.contact.updating"><i class="fa fa-circle-o-notch fa-spin"></i></span>
+			<i class="edit fa fa-pencil" title="Edit Contact"></i>
+		</div>
+		<span class="name"><span class="first_name">{[{ bcf.contact.first_name }]}</span> <span class="last_name">{[{ bcf.contact.last_name }]}</span></span><br/>
+		<span class="email" ng-show="getPrimaryEmail(bcf.contact).email">{[{ getPrimaryEmail(bcf.contact).email }]}<br/></span>
+		<span class="phone" ng-show="getPrimaryPhone(bcf.contact).number">{[{ getPrimaryPhone(bcf.contact).number }]}<br/></span>
+	</div>
+
+	<div class="details clearfix" ng-show="bcf.contact.editing">
+
+		<input name="primary_email_id" type="hidden" ng-model="bcf.contact.primary_email_id"/>
+		<input name="primary_phone_number_id" type="hidden" ng-model="bcf.contact.primary_phone_number_id"/>
+
+		<div class="detail form-group">
+			<label>First Name:</label>
+			<input name="first_name" class="form-control input-sm" type="text" ng-model="bcf.contact.first_name" ng-show="bcf.contact.editing"/>
+			<div class="alert alert-danger" ng-messages="contactForm.first_name.$error" role="alert" ng-show="contactForm.first_name.$invalid">
+			    <ul ng-message="custom">
+			    	<li ng-repeat="error in contactForm.first_name.baselineApiErrors">{[{ error }]}</li>
+			    </ul>
+			</div>
+		</div>
+		<div class="detail form-group">
+			<label>Last Name:</label>
+			<input name="last_name" class="form-control input-sm" type="text" ng-model="bcf.contact.last_name" ng-show="bcf.contact.editing"/>
+			<div class="alert alert-danger" ng-messages="contactForm.last_name.$error" role="alert" ng-show="contactForm.last_name.$invalid">
+			    <ul ng-message="custom">
+			    	<li ng-repeat="error in contactForm.last_name.baselineApiErrors">{[{ error }]}</li>
+			    </ul>
+			</div>
+		</div>
+		<div class="detail form-group">
+			<label>Title:</label>
+			<input class="form-control input-sm" type="text" ng-model="bcf.contact.title" ng-show="bcf.contact.editing"/>
+		</div>
+
+		<div class="detail form-group">
+			<label>Notes:</label>
+			<textarea class="form-control input-sm" ng-model="bcf.contact.notes" ng-show="bcf.contact.editing"></textarea>
+		</div>
+		<div class="actions-footer">
+			<span ng-show="bcf.contact.updating" class="pull-right"><i class="fa fa-circle-o-notch fa-spin"></i></span>
+			<a class="delete btn btn-sm btn-danger"
+				ng-show="!bcf.contact.updating"
+				ng-click="deleteContact(bcf.contact, contactForm)">
+				<i class="fa fa-trash"></i>
+			</a>
+			<a class="save btn btn-sm btn-success pull-right"
+				ng-show="contactForm.$dirty && !bcf.contact.updating"
+				ng-click="saveContact(bcf.contact, contactForm, bcf.contact, true)">
+				Save & Close
+			</a>
+			<a class="save btn btn-sm btn-success pull-right"
+				ng-show="contactForm.$dirty && !bcf.contact.updating"
+				ng-click="saveContact(bcf.contact, contactForm, bcf.contact)">
+				Save
+			</a>
+			<a class="save btn btn-sm btn-secondary text-muted pull-right"
+				ng-show="contactForm.$dirty && !bcf.contact.updating"
+				ng-click="cancelEdit(bcf.contact, contactForm)">
+				Cancel
+			</a>
+		</div>
+
+		<div class="notifications">
+			<div class="alert alert-danger" ng-if="bcf.contact.apiError">
+				{[{ bcf.contact.apiError }]}
+			</div>
+			<div class="alert alert-success" ng-if="bcf.contact.apiSuccess">
+				{[{ bcf.contact.apiSuccess }]}
+			</div>
+		</div>
+	</div>
+
+	<div class="details" ng-show="bcf.contact.editing">
+		<div class="detail form-group">
+			<label><span>Emails:</span></label>
+			<span ng-show="!bcf.contact.id">Save contact to add...</span>
+			<a class="add pull-right" title="Add Email" href="" ng-click='addEmail(bcf.contact)' ng-show="!bcf.contact.loadingEmails && bcf.contact.id"><i class="fa fa-fw fa-plus-square"></i> Add</a>
+			<span ng-show="bcf.contact.loadingEmails" class="add pull-right"><i class="fa fa-circle-o-notch fa-spin"></i></span>
+			<hr/>
+			<div class="subitems">
+				<div class="subitem subitem2" 
+					ng-repeat="email in bcf.contact.emails | orderBy : 'updated_at' : true"
+					ng-form="emailForm" bestline-isolate-form
+					ng-class='{deleted: email.deleted}'>
+					<div class="info">
+						<div class="actions">
+							<span ng-show="email.updating"><i class="fa fa-circle-o-notch fa-spin"></i></span>
+							<i class="fa fa-star" title="Mark As Primary" 
+								ng-show="email.id"
+								ng-class="{primary: bcf.contact.primary_email_id === email.id}"
+								ng-click="setParentKey(bcf.contact, contactForm, 'primary_email_id', email.id);">
+							</i>
+							<i class="remove fa fa-remove text-danger" title="Undo Edits" ng-show="!email.id" ng-click="deleteEmail(email, emailForm)"></i>
+							<i class="cancel fa fa-remove" title="Undo Edits" ng-click="cancelEdit(email, emailForm)" ng-show="email.id && email.editing"></i>
+							<i class="edit fa fa-pencil" title="Edit Email" ng-click="startEdit(email, emailForm)" ng-show="!email.editing"></i>
+						</div>
+						<div class="email pointer" ng-click="startEdit(email, emailForm)">{[{ email.email }]}</div>
+					</div>
+
+					<div class="notifications">
+						<div class="alert alert-danger" ng-if="email.apiError">
+							{[{ email.apiError }]}
+						</div>
+						<div class="alert alert-success" ng-if="email.apiSuccess">
+							{[{ email.apiSuccess }]}
+						</div>
+					</div>
+
+					<div class="details clearfix" ng-show="email.editing">
+						<div class="detail form-group">
+							<label>Email:</label>
+							<input name="email" class="form-control input-sm" type="text" ng-model="email.email" ng-show="email.editing"/>
+							<div class="alert alert-danger" ng-messages="emailForm.email.$error" role="alert" ng-show="emailForm.email.$invalid">
+							    <ul ng-message="custom">
+							    	<li ng-repeat="error in emailForm.email.baselineApiErrors">{[{ error }]}</li>
+							    </ul>
+							</div>
+						</div>													
+						<div class="actions-footer">
+							<span ng-show="email.updating" class="pull-right"><i class="fa fa-circle-o-notch fa-spin"></i></span>
+							<a class="delete btn btn-sm btn-danger"
+								ng-show="!email.updating"
+								ng-click="deleteEmail(email, emailForm)">
+								<i class="fa fa-trash"></i>
+							</a>
+							<a class="save btn btn-sm btn-success pull-right"
+								ng-show="emailForm.$dirty && !email.updating"
+								ng-click="saveEmail(email, emailForm, bcf.contact)">
+								Save
+							</a>
+							<a class="save btn btn-sm btn-secondary text-muted pull-right"
+								ng-show="emailForm.$dirty && !email.updating"
+								ng-click="cancelEdit(email, emailForm)">
+								Cancel
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="detail form-group">
+			<label><span>Phone Numbers:</span></label>
+			<span ng-show="!bcf.contact.id">Save contact to add...</span>
+			<a class="add pull-right" title="Add Phone" href="" ng-click='addPhoneNumber(bcf.contact)' ng-show="!bcf.contact.loadingPhoneNumbers && bcf.contact.id"><i class="fa fa-fw fa-plus-square"></i> Add</a>
+			<span ng-show="bcf.contact.loadingPhoneNumbers" class="add pull-right"><i class="fa fa-circle-o-notch fa-spin"></i></span>
+			<hr/>
+			<div class="subitems">
+				<div class="subitem subitem2" 
+					ng-repeat="phone in bcf.contact.phone_numbers | orderBy : 'updated_at' : true"
+					ng-form="phoneForm" bestline-isolate-form
+					ng-class='{deleted: phone.deleted}'>
+					<div class="info">
+						<div class="phone pointer" ng-click="startEdit(phone, phoneForm)">{[{ phone.number }]}</div>
+						<div class="actions">
+							<span ng-show="phone.updating"><i class="fa fa-circle-o-notch fa-spin"></i></span>
+							<i class="fa fa-star" title="Mark As Primary" 
+								ng-show="phone.id"
+								ng-class="{primary: bcf.contact.primary_phone_number_id === phone.id}"
+								ng-click="setParentKey(bcf.contact, contactForm, 'primary_phone_number_id', phone.id);">
+							</i>
+							<i class="remove fa fa-remove text-danger" title="Undo Edits" ng-show="!phone.id" ng-click="deletePhoneNumber(phone, phoneForm)"></i>
+							<i class="cancel fa fa-remove" title="Undo Edits" ng-click="cancelEdit(phone, phoneForm)" ng-show="phone.id && phone.editing"></i>
+							<i class="edit fa fa-pencil" title="Edit Phone" ng-click="startEdit(phone, phoneForm)" ng-show="!phone.editing"></i>
+						</div>
+					</div>
+
+					<div class="notifications">
+						<div class="alert alert-danger" ng-if="phone.apiError">
+							{[{ phone.apiError }]}
+						</div>
+						<div class="alert alert-success" ng-if="phone.apiSuccess">
+							{[{ phone.apiSuccess }]}
+						</div>
+					</div>
+
+					<div class="details clearfix" ng-show="phone.editing">
+						<div class="detail form-group">
+							<label>Phone:</label>
+							<input name="number" class="form-control input-sm" type="text" ng-model="phone.number" ng-show="phone.editing"/>
+							<div class="alert alert-danger" ng-messages="phoneForm.number.$error" role="alert" ng-show="phoneForm.number.$invalid">
+							    <ul ng-message="custom">
+							    	<li ng-repeat="error in phoneForm.number.baselineApiErrors">{[{ error }]}</li>
+							    </ul>
+							</div>
+						</div>
+						<div class="detail form-group">
+							<label>Type:</label>
+							<select name="type" class="form-control input-sm"
+								ng-show="phone.editing"
+								ng-model="phone.type"
+								ng-options="key as value for (key , value) in bcf.phoneTypes">
+							</select>
+						</div>												
+						<div class="actions-footer">
+							<div ng-show="phone.updating" class="pull-right"><i class="fa fa-circle-o-notch fa-spin"></i></div>
+							<a class="delete btn btn-sm btn-danger"
+								ng-show="!phone.updating"
+								ng-click="deletePhoneNumber(phone, phoneForm)">
+								<i class="fa fa-trash"></i>
+							</a>
+							<a class="save btn btn-sm btn-success pull-right"
+								ng-show="phoneForm.$dirty && !phone.updating"
+								ng-click="savePhoneNumber(phone, phoneForm, bcf.contact)">
+								Save
+							</a>
+							<a class="save btn btn-sm btn-secondary text-muted pull-right"
+								ng-show="phoneForm.$dirty && !phone.updating"
+								ng-click="cancelEdit(phone, phoneForm)">
+								Cancel
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

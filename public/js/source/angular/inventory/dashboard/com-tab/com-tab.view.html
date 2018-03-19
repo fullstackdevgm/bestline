@@ -1,0 +1,9 @@
+<div ng-controller="comTabCtrl as vmCom">
+	<div class="alert alert-danger" ng-if="vmCom.apiErrors.length > 0">
+		<p ng-repeat="error in vmCom.apiErrors">
+			{[{ error }]}
+		</p>
+	</div>
+	<div ng-show="vmCom.loading"><span class="fa fa-circle-o-notch fa-spin b-margin b-top"></span></div>
+	<div bestline-fabric-table fabric-table-rows="vmCom.allFabrics" fabric-table-options="vmCom.fabricTableOptions" ng-show="!vmCom.loading"></div>
+</div>

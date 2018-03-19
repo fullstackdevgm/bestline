@@ -1,0 +1,8 @@
+<div ng-show="bestlineApiErrors.length > 0" class="alert alert-danger clearfix">
+	<div class="col-md-1">
+		<i class="fa fa-exclamation-triangle"></i>
+	</div>
+	<div class="col-md-10 text-left">
+		<span ng-repeat="error in bestlineApiErrors">{[{ error }]}<br/></span>
+	</div>
+</div>

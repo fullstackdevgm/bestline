@@ -1,0 +1,106 @@
+<div class="directives address"
+	ng-form="addressForm" bestline-isolate-form
+	ng-class='{deleted: baf.address.deleted}'>
+	<div class="info">
+		<div class="actions">
+			<span ng-show="baf.address.updating"><i class="fa fa-circle-o-notch fa-spin"></i></span>
+			<i class="fa fa-truck" title="Make Primary Shipping Address"
+				ng-show="baf.address.id && baf.company"
+				ng-class="{primary: baf.company.primary_shipping_address_id === baf.address.id}" 
+				ng-click="setParentKey(baf.company, baf.companyForm, 'primary_shipping_address_id', baf.address.id);">
+			</i>
+			<i class="fa fa-money" title="Make Primary Billing Address"
+				ng-show="baf.address.id && baf.company"
+				ng-class="{primary: baf.company.primary_billing_address_id === baf.address.id}"  
+				ng-click="setParentKey(baf.company, baf.companyForm, 'primary_billing_address_id', baf.address.id);">
+			</i>
+			<i class="remove fa fa-remove text-danger" title="Undo Edits" ng-show="!baf.address.id" ng-click="deleteAddress(baf.address, addressForm)"></i>
+			<i class="cancel fa fa-remove" title="Undo Edits" ng-click="cancelEdit(baf.address, addressForm)" ng-show="baf.address.id && baf.address.editing"></i>
+			<i class="edit fa fa-pencil" title="Edit Address" ng-click="startEdit(baf.address, addressForm)" ng-show="!baf.address.editing"></i>
+		</div>
+		<div class="summary pointer" ng-click="startEdit(baf.address, addressForm)">
+			<span class="address1" ng-show="baf.address.address1 ">{[{ baf.address.address1 }]}<br/></span>
+			<span class="address2" ng-show="baf.address.address2">{[{ baf.address.address2 }]}<br/></span>
+			<span class="address3" ng-show="baf.address.city || baf.address.state || baf.address.zip">
+				<span class="city">{[{ baf.address.city }]}</span>, 
+				<span class="state">{[{ baf.address.state }]}</span> 
+				<span class="zip">{[{ baf.address.zip }]}</span>
+			</span>
+		</div>
+	</div>
+
+	<div class="details clearfix" ng-show="baf.address.editing">
+		<div class="detail form-group">
+			<label>Address Line 1:</label>
+			<span class="">{[{ baf.address.address1 }]}</span>
+			<input class="form-control input-sm" type="text" name='address1' ng-model="baf.address.address1" ng-show="baf.address.editing"/>
+		</div>
+		<div class="detail form-group">
+			<label>Address Line 2:</label>
+			<span class="">{[{ baf.address.address2 }]}</span>
+			<input class="form-control input-sm" type="text" name='address2' ng-model="baf.address.address2" ng-show="baf.address.editing"/>
+		</div>
+		<div class="detail form-group">
+			<label>City:</label>
+			<span class="">{[{ baf.address.city }]}</span>
+			<input class="form-control input-sm" type="text" name='city' ng-model="baf.address.city" ng-show="baf.address.editing"/>
+		</div>
+		<div class="detail form-group">
+			<label>State:</label>
+			<span class="">{[{ baf.address.state }]}</span>
+			<select class="form-control input-sm" name='state'
+				ng-show="baf.address.editing" 
+				ng-model="baf.address.state"
+				ng-options="key as value for (key , value) in baf.states">
+				<option>Select a state...</option>
+			</select>
+		</div>
+		<div class="detail form-group">
+			<label>Zip Code:</label>
+			<span class="">{[{ baf.address.zip }]}</span>
+			<input class="form-control input-sm" type="text" name='zip' ng-model="baf.address.zip" ng-show="baf.address.editing"/>
+		</div>
+		<div class="detail form-group" ng-class="{'has-warning' : addressForm.shipping_method_id.$dirty}">
+			<label>Default Shipping Method:</label>
+			<span class="">{[{ getShippingMethodName(baf.address.shipping_method_id) }]}</span>
+			<select class="form-control input-sm"
+				ng-show="baf.address.editing" 
+				ng-model="baf.address.shipping_method_id"
+				ng-options="item.id as item.name for item in baf.shippingMethods">
+			</select>
+		</div>
+		<div class="detail form-group" ng-class="{'has-warning' : addressForm.area.$dirty}">
+			<label>Area:</label>
+			<span class="">{[{ baf.address.area }]}</span>
+			<input class="form-control input-sm" type="text" ng-model="baf.address.area" ng-show="baf.address.editing"/>
+		</div>
+		<div class="actions-footer">
+
+			<span ng-show="baf.address.updating" class="pull-right"><i class="fa fa-circle-o-notch fa-spin"></i></span>
+			<a class="delete btn btn-sm btn-danger"
+				ng-show="!baf.address.updating"
+				ng-click="deleteAddress(baf.address, addressForm)">
+				Remove
+			</a>
+			<a class="save btn btn-sm btn-success pull-right"
+				ng-show="addressForm.$dirty && !baf.address.updating"
+				ng-click="saveAddress(baf.address, addressForm, contact)">
+				Save
+			</a>
+			<a class="save btn btn-sm btn-secondary text-muted pull-right"
+				ng-show="addressForm.$dirty && !baf.address.updating"
+				ng-click="cancelEdit(baf.address, addressForm)">
+				Cancel
+			</a>
+		</div>
+	</div>
+
+	<div class="notifications">
+		<div class="alert alert-danger" ng-if="baf.address.apiError">
+			{[{ baf.address.apiError }]}
+		</div>
+		<div class="alert alert-success" ng-if="baf.address.apiSuccess">
+			{[{ baf.address.apiSuccess }]}
+		</div>
+	</div>
+</div>

@@ -1,0 +1,75 @@
+FROM ubuntu:14.04
+MAINTAINER Buink Web Development <online@buink.biz>
+
+# so that Dialog and TERM errors are silenced because this is not an interactive setup
+ENV DEBIAN_FRONTEND noninteractive
+
+# Set locale and install apache
+RUN locale-gen en_US.UTF-8 \
+  && export LANG=en_US.UTF-8 \
+  && apt-get update \
+  && apt-get -y install apache2
+
+# set apache variables
+ENV APACHE_RUN_USER www-data
+ENV APACHE_RUN_GROUP www-data
+ENV APACHE_LOG_DIR /var/log/apache2
+ENV APACHE_PID_FILE /var/run/apache2.pid
+ENV APACHE_RUN_DIR /var/run/apache2
+ENV APACHE_LOCK_DIR /var/lock/apache2
+RUN ln -sf /dev/stdout /var/log/apache2/access.log && \
+    ln -sf /dev/stderr /var/log/apache2/error.log
+RUN mkdir -p $APACHE_RUN_DIR $APACHE_LOCK_DIR $APACHE_LOG_DIR
+
+# add other dependencies
+RUN apt-get update && apt-get install -y php5 \
+	php5-cli \
+	php5-mcrypt \
+	php5-gd \
+	php5-json \
+	php5-memcached \
+	apache2 \
+	libapache2-mod-php5 \
+	libssl-dev \
+	curl \
+	php5-curl \
+	git-core \
+	mysql-server \
+	php5-mysqlnd \
+	ruby \
+	ruby-dev \
+	ruby-bundler
+
+RUN php5enmod mcrypt
+RUN a2enmod rewrite
+
+# add apache configs
+COPY ./docker/bl-php/apache.conf /etc/apache2/sites-available/000-default.conf
+
+WORKDIR /var/www/html
+
+# Install composer
+RUN curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/local/bin --filename=composer
+
+# Install compass
+RUN gem install --no-rdoc --no-ri compass
+
+# Install gem sass for grunt-contrib-sass
+RUN apt-get install -y ruby
+RUN gem install sass
+
+# Install NodeJS
+RUN curl -sL https://deb.nodesource.com/setup_4.x | sudo -E bash -
+RUN sudo apt-get install -yq nodejs
+
+# Install MEAN.JS Prerequisites
+RUN npm install --quiet -g gulp bower jshint
+
+# Add start file to new environment
+COPY ./docker/bl-php/start.sh /var/www/docker/bl-php/start.sh
+
+# Modify the executable to have the linux line endings
+RUN sed -i 's/\r//' /var/www/docker/bl-php/start.sh
+
+# Give permissions to run executable
+RUN chmod u+x /var/www/docker/bl-php/start.sh

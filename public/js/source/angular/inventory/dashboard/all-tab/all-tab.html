@@ -1,0 +1,9 @@
+<div ng-controller="allTabCtrl as vmAll">
+	<div class="alert alert-danger" ng-if="vmAll.apiErrors.length > 0">
+		<p ng-repeat="error in vmAll.apiErrors">
+			{[{ error }]}
+		</p>
+	</div>
+	<div ng-show="vmAll.loading"><span class="fa fa-circle-o-notch fa-spin b-margin b-top"></span></div>
+	<div bestline-fabric-table fabric-table-rows="vmAll.allFabrics" ng-show="!vmAll.loading"></div>
+</div>

@@ -1,0 +1,413 @@
+
+/* Base */
+
+body {
+    font-family: "Helvetica", "Arial";
+    font-size: 13px;
+    line-height: 18px;
+    cursor: default;
+}
+
+a {
+    color: #ef7c61;
+}
+/*  Nav  */
+
+.create-order {
+    margin-top:10px;
+}
+
+/*  Core layout */
+
+.container-fluid {
+    margin-left:1em;
+    margin-right:1em;
+}
+
+.navbar-brand {
+    margin-left:-13px;
+    width:270px;
+    background-repeat: no-repeat;
+    background-position: 13px;
+    background-image: url('../../images/white_logo.png');
+}
+
+.header, .footer {
+    background: #000;
+    line-height: 50px;
+    height: 50px;
+    width: 100%;
+    color: #fff;
+}
+
+.header h1, .header a{
+    display: inline-block;
+}
+
+.header h1 {
+    margin: 0;
+    font-weight: normal;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+}
+
+.content {
+    padding-bottom: 1em;
+}
+
+.error {
+    color: #ef7c61;
+}
+
+.red-text {
+    color: #d9534f;
+}
+
+/*  Login  */
+
+.account-wall {
+    margin-top: 20px;
+    padding: 40px 0px 20px 0px;
+    background-color: #f7f7f7;
+    -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+}
+.login-title
+{
+    color: #555;
+    font-size: 18px;
+    font-weight: 400;
+    display: block;
+}
+#login_content img {
+    margin-left:10%;
+    margin-bottom:20px;
+    width:80%;
+}
+
+.profile-img {
+    width: 96px;
+    height: 96px;
+    margin: 0 auto 10px;
+    display: block;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+}
+
+.need-help {
+    margin-top: 10px;
+}
+
+.new-account {
+    display: block;
+    margin-top: 10px;
+}
+
+
+/*  Orders Show  */
+
+#tbl_orderlist th {
+    text-align: center;
+}
+.embolden {
+    font-weight: bold;
+}
+
+/*  Order Create */
+
+#billing_info h6 {
+    color:#999;
+    font-weight:normal;
+}
+#orderItems {
+    background-color: transparent;
+}
+
+#orderItems tbody td {
+    border:none;
+}
+#cancelItemBtn {
+    margin-right:4px;
+}
+#newItemForm {
+    display:none;
+}
+
+#order-totals {
+    padding-right: 32px;
+}
+
+#order-totals input, #order-totals select {
+    width:45%;
+}
+
+#order-totals .row div {
+    text-align:right;
+}
+
+.order-create.buttons {
+    text-align: right;
+    padding-right:40px;
+}
+
+#lineItems {
+    background-color: #fff;
+}
+.itemHead th {
+    font-style:normal;
+    font-weight:normal;
+}
+
+
+table#orderItems input[type="text"] {
+    text-align: right;
+}
+
+table#orderItems .align_right {
+    text-align: right;
+}
+
+tbody.order-line {
+}
+
+tr.itemHead {
+}
+
+tr.optionHead {
+}
+
+.optionHead th {
+    font-weight: normal;
+}
+
+.table .options_table {
+    border-collapse: separate;
+}
+.table tr.optionHead th {
+    border-bottom:1px solid #ccc;
+}
+
+.table > tbody + tbody {
+    border-top:1px solid #ddd;
+}
+.table tr.optionHead th:first-child {
+}
+
+.table tr.optionHead th:last-child {
+}
+
+table#orderItems th span.sectionTitle {
+    font-size:120%;
+    color:#aaa;
+    line-height: 100%;
+}
+
+table#orderItems table.options_table th span.sectionTitle {
+    color:#ccc;
+    font-weight: normal;
+}
+
+table.options_table {
+    margin-left:4px;
+}
+
+table.options_table tr td {
+    line-height: 2em;
+}
+
+#addItemBtn {
+    margin-left: -1px;
+}
+
+.orders.edit {
+    font-size:80%;
+}
+
+
+
+#lineItems {
+    min-height:100px;
+    margin:40px 0 40px 0;
+    vertical-align:middle;
+}
+
+.table > tbody > tr.newItem  > td {
+    padding-left: 5px;
+}
+
+.newItem input[id^="ol"] {
+    /* width:100%; */
+}
+
+.newItem td:first-child {
+    /* width:50%; */
+}
+
+.newItem td:last-child {
+    text-align:right;
+}
+.ol_buttons,
+.olButtons {
+    text-align:right;
+}
+
+.curr {
+    text-align: right;
+}
+
+.order-create td.ol_unit_price, .order-create td.ol_width, .order-create td.ol_length, .order-create td.ol_quantity, .order-create td.ol_total_inv {
+    text-align: right;
+}
+
+.item_add_link,
+.option_add_link {
+    float:left;
+    padding-top:.5em;
+    margin-left:1em;
+}
+.option_add_link {
+    padding-top:1em;
+}
+
+
+.table tr.sub_product_line > td {
+    border-top: none;
+}
+
+table tr.options_row > td {
+    border-top: none;
+    padding-left:0;
+    padding-right: 0;
+}
+
+.options_border {
+    border:2px solid  rgba(255, 69, 0, .2);
+    border-radius:4px;
+    padding-left:1em;
+    margin-bottom:1em;
+}
+
+.options_border h5 {
+    float:left;
+    color:#999;
+}
+
+.table table.options_table {
+    background-color: transparent;
+    margin-left:-5px;
+}
+
+.table table.options_table tr > td {
+    border-top: none;
+}
+
+.order-create .table-condensed > tbody > tr > td {
+    padding-top: 1px;
+    padding-bottom: 1px;
+}
+
+.order-create .table table.options_table > tbody > tr > td {
+    padding: 0 0 5px 5px;
+}
+
+.order-create .table table.options_table > tbody > tr > td.op_option_name {
+    width: 30%;
+}
+
+table.options_table input.btn-xs {
+
+}
+.order-create #pricing-table input {
+    width:100%;
+}
+.order-create #action-buttons{
+    margin-top:6em;
+}
+.order-create #action-buttons .btn-group {
+    margin-top:.6em;
+}
+.order-create .btn-xs {
+    line-height: 1;
+    margin-bottom:-20px;
+}
+#edit_fabrics h5 {
+    margin-top:0;
+}
+
+/*  Order Create END  */
+
+.label_right {
+    text-align: right;
+}
+
+.inside_label {
+    font-weight: bold;
+}
+
+tr.order_line_edit input {
+    width: 50px;
+}
+
+tbody.order_line_group_new {
+    border:none;
+}
+
+.options-table select.form-control {margin-left:-.8em; height:2em;font-size: 90%;}
+.options-table.table tr td { height: 2.5em; vertical-align: middle;}
+.option-name {width:40%;}
+.option-sub {width:20%;}
+.option-cost {width:15%;}
+.option-cost-input {height: 2em; font-size: 90%}
+.option-buttons {width:25%;}
+.option-buttons span,
+.option-buttons button.btn,
+.option-buttons a {float:right;font-size:90%;}
+.option-buttons a {float:left;color:#aaa;}
+
+.btn-file {
+    position: relative;
+    overflow: hidden;
+}
+.btn-file input[type=file] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    font-size: 100px;
+    text-align: right;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    outline: none;
+    background: white;
+    cursor: inherit;
+    display: block;
+}
+
+/* Order View */
+
+.finalized .order-line.row {
+    margin-left:-5px;
+    margin-right:-5px;
+    font-size:90%;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    margin-bottom:0;
+    margin-top:0;
+}
+.finalized .order-line .row table {
+    margin-bottom:2px;
+}
+
+.finalized .order-line.row:nth-child(even){
+  background-color: #eee;
+}
+.finalized .order-line.row:nth-child(odd){
+  background-color: none;
+}
+

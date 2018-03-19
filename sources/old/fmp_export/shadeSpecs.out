@@ -1,0 +1,55 @@
+Calico Price	NUMBER	1
+cnConstant1	NUMBER	1
+currentfilepath	NUMBER	1
+CutLengthAddInches	NUMBER	1
+CutLengthFormula	TEXT	1
+deco	NUMBER	1
+DefaultPanelSpacing	NUMBER	1
+HeightPoufAdjustment	NUMBER	1
+HeightRodAdjustment	NUMBER	1
+nHeaderboardIn	TEXT	1
+nHeaderboardOut	TEXT	1
+nLengthMultiply	NUMBER	1
+nLengthPlus	NUMBER	1
+nOuterRings	NUMBER	1
+nOuterRingsDivisor	NUMBER	1
+nPricePlusPercentage	NUMBER	1
+nShadePrice	NUMBER	1
+nShadeScore	NUMBER	1
+nWidthMultiply	NUMBER	1
+nWidthPlus	NUMBER	1
+poufy	TEXT	1
+Pricing_Type	TEXT	1
+RingRowMinimum	NUMBER	1
+RodType	TEXT	1
+shadeShape	TEXT	1
+Shade_Type	TEXT	1
+softCasual	TEXT	1
+TDBU Clutch Deduction	TEXT	1
+TDBU Cord Lock Deduction	TEXT	1
+TDBU Motorized Deduction	TEXT	1
+tRingOrGrommet	TEXT	1
+tShadeName	TEXT	1
+tSideHemType	TEXT	1
+tTakeLining	TEXT	1
+tTakeReturn	TEXT	1
+ValanceMinimum	NUMBER	1
+Valance_Price	NUMBER	1
+zdDateCreated	DATE	1
+zdModDate	DATE	1
+zgtPrefsKey	TEXT	1
+ziModTime	TIME	1
+ziTimeCreated	TIME	1
+ztCreatorName	TEXT	1
+ztModName	TEXT	1
+ztSerNo	TEXT	1
+_gtCurrKey	TEXT	1
+CutLengthAddInches_inv	NUMBER	1
+nLengthMultiply_inv	NUMBER	1
+nLengthPlus_inv	NUMBER	1
+nWidthMultiply_inv	NUMBER	1
+nWidthPlus_inv	NUMBER	1
+nPoufAdjustment_inv	NUMBER	1
+book	NUMBER	1
+woodWoven	TEXT	1
+RodDeduction	NUMBER	1

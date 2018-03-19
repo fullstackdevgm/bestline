@@ -1,0 +1,54 @@
+ID	TEXT	1
+Creation_Date	DATE	1
+Modification_Date	DATE	1
+Creation_Time	TIME	1
+Modification_Time	TIME	1
+Creation_User	TEXT	1
+Modification_User	TEXT	1
+One	NUMBER	1
+gText_1	TEXT	1
+gText_2	TEXT	1
+gText_3	TEXT	1
+gText_4	TEXT	1
+gText_5	TEXT	1
+gNumber_1	NUMBER	1
+gNumber_2	NUMBER	1
+gNumber_3	NUMBER	1
+gNumber_4	NUMBER	1
+gNumber_5	NUMBER	1
+Contact Number	TEXT	1
+First Name	TEXT	1
+Last Name	TEXT	1
+Company Name	TEXT	1
+Address1	TEXT	1
+Address2	TEXT	1
+City	TEXT	1
+State	TEXT	1
+Zip	TEXT	1
+Phone1	TEXT	1
+Phone2	TEXT	1
+Fax	TEXT	1
+Email	TEXT	1
+Notes	TEXT	1
+Contact View	TEXT	1
+Random Key	TEXT	1
+Shipping First Name	TEXT	1
+Shipping Last Name	TEXT	1
+Shipping Address1	TEXT	1
+Shipping Address2	TEXT	1
+Shipping City	TEXT	1
+Shipping State	TEXT	1
+Shipping Zip	TEXT	1
+Shipping Company Name	TEXT	1
+CityAbbrev	TEXT	1
+CustomerAbbrev	TEXT	1
+Name Check	TEXT	1
+Sales Rep	TEXT	1
+Mobile Number	TEXT	1
+Account_No_With_Client	TEXT	1
+Credit	TEXT	1
+Name2	TEXT	1
+Customer Type	TEXT	1
+NameCalc	TEXT	1
+Area	TEXT	1
+HideOnLabel	TEXT	1

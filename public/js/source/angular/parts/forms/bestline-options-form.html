@@ -1,0 +1,209 @@
+<div ng-form="optionForm" class="directives optionForm">
+  <h2>
+    <span ng-hide="vmOptionForm.loadingData">
+      <span ng-show="option.id">Edit Option: {[{ option.name }]}</span>
+      <span ng-hide="option.id">
+        <span ng-hide="option.id">New</span><span ng-show="option.id">Edit</span>
+        <span ng-hide="option.parent_id">Option</span><span ng-show="option.parent_id">Suboption</span>:
+        {[{ option.name }]}
+      </span>
+    </span>
+    <span ng-show="vmOptionForm.loadingData">
+      <i class="fa fa-circle-o-notch fa-spin"></i>
+    </span>
+  </h2>
+
+  <div bestline-api-errors="vmOptionForm.apiErrors"></div>
+
+  <div ng-if="!vmOptionForm.loadingData">
+
+  <div class="row">
+    <div class="col-md-6">
+      <div class="form-group" ng-class="{'has-error': (vmOptionForm.showFormErrors && optionForm.name.$invalid)}">
+        <label>Name <span ng-show="vmOptionForm.showFormErrors && optionForm.name.$error.required" class="text-danger">is required</span></label>
+        <input class="form-control input-sm" type="text" name="name" ng-required="true" ng-model="option.name"/>
+      </div>
+
+    </div>
+    <div class="col-md-6">
+      <div class="form-group">
+        <label>Attributes</label><br/>
+        <label class="checkbox-inline">
+          <input type="checkbox" name="is_embellishment_option" ng-true-value="1" ng-false-value="0" ng-model="option.is_embellishment_option">Embellishment Option
+          <span bestline-tooltip>Makes the option available when fabric type "embellishment" is chosen</span>
+        </label>
+        <label class="checkbox-inline">
+          <input type="checkbox" name="is_interlining_option" ng-true-value="1" ng-false-value="0" ng-model="option.is_interlining_option">Interlining Option
+          <span bestline-tooltip>Makes the option available when fabric type "interlining" is chosen</span>
+        </label>
+
+        <label class="checkbox-inline">
+          <input type="checkbox" name="price_as_fabric" ng-true-value="1" ng-false-value="0" ng-model="option.price_as_fabric">Price as a fabric
+          <span bestline-tooltip>Price the option using fabric pricing &amp; calculations</span>
+        </label>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="well" ng-if="option.parent_id">
+    <h4>Pricing</h4>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="form-group">
+          <label>Price</label>
+          <input class="form-control input-sm" type="text" step="any" name="pricing_value" ng-model="option.pricing_value"/>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="form-group">
+          <label>Pricing Type</label>
+          <select class="form-control"
+            ng-model="option.pricing_type"
+            ng-options="typeSlug as typeName for (typeSlug, typeName) in vmOptionForm.selectOptions.pricing_types">
+            <option value="">Select a pricing type...</option>
+          </select>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="form-group">
+          <label>Min Charge</label>
+          <input class="form-control input-sm" type="text" step="any" name="min_charge" ng-model="option.min_charge"/>
+        </div>
+      </div>
+    </div>
+    <div class="row" ng-if="option.pricing_type === 'tier'">
+      <div class="col-md-12">
+        <div class="form-group">
+          <label>Tier Pricing</label>
+          <span bestline-tooltip>
+            <span class="text-warning">a:3:</span>{<span class="text-danger">i:72;</span><span class="text-primary">d:100;</span>i:144;d:150;<span class="text-success">i:9999;</span>d:250;}
+            <br/>
+            <span class="text-warning">a:3:    = 3 total tiers</span>
+            <br/>
+            <span class="text-danger">i:72;   = First tier, in inches</span>
+            <br/>
+            <span class="text-primary  ">d:100;  = First tier charge, dollars</span>
+            <br/>
+            <span class="text-success">i:9999; = Infinity (greater than)</span>
+           </span>
+
+          <input class="form-control input-sm" type="text" step="any" name="tier_formula" ng-model="option.tier_formula"/>
+        </div>
+      </div>
+    </div>
+
+    <div bestline-company-prices bc-prices="vmOptionForm.companyPrices" bc-parent="option" bc-options="vmOptionForm.companyPricesOptions" class="well well-white"></div>
+  </div>
+
+  <div class="well">
+    <h4>Notes</h4>
+    <div class="row">
+      <div class="col-md-3">
+        <div class="form-group">
+          <label for="comment">Assembler Note:</label>
+          <textarea class="form-control input-sm" rows="4" name="assembler_note" ng-model="option.assembler_note"></textarea>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="form-group">
+          <label for="comment">Embellisher Note:</label>
+          <textarea class="form-control input-sm" rows="4" name="embellisher_note" ng-model="option.embellisher_note"></textarea>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="form-group">
+          <label for="comment">Seamstress Note:</label>
+          <textarea class="form-control input-sm" rows="4" name="seamstress_note" ng-model="option.seamstress_note"></textarea>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="form-group">
+          <label for="comment">Other Notes:</label>
+          <textarea class="form-control input-sm" rows="4" name="notes" ng-model="option.notes"></textarea>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="well" ng-if="option.parent_id">
+    <h4>Parent</h4>
+    <table class="table table-striped b-margin b-bottom-0">
+      <tr>
+        <th>Name</th>
+        <th>Actions</th>
+      </tr>
+      <tr>
+        <td>{[{ option.parents.name }]}</td>
+        <td>
+          <span ng-hide="option.loading">
+            <a class="btn btn-primary btn-xs" href="/parts/options/{[{ option.parents.id }]}">Edit</a>
+          </span>
+        </td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="well" ng-if="!option.parent_id">
+    <div class="row">
+      <div class="col-md-8">
+        <h4>Suboptions</h4>
+      </div>
+      <div class="col-md-4 text-right">
+        <a ng-show="option.id" class="btn btn-primary btn-xs" href="/parts/options/new?parent={[{ option.id }]}">New Suboption</a>
+      </div>
+    </div>
+    <table class="table table-striped b-margin b-bottom-0" ng-show="option.id">
+      <tr>
+        <th>Name</th>
+        <th>Actions</th>
+      </tr>
+      <tr ng-repeat="suboption in option.sub_options">
+        <td>{[{ suboption.name }]}</td>
+        <td>
+          <span ng-hide="option.loading">
+            <a class="btn btn-primary btn-xs" href="/parts/options/{[{ suboption.id }]}">Edit</a>
+          </span>
+        </td>
+      </tr>
+      <tr ng-show="option.sub_options.length === 0">
+        <td colspan="2">This option has no suboptions</td>
+      </tr>
+    </table>
+    <p ng-hide="option.id">You must save a new option before you can add suboptions</p>
+  </div>
+</div>
+
+<div bestline-api-errors="option.apiErrors"></div>
+
+<div class="row b-margin b-bottom" ng-hide="vmOptionForm.loadingData">
+  <div class="col-md-6">
+    <span ng-hide="option.busy">
+      <a class="btn btn-sm btn-default" href=""
+        ng-hide="vmOptionForm.showDeleteConfirm"
+        ng-click="vmOptionForm.showDeleteConfirm = true">
+        Delete
+      </a>
+      <a class="btn btn-sm btn-danger" href=""
+        ng-show="vmOptionForm.showDeleteConfirm"
+        ng-click="vmOptionForm.deleteOption(option)">
+        Really Delete?
+      </a>
+    </span>
+  </div>
+  <div class="col-md-6">
+    <div class="text-right">
+      <div ng-hide="option.busy">
+        <a class="btn btn-sm btn-default" title="" href="" ng-click="vmOptionForm.cancelEdit()">Cancel</a>
+        <a class="btn btn-sm btn-primary" title="" href="" ng-click="vmOptionForm.saveOption(option, optionForm)">Save</a>
+        <a class="btn btn-sm btn-primary" title="" href="" ng-click="vmOptionForm.saveOptionAndClose(option, optionForm)">Save & Close</a>
+      </div>
+      <div ng-show="option.busy">
+        <i class="fa fa-circle-o-notch fa-spin fa-2x"></i>
+      </div>
+    </div>
+  </div>
+
+  </div>
+
+</div>

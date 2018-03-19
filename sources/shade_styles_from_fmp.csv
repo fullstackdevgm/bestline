@@ -1,0 +1,130 @@
+shade_name,pricing_type,shade_price,cut_length_add_inches_invoice,cut_length_formula,default_panel_spacing,pouf_height_adjustment,rod_height_adjustment,headerboard_deduction_if_in,headerboard_deduction_if_out,length_multiplier,length_multipler_invoice,length_plus,length_plus_invoic,outer_rings,outer_rings_divsor,pouf_adjustment_invoice,add_percentage_to_price,width_multiplier,width_multiplier_invoice,width_plus,width_plus_invoic,is_pouf,ring_row_minimum ,rod_deduction,rod_type,shade_type,shade_shape,tdbu_clutch_deduction,tdbu_cord_lock_deduction,tdbu_motorized_deduction,ring_hardware,side_hem_width,take_lining,take_return,valance_price,valance_minimum_charge
+Austrian,Square Feet,15,,FH + Board,,,,.125,.125,3,3,,,1,16.875,,,1.5,2,,,,,0.75,Flat Plastic,Shade,Austrian,,,,White Ring,1.25,Yes,No,,0.01
+Casual with Tails-o,Square Feet,8.5,,FH + Board,,17,22,.125,0,,,,30,1,,,,,,8,10,Yes,2,,,Shade,Square/Trapezoid,,,,Brass Ring,1,Yes,Yes,,
+Soft Casual-o,Square Feet,8.5,,FH + Board,,17,22,.125,0,,,,30,1,45,,,,,8,10,Yes,2,,,Shade,Square/Trapezoid,,,,Brass Ring,1,Yes,Yes,,
+Gathered Casual-o,Square Feet,9,,FH + Board,,17,22,.125,0,,,,30,1,,,,1.5,1.5,,,Yes,,,,Shade,Square,,,,Brass Ring,1,Yes,Yes,,0.01
+Pltd. Soft Casual-o,Square Feet,9,,FH + Board,,17,22,.125,0,,,30,30,1,,,,1.35,1.35,,,Yes,2,,,Shade,Square,,,,Brass Ring,1,Yes,Yes,,0.01
+Stagecoach,Square Feet,9,30,,,,,.125,.125,,2,,,,,,,,,4,3,,,,,Shade,Square,,,,White Ring,,,No,,
+Soft Fold,Square Feet,10,24,Spaces x PS,,,,.125,.125,,2,,,1.5,15,,,,,5,5,,,1,Round Plastic,Shade,Square,,,,White Ring,1,Yes,No,,0.01
+Shirred Soft Fold,Square Feet,12.5,24,Spaces x PS,,,,.125,.125,,2,,,1.5,15,,,,2.5,5,5,,,1,Round Plastic,Shade,Square,,,,White Ring,1,Yes,No,,0.1
+Deco Fold,Square Feet,11.26,24,Spaces x PS,6,,,.125,.125,,2,,,1.5,15,,,,,5,5,,,1,Round Plastic,Shade,Square,,,,Brass Ring,1.5,Yes,No,,0.01
+Front Slat,Square Feet,9,,L + Spaces x 2,,,,.125,.125,,1.75,,,1.5,15,,,,,5,5,,,1,Round Plastic,Shade,Square,,,,Brass Ring,1,Yes,No,,
+"Back Slat
+",Square Feet,9,,L + Spaces x 2,,,,,.125,,1.75,,,1.5,15,,,,,5,5,,,1,Round Plastic,Shade,Square,,,,Brass Ring,1,Yes,No,,
+Single Tuk,Square Feet,9,,L + Spaces x 2,,,,.125,.125,1.75,1.75,,,1.5,15,,,,,10,10,,3,0.25,Flat Plastic,Shade,Square,,,,Silver Grommet,2,Yes,No,,0.01
+Gathered Tuk,Square Feet,12.5,,,,,27,.125,.125,1.75,1.75,,,1.5,15,,,1.5,1.5,,,,3,,,Shade,Square,,,,Silver Grommet,2,Yes,No,,0.01
+Double Tuk,Square Feet,11.26,,L + Spaces x 4,,,,.125,.125,,2,,,1.5,15,,,,,10,10,,3,0.25,Flat Plastic,Shade,Square,,,,Silver Grommet,2,Yes,No,,0.01
+"Triple Tuk
+",Square Feet,12.5,,L + Spaces x 6,,,,.125,.125,,2.5,,,1.5,15,,,,,10,10,,3,0.25,Flat Plastic,Shade,Square,,,,Silver Grommet,2,Yes,No,,0.01
+Full Tuk,Square Feet,12,,,,,,.125,.125,,3,,,1.5,15,,,,,10,10,,3,,,Shade,Square,,,,Silver Grommet,2,Yes,No,,
+Dog Ear,Square Feet,10,,FH + Board,,22,27,.125,0,,,,30,,,,0.35,1.5,2,,,Yes,,,,Shade,Dog Ear,,,,Brass Ring,1,Yes,Yes,,0.01
+Balloon,Square Feet,11.26,,FH + Board,,27,32,.125,0,,,,30,0,16.875,,,2.5,2.5,,,Yes,,,,Shade,Balloon,,,,Brass Ring,1,Yes,No,,0.01
+Cloud,Square Feet,11.26,,FH + Board,,27,32,.125,0,,,,30,0,12,,,3,3,,,Yes,,,,Shade,SCloud,,,,Brass Ring,1,Yes,Yes,,0.01
+Pole Cloud,Square Feet,11.26,,FH + Board,,27,32,.125,0,,,,30,0,12,,,3,3,,,Yes,,,,Shade,PCloud,,,,Brass Ring,1,Yes,Yes,,
+Casual-o,Square Feet,8.5,,FH + Board,,,,.125,.125,,,15,15,1,12,,,,,5,5,,2,0.25,,Shade,Square,,,,Brass Ring,1,Yes,No,,0.01
+Soft Fold TD/BU,Square Feet,13.5,49,Spaces x PS,,,,.125,.125,,2,,,1.5,20,,0.35,,,5,5,,3,1,Wood,Shade,Square,3.25,2.25,5,White Ring,1,Yes,No,,
+Soft Fold BU,Square Feet,13,49,Spaces x PS,,,,.125,.125,,2,,,1.5,20,,0.3,,,5,5,,2,1,Wood,Shade,TDBU/BU,3.25,2.25,5,White Ring,1,Yes,No,,
+Front Slat TD/BU,Square Feet,12.15,25,L + Spaces x 2,,,,.125,.125,,1.75,,,1.5,38,,0.35,,,5,5,,2,1,Wood,Shade,Square,3.25,2.25,5,Brass Ring,1,Yes,No,,
+Front Slat BU,Square Feet,11.7,25,L + Spaces x 2,,,,.125,.125,,1.75,,,1.5,38,,0.3,,,5,5,,2,,,Shade,Square,3.25,2.25,5,Brass Ring,1,Yes,No,,
+Back Slat TD/BU,Square Feet,12.15,25,L + Spaces x 2,,,,,.125,,1.75,,,1.5,38,,0.35,,,5,5,,2,1,Wood,Shade,Square,3.25,2.25,5,Brass Ring,1,Yes,No,,
+Back Slat BU,Square Feet,11.7,25,L + Spaces x 2,,,,,.125,,1.75,,,1.5,38,,0.3,,,5,5,,2,,,Shade,Square,3.25,2.25,5,Brass Ring,1,Yes,No,,
+Single Tuk TD/BU,Square Feet,12.15,25,L + Spaces x 2,,,,.125,.125,1.75,1.75,,,1.5,15,,0.35,,,5,5,,3,,,Shade,Square,3.25,2.25,5,Silver Grommet,2,Yes,No,,
+Single Tuk BU,Square Feet,11.7,25,L + Spaces x 2,,,,.125,.125,,1.75,,,1.5,15,,0.3,1.5,,,5,,3,,,Shade,Square,3.25,2.25,5,Silver Grommet,2,Yes,No,,
+"
+",Square Feet,11.48,25,FH + Board,,,,.125,.125,,,,15,1,12,,0.35,,,5,5,,,,,Shade,Square,3.25,2.25,5,Brass Ring,1,Yes,No,,
+Casual BU-o,Square Feet,11.05,25,FH + Board,,,,.125,.125,,,28,15,1,15,,0.3,,,5,5,,2,,,Shade,Square,3.25,2.25,5,Brass Ring,1,Yes,No,,
+Custom Line Item,Square Feet,,,,,,,,,,,,,,,,,,,,,,,,,Shade,Square,,,,,,,,,
+Balloon Royale,Square Feet,15,,FH + Board,,27,32,.125,0,,,,30,0,16.875,,,3.5,3.5,,,Yes,,,,Shade,Balloon,,,,Brass Ring,1,Yes,No,,
+"Flat Valance -Max drop 6"" ",Linear Foot,5,,,,,,,,3,3,,,,,,,,,5,5,,,,,Valance,Square,,,,,,,,5,5
+Double Tuk TD/BU,Square Feet,15.2,25,L + Spaces x 4,,,,.125,.125,,2,,,1.5,15,,,,,10,10,,3,,,Shade,Square,,,,Silver Grommet,2,Yes,No,,
+Deco Fold BU,Square Feet,14.64,49,Spaces x PS,,,,.125,.125,,2,,,1.5,38,,0.3,,,5,5,,3,,,Shade,Square,3.25,2.25,5,Brass Ring,1.5,Yes,No,,
+Deco Fold TD/BU,Square Feet,15.2,49,Spaces x PS,,,,.125,.125,,2,,,1.5,38,,0.3,,,5,5,,3,,,Shade,Square,3.25,2.25,5,Brass Ring,1.5,Yes,No,,
+Special Order,Square Feet,,,,,,,,,,,,,,,,,,,,,,,,,Shade,,,,,,,,,,
+Dog Ear - Gathered,Square Feet,10,,FH + Board,,22,27,.125,0,,,,30,,,,0.35,2,2,,,Yes,2,,,Shade,Dog Ear,,,,Brass Ring,1,Yes,Yes,,
+Pltd.Soft Casual w/Tails-o,Square Feet,9,,FH + Board,,17,22,.125,0,,,30,30,1,,,,1.35,1.35,,,Yes,2,,,Shade,Square,,,,Brass Ring,1,Yes,Yes,,
+Dog Ear Valance,Linear Foot,10,,FH + Board,,22,27,.125,0,,,,30,,,,0.35,1.5,2,,,Yes,2,,,Valance,Dog Ear,,,,Brass Ring,1,Yes,Yes,30,4
+Cloud Valance,Linear Foot,11.26,,FH + Board,,27,32,.125,0,,,,30,0,12,,,3,3,,,Yes,,,,Valance,SCloud,,,,Brass Ring,1,Yes,Yes,35,4
+Cloud w/4 Cord Shirring,Square Feet,11.26,,FH + Board,,27,32,.125,0,,,,30,0,12,,,3,3,,,Yes,,,,Shade,SCloud,,,,Brass Ring,1,Yes,Yes,,
+"Box Pltd. Valance(up to12"")",Linear Foot,8,,,,,,,,3,3,,,,,,,,,20,17,,,,,Valance,Square,,,,,,,,9,5
+Triple Tuk TD/BU,Square Feet,16.88,,FH + Board,,,,.125,.125,,,,,1.5,15,,,,,10,,,3,,,Shade,Square,,,,Silver Grommet,2,Yes,No,,
+Triple Tuk BU,Square Feet,16.25,,FH + Board,,,,.125,.125,,,,,1.5,15,,,,2.5,10,10,,3,,,Shade,Square,,,,Silver Grommet,2,Yes,No,,
+"Box Pltd. Valance(up to 24"")",Linear Foot,8,,,,,,,,3,3,,,,,,,,,20,17,,,,,Valance,Square,,,,,,,,11,5
+"Box Pltd. Valance(up to18"")",Linear Foot,8,,,,,,,,3,3,,,,,,,,,20,17,,,,,Valance,Square,,,,,,,,10,5
+"Box Pltd. Valance(up to 6"")",Linear Foot,8,,,,,,,,3,3,,,,,,,,,20,17,no,,,,Valance,Square,,,,,,,,8,5
+"Valance - 12"" Straight",Linear Foot,4,,,,,,,,3,3,,,,,,,,,5,5,no,,,,Valance,Square,,,,,,,,6,5
+Smocked Cloud,Square Feet,11.26,,FH + Board,,27,32,.125,0,,,,30,0,12,,,3,3,,,Yes,,,,Shade,SCloud,,,,Brass Ring,1,Yes,Yes,,
+Balloon Valance,Square Feet,11.26,,FH + Board,,27,32,.125,0,,,,30,0,16.875,,,2.5,2.5,,,Yes,,,,Valance,Balloon,,,,Brass Ring,1,Yes,No,35,4
+Casual with Tails Valance-o,Square Feet,8.5,,FH + Board,,17,22,.125,0,,,,30,1,,,,,,8,10,Yes,2,,,Valance,Square/Trapezoid,,,,Brass Ring,1,Yes,Yes,,4
+Soft Casual Valance-o,Square Feet,8.5,,FH + Board,,17,22,.125,0,,,,30,1,38,,,,,8,10,Yes,2,,,Valance,Square/Trapezoid,,,,Brass Ring,1,Yes,Yes,,4
+Soft Fold Valance,Linear Foot,10,24,Spaces x PS,,,,.125,.125,,2,,,1.5,15,,,,,5,5,no,,1,Round Plastic,Valance,Square,,,,White Ring,1,Yes,Yes,28,4
+"Flat Valance - Max drop 24"" ",Linear Foot,,,,,,,,,3,3,,,,,,,,,5,5,no,,,,Valance,Square,,,,,,,,8,5
+"Flat Valance -Max drop 12"" ",Linear Foot,,,,,,,,,3,3,,,,,,,,,5,5,no,,,,Valance,Square,,,,,,,,6,5
+"Flat Valance -Max drop 18"" ",Linear Foot,,,,,,,,,3,3,,,,,,,,,5,5,no,,,,Valance,Square,,,,,,,,7,5
+Deco Fold Valance,Square Feet,11.26,15,Spaces x PS,,,,.125,.125,,2,,,1.5,15,,,,,5,5,no,,,,Valance,Square,,,,Brass Ring,1.5,Yes,Yes,32.5,4
+Stagecoach Valance,Square Feet,,30,Spaces x PS,,,,.125,.125,2.5,2,,,1.5,15,,,,,5,5,no,,,,Valance,Square,,,,White Ring,1,Yes,No,26,4
+Double Tuk - BU,Square Feet,14.64,25,L + Spaces x 4,,,,.125,.125,,2,,,1.5,15,,,,,10,10,no,3,,,Shade,Square,,,,Silver Grommet,2,Yes,No,,
+Pole Cloud Valance,Linear Foot,11.26,,FH + Board,,27,32,.125,0,,,,30,0,12,,,3,3,,,no,,,,Valance,SCloud,,,,Brass Ring,1,Yes,Yes,35,4
+Pinch Pleated Panel,Flat Fee,8,,FH + Board,,,,.125,.125,,,,,1,12,,,,,5,,no,,,,Valance,Square,,,,Brass Ring,1,Yes,No,98,
+"Quadruple Tuk
+",Square Feet,12,,L + Spaces x 6,,,,.125,.125,,,,,1.5,15,,,,,10,,no,3,,,Shade,Square,,,,Silver Grommet,2,Yes,No,,
+Fan Pleated Casual-o,Square Feet,9,,FH + Board,,17,22,.125,0,,,30,30,1,,,,,,12,12,no,2,,,Shade,Square,,,,Brass Ring,1,Yes,Yes,,
+"Flat Valance -Max drop 12""(not Selflined) ",Linear Foot,,,,,,,,,3,3,,,,,,,,,5,5,no,,,,Valance,Square,,,,,,,,9,5
+"Flat Valance -Max drop 18"" (not Selflined)",Linear Foot,,,,,,,,,3,3,,,,,,,,,5,5,no,,,,Valance,Square,,,,,,,,10,5
+"Flat Valance - Max drop 24"" (not Selflined)",Linear Foot,,,,,,,,,3,3,,,,,,,,,5,5,no,,,,Valance,Square,,,,,,,,11,5
+"Box Pltd. Valance(up to 12"") (not Selflined)",Linear Foot,,,,,,,,,3,3,,,,,,,,,20,17,no,,,,Valance,Square,,,,,,,,12,5
+"Box Pltd. Valance(up to 18"") (not Selflined)",Linear Foot,8,,,,,,,,3,3,,,,,,,,,20,17,no,,,,Valance,Square,,,,,,,,13,5
+"Box Pltd. Valance(up to 24"") (not Selflined)",Linear Foot,8,,,,,,,,3,3,,,,,,,,,20,17,no,,,,Valance,Square,,,,,,,,14,5
+"Scalloped Valance (up to6"")",Linear Foot,,,,,,,,,3,3,,,,,,,,,5,5,no,,,,Valance,Square,,,,,,,,22,5
+"Scalloped Valance (up to12"")",Linear Foot,,,,,,,,,3,3,,,,,,,,,5,5,no,,,,Valance,Square,,,,,,,,24,5
+"Scalloped Valance (up to18"")",Linear Foot,,,,,,,,,3,3,,,,,,,,,5,5,no,,,,Valance,Square,,,,,,,,25,5
+"Scalloped Valance (up to24"")",Linear Foot,,,,,,,,,3,3,,,,,,,,,5,5,no,,,,Valance,Square,,,,,,,,26,5
+"Flat Valance -Max drop 6"" ",Linear Foot,5,,,,,,,,3,3,,,,,,,,,5,5,no,,,,Valance,Square,,,,,,,,5,5
+Gathered Soft Casual-o,Square Feet,9,,FH + Board,,17,22,.125,0,,,,30,1,,,,1.5,1.5,,,Yes,,,,Shade,Square,,,,Brass Ring,1,Yes,Yes,,0.01
+"Cornice - under 5.5"" Depth",Linear Foot,28,,FH + Board,,,,.125,0,,,15,15,1,,,,10,10,,,no,,,,Shade,Square,,,,,1,Yes,Yes,28,
+"Pillow - Bolster Flat  Edge  7"" x 20"" ",Flat Fee,85,,FH + Board,,,,,,,,,,,,,,,,,,no,,,,Shade,,,,,,,Yes,,,
+"Pillow - Bolster Gathered  Edge  7"" x 20""",Flat Fee,85,,FH + Board,,,,,,,,,,,,,,,,,,no,,,,Shade,,,,,,,Yes,,,
+"Pillow - Flanged Edge up to 24""",Flat Fee,75,,FH + Board,,,,,,,,,,,,,,,,,,no,,,,Shade,Square,,,,,,Yes,,,
+"Pillow - Flanged Edge up to 36""",Flat Fee,85,,FH + Board,,,,,,,,,,,,,,,,,,no,,,,Shade,Square,,,,,,Yes,,,
+"Pillow - Soft Edge up to 36""",Flat Fee,85,,FH + Board,,,,,,,,,,,,,,,,,,no,,,,Shade,Square,,,,,,Yes,,,
+"Pillow - Soft Edge up to 24""",Flat Fee,75,,FH + Board,,,,,,,,,,,,,,,,,,no,,,,Shade,Square,,,,,,Yes,,,
+"Pillow - Knife Edge up to 24""",Flat Fee,60,,FH + Board,,,,,,,,,,,,,0,,,,,no,,,,Shade,Square,,,,,,Yes,,,
+"Pillow - Knife Edge up to 36""",Flat Fee,75,,FH + Board,,,,,,,,,,,,,,,,,,no,,,,Shade,Square,,,,,,Yes,,,
+"Pillow - Grid Face up to 36""",Flat Fee,120,,FH + Board,,,,,,,,,,,,,,,,,,no,,,,Shade,Square,,,,,,Yes,,,
+"Pillow - Grid Face up to 24""",Flat Fee,100,,FH + Board,,,,,,,,,,,,,,,,,,no,,,,Shade,Square,,,,,,Yes,,,
+"Pillow - Dart Edge up to 24""",Flat Fee,75,,FH + Board,,,,,,,,,,,,,,,,,,no,,,,Shade,Square,,,,,,Yes,,,
+"Pillow - Dart Edge up to 36""",Flat Fee,85,,FH + Board,,,,,,,,,,,,,,,,,,no,,,,Shade,Square,,,,,,Yes,,,
+Butterly,Square Feet,8.5,,FH + Board,,17,22,.125,0,,,,30,1,,,,,,8,10,no,1,,,Shade,Square/Trapezoid,,,,Brass Ring,1,Yes,Yes,,
+"Pillow - Bolster Flat  Edge 9""x 24"" ",Flat Fee,90,,FH + Board,,,,,,,,,,,,,,,,,,no,,,,Shade,,,,,,,Yes,,,
+"Shirred Valance (up to12"")",Linear Foot,15,,,,,,,,,,10,10,,,,,3,3,,,no,,,,Valance,Square,,,,,,,,,5
+Casual TD/BU-o,Square Feet,11.48,25,FH + Board,,,,,.125,,,,35,1.5,15,,0.35,,,5,5,no,2,1,,Shade,Square,3.25,2.25,5,Brass Ring,1,Yes,No,,
+Shirred Front Slat,Square Feet,11.5,,,,,,,,,1.75,,,,15,,,,2,5,,no,,,,Shade,Square,,,,,,,No,,0.1
+Casual BU - NO Valance-o,Square Feet,10.63,15,FH + Board,,,,.125,.125,,,15,15,1,15,,0.3,,,5,5,no,2,,,Shade,Square,3.25,2.25,5,Brass Ring,1,Yes,No,,
+Casual TD/BU - NO Valance-o,Square Feet,11.05,15,FH + Board,,,,,.125,,,15,15,1,15,,0.35,,,5,5,no,2,1,,Shade,Square,3.25,2.25,5,Brass Ring,1,Yes,No,,
+Back Slat BU - NO VALANCE,Square Feet,11.25,25,L + Spaces x 2,,,,,.125,,1.75,,,1.5,38,,0.3,,,5,5,no,2,,,Shade,Square,3.25,2.25,5,Brass Ring,1,Yes,No,,
+Back Slat TD/BU - NO VALANCE,Square Feet,11.7,25,L + Spaces x 2,,,,,.125,,1.75,,,1.5,38,,0.3,,,5,5,no,2,,,Shade,Square,3.25,2.25,5,Brass Ring,1,Yes,No,,
+Front Slat TD/BU - NO VALANCE,Square Feet,12.15,25,L + Spaces x 2,,,,.125,.125,,1.75,,,1.5,38,,0.35,,,5,5,no,2,1,Wood,Shade,Square,3.25,2.25,5,Brass Ring,1,Yes,No,,
+Front Slat BU - NO VALANCE,Square Feet,11.7,25,L + Spaces x 2,,,,.125,.125,,1.75,,,1.5,38,,0.3,,,5,5,no,2,,,Shade,Square,3.25,2.25,5,Brass Ring,1,Yes,No,,
+RM-Soft Fold (shoo1/9),Square Feet,10,24,Spaces x PS,,,,.125,.125,,2,,,1.5,15,,,,,5,5,no,,1,Round Plastic,Shade,Square,,,,White Ring,1,Yes,No,,0.01
+RM-Soft Fold  BU (sh001a/11.7),Square Feet,13,49,Spaces x PS,,,,.125,.125,,2,,,1.5,20,,0.3,,,5,5,no,2,1,Wood,Shade,TDBU/BU,3.25,2.25,5,White Ring,1,Yes,No,,
+RM-Soft Fold TD/BU (sh001b/12.15),Square Feet,13.5,49,Spaces x PS,,,,.125,.125,,2,,,1.5,20,,0.35,,,5,5,no,3,,Wood,Shade,TDBU/BU,3.25,2.25,5,White Ring,1,Yes,No,,
+RM-Austrian (shoo7/11.5),Square Feet,15,,FH + Board,,,,.125,.125,3,3,,,1,16.875,,,1.5,2,,,Yes,,0.75,Flat Plastic,Shade,Austrian,,,,White Ring,1.25,Yes,No,,0.01
+RM-Balloon (SH009/8.50),Square Feet,11.26,,FH + Board,,27,32,.125,0,,,,30,0,16.875,,,2.5,2.5,,,Yes,,,,Shade,Balloon,,,,Brass Ring,1,Yes,No,,0.01
+RM-Casual (SH003/7.50),Square Feet,8.5,,FH + Board,,,,.125,.125,,,15,15,1,12,,,,,5,5,no,2,0.25,,Shade,Square,,,,Brass Ring,1,Yes,No,,0.01
+Soft Fold TD/BU-NO Valance,Square Feet,13,24,Spaces x PS,,,,.125,.125,,2,,,1.5,20,,0.3,,,5,5,no,3,1,Wood,Shade,Square,3.25,2.25,5,White Ring,1,Yes,No,,
+RM-Pole Cloud (shoo8/8.5),Square Feet,11.26,,FH + Board,,27,32,.125,0,,,,30,0,12,,,3,3,,,Yes,,,,Shade,PCloud,,,,Brass Ring,1,Yes,Yes,,
+RM-Balloon Royal(sh10/10.5),Square Feet,15,,FH + Board,,27,32,.125,0,,,,30,0,16.875,,,3.5,3.5,,,Yes,,,,Shade,Balloon,,,,Brass Ring,1,Yes,No,,
+RM-Soft Casual (shoo4/7.5),Square Feet,8.5,,FH + Board,,17,22,.125,0,,,,30,1,15,,,,,8,10,Yes,2,,,Shade,Square/Trapezoid,,,,Brass Ring,1,Yes,Yes,,
+RM-Pltd.Sft Casual(shoo5/7.5),Square Feet,9,,FH + Board,,17,22,.125,0,,,30,30,1,,,,1.35,1.35,,,Yes,2,,,Shade,Square,,,,Brass Ring,1,Yes,Yes,,0.01
+RM-Casual w/Tails(shoo6/7.5),Square Feet,8.5,,FH + Board,,17,22,.125,0,,,,30,1,,,,,,8,10,Yes,2,,,Shade,Square/Trapezoid,,,,Brass Ring,1,Yes,Yes,,
+"RM-Back Slat (SH002)
+",Square Feet,9,,L + Spaces x 2,,,,,.125,,1.75,,,1.5,15,,,,,5,5,no,,1,Round Plastic,Shade,Square,,,,Brass Ring,1,Yes,No,,
+RM-Dog Ear (SH011/8.00),Square Feet,10,,FH + Board,,22,27,.125,0,,,,30,,,,0.35,1.5,2,,,Yes,,,,Shade,Dog Ear,,,,Brass Ring,1,Yes,Yes,,0.01
+Casual,Square Feet,8.6,,FH + Board,,,,.125,.125,,,15,15,1,12,,,,,5,5,no,2,0.25,,Shade,Square,,,,Brass Ring,1,Yes,No,,0.01
+Casual BU w/Valance,Square Feet,11.18,33,FH + Board,,,,.125,.125,,,33,33,1,15,,0.3,,,5,5,no,2,0.25,,Shade,Square,3.25,2.25,5,Brass Ring,1,Yes,No,,
+Casual BU - NO Valance,Square Feet,10.75,15,FH + Board,,,,.125,.125,,,15,15,1,15,,0.3,,,5,5,no,2,0.25,,Shade,Square,3.25,2.25,5,Brass Ring,1,Yes,No,,
+Casual TD/BU w/Valance,Square Feet,11.61,33,FH + Board,,,,.125,.125,,,33,33,1,15,,0.35,,,5,5,no,2,0.25,,Shade,Square,3.25,2.25,5,Brass Ring,1,Yes,No,,
+Casual TD/BU - NO Valance,Square Feet,11.18,15,FH + Board,,,,.125,.125,,,15,15,1,15,,0.35,,,5,5,no,2,0.25,,Shade,Square,3.25,2.25,5,Brass Ring,1,Yes,No,,
+Soft Casual,Square Feet,8.6,30,FH + Board,,17,22,.125,,,,30,30,1,45,,,,,8,10,Yes,2,,,Shade,Square/Trapezoid,,,,Brass Ring,1,Yes,Yes,,
+Casual with Tails,Square Feet,8.6,30,FH + Board,,17,22,.125,,,,30,30,1,52,,,,,8,10,Yes,2,,,Shade,Square/Trapezoid,,,,Brass Ring,1,Yes,Yes,,
+Pltd. Soft Casual,Square Feet,9,33,FH + Board,,17,22,.125,,,,30,30,1,45,,,1.35,1.35,,,Yes,2,,,Shade,Square,,,,Brass Ring,1,Yes,Yes,,0.01
+Gathered Casual,Square Feet,9,33,FH + Board,,17,22,.125,0,,,20,30,1,,,,1.5,1.5,,,Yes,2,,,Shade,Square,,,,Brass Ring,1,Yes,Yes,,0.01

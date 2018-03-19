@@ -1,0 +1,104 @@
+<div ng-form="companyPriceForm" class="directives companyPriceForm">
+  <h2>
+    Edit Company Price
+    <span ng-show="vmCompanyPriceForm.loadingData">
+      <i class="fa fa-circle-o-notch fa-spin"></i>
+    </span>
+  </h2>
+
+  <div bestline-api-errors="vmCompanyPriceForm.apiErrors"></div>
+
+  <div ng-if="!vmCompanyPriceForm.loadingData">
+
+    <div class="form-group" ng-class="{'has-error': (vmCompanyPriceForm.showFormErrors && companyPriceForm.company_id.$invalid)}">
+      <label>Company <span ng-show="vmCompanyPriceForm.showFormErrors && companyPriceForm.company_id.$error.required" class="text-danger">is required</span></label>
+      <select class="form-control"
+        name="company_id"
+        ng-model="companyPrice.company_id"
+        ng-options="+(companyId) as companyName for (companyId, companyName) in vmCompanyPriceForm.selectOptions.companies"
+        ng-required="true">
+        <option value="">Select a company...</option>
+      </select>
+    </div>
+
+    <div class="form-group" ng-if="vmCompanyPriceForm.showProduct">
+      <label>Product</label>
+      <select class="form-control"
+        ng-model="companyPrice.product_id"
+        ng-options="+(productId) as productName for (productId, productName) in vmCompanyPriceForm.selectOptions.products">
+        <option value="">Select a product...</option>
+      </select>
+    </div>
+
+    <div class="form-group" ng-if="vmCompanyPriceForm.showFabric">
+      <label>Fabric</label>
+      <select class="form-control"
+        ng-model="companyPrice.fabric_id"
+        ng-options="+(fabricId) as fabricName for (fabricId, fabricName) in vmCompanyPriceForm.selectOptions.fabrics">
+        <option value="">Select a fabric...</option>
+      </select>
+    </div>
+
+    <div class="form-group" ng-if="vmCompanyPriceForm.showOption">
+      <label>Option</label>
+      <select class="form-control"
+        ng-model="companyPrice.option_id"
+        ng-options="+(optionId) as optionName for (optionId, optionName) in vmCompanyPriceForm.selectOptions.sub_options">
+        <option value="">Select a option...</option>
+      </select>
+    </div>
+
+    <div class="form-group" ng-if="companyPrice.pricing_type !== 'tier'">
+      <label>Price</label>
+      <input class="form-control input-sm" type="text" name="price" ng-model="companyPrice.price"/>
+    </div>
+
+    <div class="form-group" ng-if="companyPrice.pricing_type !== 'tier' && vmCompanyPriceForm.showOption">
+      <label>Min Charge</label>
+      <input class="form-control input-sm" type="text" name="min_charge" ng-model="companyPrice.min_charge"/>
+    </div>
+
+    <div class="form-group">
+      <label>Pricing Type</label>
+      <select class="form-control"
+        ng-model="companyPrice.pricing_type"
+        ng-options="typeSlug as typeName for (typeSlug, typeName) in vmCompanyPriceForm.selectOptions.pricing_types">
+        <option value="">Select a pricing type...</option>
+      </select>
+    </div>
+
+    <div class="form-group" ng-if="companyPrice.pricing_type === 'tier'">
+      <label>Tier Pricing</label>
+      <input class="form-control input-sm" type="text" step="any" name="tier_formula" ng-model="companyPrice.tier_formula"/>
+    </div>
+  </div>
+
+  <div bestline-api-errors="companyPrice.apiErrors"></div>
+
+  <div class="row b-margin b-bottom" ng-hide="vmCompanyPriceForm.loadingData">
+    <div class="col-md-6">
+      <span ng-hide="companyPrice.busy">
+        <a class="btn btn-sm btn-default" href=""
+          ng-hide="vmCompanyPriceForm.showDeleteConfirm"
+          ng-click="vmCompanyPriceForm.showDeleteConfirm = true">
+          Delete
+        </a>
+        <a class="btn btn-sm btn-danger" href=""
+          ng-show="vmCompanyPriceForm.showDeleteConfirm"
+          ng-click="vmCompanyPriceForm.deleteCompanyPrice(companyPrice)">
+          Really Delete?
+        </a>
+      </span>
+    </div>
+    <div class="col-md-6 text-right">
+      <span ng-hide="companyPrice.busy">
+        <a class="btn btn-sm btn-default" href="" ng-click="vmCompanyPriceForm.cancelEdit()">Cancel</a>
+        <a class="btn btn-sm btn-primary" href="" ng-click="vmCompanyPriceForm.saveCompanyPrice(companyPrice, companyPriceForm)">Save</a>
+      </span>
+      <span ng-show="companyPrice.busy">
+        <i class="fa fa-circle-o-notch fa-spin fa-2x"></i>
+      </span>
+    </div>
+  </div>
+
+</div>

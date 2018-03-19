@@ -1,0 +1,41 @@
+_gtCurrKey	TEXT	1
+cnConstant1	NUMBER	1
+Conflicts	TEXT	1
+currentfilepath	NUMBER	1
+CustomerKey	TEXT	1
+DecorativeTrim	TEXT	1
+Minimum Value	NUMBER	1
+nHeaderboardIn	TEXT	1
+nHeaderboardOut	TEXT	1
+nLengthMultiply	NUMBER	1
+nLengthPlus	NUMBER	1
+nOuterRings	NUMBER	1
+nOuterRingsDivisor	NUMBER	1
+nShadePrice	NUMBER	1
+nShadeScore	NUMBER	1
+nWidthMultiply	NUMBER	1
+nWidthPlus	NUMBER	1
+Tier 2 Value	NUMBER	1
+Tier1	NUMBER	1
+Tier1 Value	NUMBER	1
+Tier2	NUMBER	1
+Tier3	NUMBER	1
+Tier3 Value	NUMBER	1
+Tier4	NUMBER	1
+Tier4 Value	NUMBER	1
+Tier5	NUMBER	1
+Tier5 Value	NUMBER	1
+tOptionName	TEXT	1
+tPricingType	TEXT	1
+tRingOrGrommet	TEXT	1
+tSideHemType	TEXT	1
+tTakeLining	TEXT	1
+tTakeReturn	TEXT	1
+zdDateCreated	DATE	1
+zdModDate	DATE	1
+zgtPrefsKey	TEXT	1
+ziModTime	TIME	1
+ziTimeCreated	TIME	1
+ztCreatorName	TEXT	1
+ztModName	TEXT	1
+ztSerNo	TEXT	1

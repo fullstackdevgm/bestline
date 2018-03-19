@@ -1,0 +1,773 @@
+/*
+Note: to edit you must ssh into vagrant and run: `cd /vagrant/public/css/source/; compass watch --poll;`
+
+tableOfContents
+	includeStyles
+	tagStyles
+	snippetStyles
+	templateStyles
+	footerStyles
+*/
+
+/*includeStyles*/
+@import 'variables';
+/*tagStyles*/
+body {
+}
+/*overallStyles*/
+body {
+	.header {
+		@media print {
+			display: none;
+		}
+	}
+	.pointer {
+		cursor: pointer;
+	}
+	.container {
+		@media print {
+			width: 8.5in;
+		}
+	}
+	.devNotification {
+		@media print {
+			display: none;
+		}
+	}
+	.form-group {
+		.unit {
+			position: absolute;
+			right: 29px;
+			bottom: 22px;
+			color: #aaa;
+		}
+	}
+	.padding-top {
+		padding-top: 20px;
+	}
+	.table {
+		font-size: 90%;
+
+		thead {
+			.st-sort-ascent{
+				.fa-sort {
+					&:before {
+						content: "\f0de";
+					}
+				}
+			}
+
+			.st-sort-descent{
+				.fa-sort {
+					&:before {
+						content: "\f0dd";
+					}
+				}
+			}
+		}
+	}
+	.b-margin {
+		&.b-bottom {
+			margin-bottom: 20px;
+		}
+		&.b-bottom-0 {
+			margin-bottom: 0;
+		}
+		&.b-top {
+			margin-top: 20px;
+		}
+		&.b-top-0 {
+			margin-top: 0;
+		}
+		&.b-left-sm {
+			margin-left: 10px;
+		}
+	}
+
+	.well {
+		&.well-white {
+			background: white;
+		}
+	}
+	.text-orange {
+		color: #ef7c61;
+	}
+
+	@media print {
+		.col-print-1 {width: 8.33333333%;  float:left;}
+		.col-print-2 {width: 16.66666667%; float:left;}
+		.col-print-3 {width: 25%; float:left;}
+		.col-print-4 {width: 33.33333333%; float:left;}
+		.col-print-5 {width: 41.66666667%; float:left;}
+		.col-print-6 {width:50%; float:left;}
+		.col-print-7 {width: 58.33333333%; float:left;}
+		.col-print-8 {width: 66.66666667%; float:left;}
+		.col-print-9 {width:75%; float:left;}
+		.col-print-10{width: 83.33333333%; float:left;}
+		.col-print-11{width: 91.66666667%; float:left;}
+		.col-print-12{width:100%; float:left;}
+	}
+}
+/*directiveStyles*/
+.directives {
+	&.address, &.contact {
+		color: $grey8;
+		background: $greyD;
+		@include radius(4px);
+		position: relative;
+		padding: 12px;
+		margin-bottom: 12px;
+
+		&.deleted {
+			display: none;
+		}
+		hr {
+			border-top: 1px solid $greyC;
+			margin-top: 0;
+		}
+		.actions {
+			position: absolute;
+			top: 15px;
+			right: 15px;
+			font-size: 18px;
+			color: $greyC;
+
+			.fa {
+				cursor: pointer;
+			}
+			.cancel {
+				color: $grey8;
+			}
+			.primary {
+				color: $grey8;
+			}
+		}
+		.contactDetails {
+			background: $greyC;
+			@include radius(4px);
+			position: relative;
+			padding: 12px;
+			margin-bottom: 12px;
+		}
+		.contactSummary {
+			position: relative;
+			background: $greyC;
+			@include radius(4px);
+			position: relative;
+			padding: 12px;
+			margin-bottom: 12px;
+
+			.actions {
+				color: $greyB;
+			}
+		}
+		.details {
+			margin-top: 15px;
+
+			.detail {
+				position: relative;
+
+				.add {
+					float: right;
+				}
+				.subitems {
+					.subitem {
+						background: $greyD;
+						@include radius(4px);
+						position: relative;
+						padding: 12px;
+						margin-bottom: 12px;
+
+						&.deleted {
+							display: none;
+						}
+						hr {
+							border-top: 1px solid $greyC;
+						}
+						.actions {
+							color: $greyB;
+						}
+						&.subitem2 {
+							background: $greyC;
+
+							.actions {
+								color: $greyA;
+							}
+						}
+					}
+				}
+			}
+			.actions-footer {
+				font-size: 22px;
+
+				.fa {
+					cursor: pointer;
+				}
+				.btn.pull-right {
+					margin-left: 5px;
+				}
+			}
+		}
+		.actions-footer {
+			font-size: 22px;
+
+			.fa {
+				cursor: pointer;
+			}
+		}
+	}
+	&.bestlineFabricInputRows {
+		.customSelect {
+			position: relative;
+
+			.caretDown {
+				position: absolute;
+				right: 10px;
+				top: 9px;
+				cursor: pointer;
+			}
+			.options {
+				@include box-shadow(0px, 0px, 2px, rgba(0,0,0,.2));
+				position: absolute;
+				box-sizing:border-box;
+				width: 100%;
+				max-height: 200px;
+				overflow-y: auto;
+				z-index: 1;
+				background: white;
+
+				>.item {
+					padding: 10px;
+
+					&:focus, &.selected {
+						border: 0;
+						outline: none;
+					}
+					&:hover, &:focus {
+						background: $subtleBlue;
+					}
+					&.selected {
+						background: $blue;
+						color: white;
+						font-weight: bold;
+					}
+					.fabricThumb {
+						margin-right: 5%;
+						float: left;
+						width: 15%;
+					}
+					.fabricName {
+						float: left;
+						width: 65%;
+					}
+				}
+			}
+			.rowLinks {
+				color: $grey9;
+				text-align: right;
+				font-size: 90%;
+
+				label {
+					font-weight: normal;
+				}
+			}
+		}
+	}
+
+	&.optionForm{
+		.bestlineTooltipWrapper {
+			display: inline-block;
+		}
+	}
+
+	.bestlineTooltip {
+		color:$blue;
+	}
+}
+
+.order{
+	.nav-tabs > li, .nav-pills > li {
+    float:none;
+    display:inline-block;
+	}
+	.nav-tabs, .nav-pills {
+	    text-align:center;
+	}
+	.nav-tabs {
+		margin-bottom: 15px;
+		padding-top: 10px;
+	}
+
+}
+
+.devNotification {
+		background-color: rgb(117,6,30);
+		text-align:center;
+		color:white;
+		height:14px;
+		font-size: 65%;
+	}
+
+
+/*templateStyles*/
+.templates {
+
+	&.templateCompanies {
+		position: relative;
+
+		.companyActions {
+			margin-top: 25px;
+		}
+		.companies {
+			> .item {
+				color: $grey8;
+				background: $greyE;
+				@include radius(4px);
+				position: relative;
+				float: left;
+				margin-left: 1.16666%;
+				margin-bottom: 1.16666%;
+				width: 24.1%;
+				padding: 5px 15px 15px;
+
+				&.fifth {
+					clear: left;
+					margin-left: 0;
+				}
+				&.deleted {
+					display: none;
+				}
+				.companySummary {
+					color: $grey8;
+					background: $greyD;
+					@include radius(4px);
+					position: relative;
+					padding: 12px;
+					margin-bottom: 12px;
+
+					.actions {
+						top: 11px;
+					}
+				}
+				.alert {
+					margin-top: 10px;
+				}
+				h4 {
+					cursor: pointer;
+
+					i {
+						margin-right: 5px;
+					}
+				}
+				hr {
+					border-top: 1px solid $greyD;
+					margin-top: 0;
+				}
+				.actions {
+					color: $greyC;
+					position: absolute;
+					top: 15px;
+					right: 15px;
+					font-size: 18px;
+					z-index: 1;
+
+					.fa {
+						cursor: pointer;
+					}
+					.save {
+						color: $green;
+					}
+					.cancel {
+						color: $grey8;
+					}
+					.primary {
+						color: $grey8;
+					}
+				}
+				.companyDetails {
+					color: $grey8;
+					background: $greyD;
+					@include radius(4px);
+					position: relative;
+					padding: 12px;
+					margin-bottom: 12px;
+				}
+				.details {
+					position: relative;
+
+					.actions {
+						top: 11px;
+					}
+					.detail {
+						position: relative;
+
+						.add {
+							float: right;
+						}
+					}
+					.actions-footer {
+						font-size: 22px;
+
+						.fa {
+							cursor: pointer;
+						}
+					}
+				}
+			}
+		}
+	}
+	&.templateOrderCreate {
+		.addShippingAddress {
+			margin-top: 7px;
+			margin-left: 20px;
+		}
+	}
+	&.templateOrderStep2 {}
+	&.templateTicket {
+
+		h2.finishedValue {
+			font-size: 1.4em;
+			padding-top: .4em;
+		}
+		.printAll, .printPink, .printBtn {
+			margin-bottom: 20px;
+			margin-top: 30px;
+			margin-left: 10px;
+		}
+		.table-no-border td {
+			border-top: 0;
+		}
+		.itemTab {
+			padding-top: 30px;
+
+			.svgContainer {
+				width: 100%;
+				height: 600px;
+				cursor: pointer;
+			}
+		}
+		.sidetabs {
+			.svgContainer {
+				width: 100%;
+				height: 550px;
+				cursor: pointer;
+			}
+		}
+		.pinkTab {
+			.fabricImage {
+				max-height: 60px;
+				max-width: 60px;
+			}
+		}
+		.boardTab, .trimTab {
+			.fabricImage {
+				max-height: 60px;
+				max-width: 60px;
+				float: left;
+				margin-right: 10px;
+			}
+			.text-lg {
+				font-size: 120%;
+			}
+		}
+		&.temporaryPrintStyles, &.showPinkPrintStyles{
+			font-size: 80%;
+
+			h1 {
+				display: none;
+			}
+			.nav {
+				display: none;
+			}
+			.ticketHeaderRow {
+				display: none;
+			}
+			.tab-content {
+				> div {
+					padding-top: 0px;
+
+
+					h2 {
+						font-size: 20px;
+						margin-top: 0;
+					}
+					ul {
+						margin-bottom: 5px;
+					}
+					p {
+						margin-bottom: 5px;
+					}
+					table {
+						table-layout: auto;
+
+						&.table {
+							margin-bottom: 0;
+
+							tbody tr td {
+								padding: 4px;
+							}
+						}
+					}
+					.itemTab {
+						padding-top: 0px;
+
+						&.ng-hide {
+							display: block !important;
+						}
+						.svgContainer {
+							height: 450px;
+						}
+					}
+					.panel {
+						margin-bottom: 10px;
+
+						.panel-heading {
+							padding: 5px 10px;
+						}
+						.panel-body {
+							padding: 7px;
+						}
+					}
+				}
+			}
+		}
+		&.temporaryPrintStyles {
+			&.container {
+				width: 8.5in;
+			}
+			.tab-content {
+				> div {
+					border-top: 1px solid $greyE;
+					page-break-after: always;
+					page-break-inside: avoid;
+
+					&.item-ticket {
+						page-break-after: auto;
+						padding-top:20px;
+					}
+					&.ng-hide {
+						display: block !important;
+					}
+					&.pink {
+						page-break-inside: auto;
+					}
+					h2.finishedValue {
+						font-size: 1.2em;
+						padding-top: .6em;
+					}
+				}
+			}
+		}
+		&.showPinkPrintStyles {
+			&.container {
+				width: 11in;
+			}
+			.tab-content {
+				> div {
+					display: none !important;
+
+					&.pink {
+						display: block !important;
+
+						.fabricImage {
+							max-height: 20px;
+						}
+						.orderItemsHeading {
+							display: none;
+						}
+					}
+				}
+			}
+		}
+	}
+	&.templateInventory {
+
+		.fabricImage {
+			height: 40px;
+		}
+	}
+	&.templateTrackingCutter {
+		table {
+			tr.order-row {
+				td {
+					background: #f9f9f9;
+				}
+			}
+			tr.orderLine {
+				td {
+					background: white;
+				}
+			}
+		}
+	}
+	&.templateDashboardView {
+		.order-row {
+			cursor: pointer;
+		}
+		.nav-tabs {
+			li {
+				&.active {
+					a {
+						color: $grey7;
+					}
+				}
+				&.pull-right {
+					margin-left: 15px;
+				}
+				a {
+					color: $blue;
+
+					.badge {
+						background-color: black;
+						margin-left: 5px;
+					}
+				}
+				.pagination {
+					margin: 0;
+
+					> .active {
+						> a {
+							color: white;
+						}
+					}
+				}
+			}
+		}
+		.pagination {
+			margin: 0;
+
+			> .active {
+				> a {
+					color: white;
+				}
+			}
+			a {
+				color: $blue;
+			}
+		}
+	}
+	&.templateFabricEdit {
+		.imageBox {
+			position: relative;
+
+			.imageOverlay {
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				opacity: 0.8;
+				filter: alpha(opacity=80);
+				background: black;
+
+				i {
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					margin-top: -8px;
+					margin-left: 8px;
+					color: white;
+				}
+			}
+
+			img {
+				width: 100%;
+			}
+		}
+		.ng-camera {
+			.ng-camera-stack {
+				margin-bottom: 10px;
+			}
+			#ng-camera-action {
+				margin-bottom: 10px;
+				width: 100%;
+				color: #ffffff;
+				background-color: #5cb85c;
+				border-color: #4cae4c;
+				display: block;
+			    padding: 6px 12px;
+			    font-size: 14px;
+			    font-weight: normal;
+			    line-height: 1.428571429;
+			    text-align: center;
+			    white-space: nowrap;
+			    vertical-align: middle;
+			    cursor: pointer;
+			    background-image: none;
+			    border: 1px solid transparent;
+			    border-radius: 4px;
+			    -webkit-user-select: none;
+			    -moz-user-select: none;
+			    -ms-user-select: none;
+			    -o-user-select: none;
+			    user-select: none;
+			}
+		}
+		.reason-field {
+			width: 100%;
+		}
+		@media print {
+			width: 11in;
+
+		    .hide-when-printing {
+		    	display: none !important;
+		    }
+		    .select-multiple {
+		    	option:checked {
+		    		border: 1px solid $blue;
+		    	}
+		    }
+		}
+	}
+	&.container {
+		@media print {
+			margin-left:0;
+			margin-right:0;
+			padding-left:0;
+			padding-right:0;
+		}
+	}
+	&.templateTicketLabels {
+		@media print {
+			width: 3in;
+
+			h1 {
+		  		display: none;
+		  	}
+	  	.printLabel {
+	  		max-height: 2.3in;
+	  		width: 3in;
+	  		overflow: hidden;
+	  		page-break-before: always;
+	  		page-break-inside: avoid;
+
+	  		&:nth-child(1){
+	  			page-break-before: avoid;
+	  		}
+	  		h2 {
+	  			margin-top: 0;
+	  		}
+	  	}
+	  	.ellipsis-overflow {
+	  		text-overflow: ellipsis;
+	  		white-space: nowrap;
+	  		overflow:hidden;
+	  	}
+		}
+	}
+}
+/*routeStyles*/
+.routes {
+	&.ticketLabels {
+		> .content {
+			> .container {
+				width:3in;
+				margin-left:0;
+				margin-right:0;
+				padding-left:0;
+				padding-right: 0;
+			}
+		}
+	}
+}
+/*footerStyles*/

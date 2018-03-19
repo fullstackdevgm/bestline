@@ -1,0 +1,31 @@
+<g ng-attr-transform="translate({[{ measurement.x }]}, {[{ measurement.y }]}) {[{ measurement.transform }]}" ng-repeat="measurement in measurements">
+    <g ng-if="measurement.height">
+        <!-- horizontal top line -->
+        <line ng-attr-x1="0" ng-attr-y1="0" 
+            ng-attr-x2="{[{ measurement.width }]}" ng-attr-y2="0" 
+            stroke="black" stroke-linecap="round" 
+            stroke-width="{[{ measurement.lineWidth }]}" stroke-dasharray="0, {[{ measurement.lineWidth * 2 }]}"
+        />
+        <!-- vertical height line line -->
+        <line ng-attr-x1="{[{ measurement.width * .5 }]}" ng-attr-y1="{[{ measurement.lineWidth * 2 }]}" 
+            ng-attr-x2="{[{ measurement.width * .5 }]}" ng-attr-y2="{[{ measurement.height - (measurement.lineWidth * 2) }]}" 
+            stroke="black" stroke-width="{[{ measurement.lineWidth }]}" stroke-linecap="round" stroke-dasharray="0, {[{ measurement.lineWidth * 2 }]}"
+        />
+        <!-- horizontal bottom line -->
+        <line ng-attr-x1="0" ng-attr-y1="{[{ measurement.height }]}" 
+            ng-attr-x2="{[{ measurement.width }]}" ng-attr-y2="{[{ measurement.height }]}" 
+            stroke="black" stroke-linecap="round" 
+            stroke-width="{[{ measurement.lineWidth }]}" stroke-dasharray="0, {[{ measurement.lineWidth * 2 }]}"
+        />
+    </g>
+    <text text-anchor="{[{ measurement.textAnchor }]}" 
+        paint-order="stroke" stroke="white" 
+        stroke-width="{[{ measurement.lineWidth * 2 }]}"
+        font-size="0" 
+        ng-attr-font-size="{[{ measurement.fontSize }]}" 
+        ng-attr-x="{[{ measurement.textX }]}" 
+        ng-attr-y="{[{ measurement.height * .5 }]}"
+        ng-attr-transform="{[{ measurement.textTransform }]}">  
+        <tspan ng-attr-alignment-baseline="{[{ measurement.textAlignment }]}">{[{ measurement.height }]}</tspan> <tspan ng-attr-alignment-baseline="{[{ measurement.textAlignment }]}" ng-if="measurement.textLabel">{[{ measurement.textLabel }]}</tspan>
+    </text>
+</g>

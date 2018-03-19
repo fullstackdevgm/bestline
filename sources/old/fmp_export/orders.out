@@ -1,0 +1,142 @@
+AcceptInvoice	TEXT	1
+Address1	TEXT	1
+Address2	TEXT	1
+Approved	TEXT	1
+Billing Address Box	TEXT	1
+BillingMobile	TEXT	1
+Boxing	NUMBER	1
+City	TEXT	1
+COM_Description	TEXT	1
+Company Name	TEXT	1
+constantForFaceFabric	TEXT	1
+ContactArea	TEXT	1
+ContactAreaText	TEXT	1
+Contacts FK	TEXT	1
+Creation_Date	DATE	1
+Creation_Time	TIME	1
+Creation_User	TEXT	1
+CreditTerms	TEXT	1
+Current Invoice	TEXT	1
+Customer Number	TEXT	1
+Customer Type	TEXT	1
+CustomerKey	TEXT	1
+Data Entry Check	TEXT	1
+DataEntryCheckDate	DATE	1
+deposit_amount	NUMBER	1
+deposit_check	TEXT	1
+Discount Charge	NUMBER	1
+Discount Percent	NUMBER	1
+Due Date	DATE	1
+Email	TEXT	1
+Fabric	TEXT	1
+Fabric Color	TEXT	1
+Fabric3	TEXT	1
+Fabric3 Color	TEXT	1
+Fabric3 Width	NUMBER	1
+Fabric4	TEXT	1
+Fabric4 Color	TEXT	1
+Fabric4Width	NUMBER	1
+Face Fabric Price	NUMBER	1
+Face Fabric Upcharge	NUMBER	1
+Face Width	NUMBER	1
+Fax	TEXT	1
+First Name	TEXT	1
+FirstLastName	NUMBER	1
+FlawsInFabric	TEXT	1
+FlawsInFabric Copy	TEXT	1
+Global Random Key	TEXT	1
+gNumber_1	NUMBER	1
+gNumber_2	NUMBER	1
+gNumber_3	NUMBER	1
+gNumber_4	NUMBER	1
+gNumber_5	NUMBER	1
+gRandom	NUMBER	1
+gText_1	TEXT	1
+gText_2	TEXT	1
+gText_3	TEXT	1
+gText_4	TEXT	1
+gText_5	TEXT	1
+HideOnLabel	TEXT	1
+HowMuchFabric	TEXT	1
+HowMuchFabric Copy	TEXT	1
+ID	TEXT	1
+If Invoice	TEXT	1
+ifDecorative	NUMBER	1
+ifRush	TEXT	1
+ifSideTabs	NUMBER	1
+Invoice Notes	TEXT	1
+InvoiceLock	TEXT	1
+InvoiceTotals	TEXT	1
+InvoiceTotals Copy	TEXT	1
+InvoiceTotalsLabel	TEXT	1
+IsValidLogins	NUMBER	1
+Last Name	TEXT	1
+Lining	TEXT	1
+Lining Color	TEXT	1
+Lining Width	NUMBER	1
+MakeRush	TEXT	1
+Modification_Date	DATE	1
+Modification_Time	TIME	1
+Modification_User	TEXT	1
+Name Check	TEXT	1
+NOTES FOR JILL	TEXT	1
+One	NUMBER	1
+Order Notes	TEXT	1
+Order Number	TEXT	1
+Order Total	NUMBER	1
+order_type	TEXT	1
+OrderTotal_Static	NUMBER	1
+PartsFK	NUMBER	1
+Phone1	TEXT	1
+Phone2	TEXT	1
+PO	TEXT	1
+PointsDollarAmount	NUMBER	1
+prod_ifCleaner	TEXT	1
+prod_ifCutter	TEXT	1
+prod_ifPleat	TEXT	1
+prod_ifReviewer	TEXT	1
+prod_ifSeamstress	TEXT	1
+prod_ifSideHemist	TEXT	1
+prod_ifStringer	TEXT	1
+Received Date	DATE	1
+RecordCount	NUMBER	1
+Report_OrderAmount	NUMBER	1
+Rush Charge	NUMBER	1
+Rush Percent	NUMBER	1
+Same As Shipping Address	TEXT	1
+Shade Total	NUMBER	1
+Shade Total Summary	NUMBER	1
+Shade Total Yardage	NUMBER	1
+ShadesCount	NUMBER	1
+ShadeTotalSummary_Static	NUMBER	1
+Ship Date	DATE	1
+Shipped Via	TEXT	1
+ShippedTrackingNo	TEXT	1
+Shipping Address Box	TEXT	1
+Shipping Address1	TEXT	1
+Shipping Address2	TEXT	1
+Shipping Area	TEXT	1
+Shipping Charges	NUMBER	1
+Shipping City	TEXT	1
+Shipping Company Name	TEXT	1
+Shipping First Name	TEXT	1
+Shipping Last Name	TEXT	1
+Shipping Method	TEXT	1
+Shipping State	TEXT	1
+Shipping Zip	TEXT	1
+Side Mark	TEXT	1
+State	TEXT	1
+Status	TEXT	1
+status2	TEXT	1
+sum_sumPoints_inv	NUMBER	1
+sumOrders	NUMBER	1
+sumOrderTotal	NUMBER	1
+sumPoints	NUMBER	1
+sumPoints_Inv	NUMBER	1
+sumReportOrderAmount	NUMBER	1
+sumShadesCount	NUMBER	1
+sumSumPoints	NUMBER	1
+total_due	NUMBER	1
+Total_Due_Static	NUMBER	1
+user	TEXT	1
+Zip	TEXT	1

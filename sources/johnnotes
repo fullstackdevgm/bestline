@@ -1,0 +1,87 @@
+sqft = len * (width + return) (in feet)
+linear feet = height (ft)
+flat feet = unit of one
+
+pricing type is the unit of measurement (sq ft, linear feet, flat fee)
+
+length = height
+
+price is the base price
+
+actual price = price per unit (pricing type is) * price * (1 * price plus)
+
+price plus percentage - is the markup of the actual price 
+
+Calico is a big vendor
+Calico price is the same as price except for a specific customer with this specific shade
+
+Missing a fabric field - multiple fabrics
+
+three parts of fabric
+
+Face fabric - main fab (calculate)
+lining fabric - faces the window (calculate)
+
+additional fabrics - make an appearance but no specific piece (not calcuated, documentation only)
+
+Customer's own material - may be a flat fee, maybe zero, or a surcharge
+
+fabric should be calculated similar fashion to product... pricing type, base price (no calico)
+
+fabric should add up into the fabric subtotal
+
+Lining Affects - pricing type * unit 
+LInings have a property which is how wide it is, based on input width you need to calculate the total fabric for desired height
+
+Stringing - A fixed cost is added on to the stringing based on selection
+Std, 
+Cord Lock, 
+Clutch, 
+Motor - different shades have different motors depending on somethign we don't know
+
+
+
+| price                      - Base Price 10
+| product_name              | varchar(255)     | NO   |     | NULL                |                |
+| book                      | tinyint(1)       | YES  |     | NULL                |                |
+| deco                      | tinyint(1)       | YES  |     | NULL                |                |
+| poufy                     | tinyint(1)       | YES  |     | NULL                |                |
+| pricing_type               - square feet
+| calico_price               - same as price but for a specific special customer -
+| lining                    | tinyint(1)       | YES  |     | NULL                |                |
+| return                    | tinyint(1)       | YES  |     | NULL                |                |
+| valance_cost               - Remove and should be moved to an option 
+| valance_minimum           
+| rod_type                  | varchar(100)     | YES  |     | NULL                |                |
+| product_type              | varchar(100)     | YES  |     | NULL                |                |
+| shade_shape               | varchar(100)     | YES  |     | NULL                |                |
+| hoist_guide_type          | varchar(100)     | NO   |     | ring                |                |
+| side_hem                  | decimal(6,3)     | YES  |     | NULL                |                |
+| default_panel_spacing     | decimal(6,2)     | YES  |     | NULL                |                |
+| outer_rings               | decimal(6,3)     | YES  |     | NULL                |                |
+| outer_rings_divisor       | decimal(6,3)     | YES  |     | NULL                |                |
+| ring_row_minimum          | int(11)          | YES  |     | NULL                |                |
+| length_multiply           | decimal(6,3)     | YES  |     | NULL                |                |
+| length_multiply_inv       | decimal(6,3)     | YES  |     | NULL                |                |
+| length_plus               | decimal(6,3)     | YES  |     | NULL                |                |
+| length_plus_inv           | decimal(6,3)     | YES  |     | NULL                |                |
+| pouf_adjustment_inv       | decimal(6,3)     | YES  |     | NULL                |                |
+| price_plus_percentage     - .35
+| width_multiply            | decimal(6,3)     | YES  |     | NULL                |                |
+| width_multiply_inv        | decimal(6,3)     | YES  |     | NULL                |                |
+| width_plus                | decimal(6,3)     | YES  |     | NULL                |                |
+| width_plus_inv            | decimal(6,3)     | YES  |     | NULL                |                |
+| cut_length_add_inches     | decimal(7,3)     | YES  |     | NULL                |                |
+| cut_length_add_inches_inv | decimal(7,3)     | YES  |     | NULL                |                |
+| cut_length_formula        | decimal(7,3)     | YES  |     | NULL                |                |
+| height_pouf_adjustment    | decimal(6,3)     | YES  |     | NULL                |                |
+| height_rod_adjustment     | decimal(6,3)     | YES  |     | NULL                |                |
+| headerboard_in_deduction  | decimal(6,3)     | YES  |     | NULL                |                |
+| headerboard_out_deduction | decimal(6,3)     | YES  |     | NULL                |                |
+| rod_deduction             | decimal(6,3)     | YES  |     | NULL                |                |
+| tdbu_clutch_deduction     | decimal(6,3)     | YES  |     | NULL                |                |
+| tdbu_cord_lock_deduction  | decimal(6,3)     | YES  |     | NULL                |                |
+| tdbu_motorized_deduction  | decimal(6,3)     | YES  |     | NULL                |                |
+| created_at                | timestamp        | NO   |     | 0000-00-00 00:00:00 |                |
+| updated_at                | timestamp        | NO   |     | 0000-00-00 00:00:00 |                |
++---------------------------+------------------+------+-----+---------------------+----------------+

@@ -1,0 +1,77 @@
+<div class="bestlineFabricInputRows directives" ng-repeat="row in rows">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="col-md-5">
+                <div class="form-group" ng-show="!row.typeSelect.loading">
+                    <select class="form-control input-sm"
+                        ng-model="row.fabric_type_id"
+                        ng-disabled="row.typeSelect.disabled"
+                        ng-options="typeOption.id as typeOption.name for typeOption in types"
+                        ng-change="typeSelectChange(row)">
+                        <option value="">Select Fabric Type...</option>
+                    </select>
+                </div>
+                <div ng-show="row.typeSelect.loading"><i class="fa fa-circle-o-notch fa-spin fa-2x"></i></div>
+            </div>
+            <div class="" ng-class="{'col-md-5': row.canDelete, 'col-md-7': !row.canDelete}">
+                <div class="form-group">
+                    <div class="customSelect jsCustomSelect clearfix" ng-show="!row.fabricSelect.loading">
+                        <i class="caretDown fa fa-caret-down"
+                            ng-click="fabricSelectClick($event, row.fabricSelect)"
+                            ng-show="!row.fabricSelect.showOptions">
+                        </i>
+                        <input class="form-control input-sm jsSelectName"  type="text" value="{[{ row.fabricSelect.selected.name }]}"
+                            ng-show="!row.fabricSelect.showOptions"
+                            ng-focus="fabricSelectFocus($event, row.fabricSelect)"
+                            ng-click="fabricSelectClick($event, row.fabricSelect)"
+                            ng-keydown="fabricSelectKeydown($event, row.fabricSelect)"
+                            ng-disabled="!row.fabric_type_id"
+                        />
+                        <div ng-show="row.fabricSelect.showOptions">
+                            <input class="form-control input-sm jsSearch" type="text"
+                                ng-model="row.fabricSelect.search"
+                                ng-blur="fabricSearchBlur($event, row.fabricSelect)"
+                                ng-keydown="fabricSearchKeydown($event, row.fabricSelect)"
+                            />
+                            <div class="options jsOptions">
+                                <div class="item jsItem clearfix" tabindex="0"
+                                    ng-class="{selected: fabric === row.fabricSelect.selected}"
+                                    ng-repeat="fabric in filteredFabric = (row.fabricSelect.options | filter: {name: row.fabricSelect.search})"
+                                    ng-click="fabricOptionClick($event, row, fabric)"
+                                    ng-keydown="fabricOptionKeydown($event, row, fabric)"
+                                    ng-focus="row.fabricSelect.showOptions = true">
+                                    <img class="fabricThumb" ng-if="fabric.owner_company_id && fabric.image" ng-src="/uploads/fabrics/{[{ fabric.image }]}"/>
+                                    <img class="fabricThumb" ng-if="fabric.owner_company_id && !fabric.image" ng-src="/images/default-fabric-img.png"/>
+                                    <div ng-switch on="fabric.ticket_number">
+                                        <div ng-switch-when="">
+                                            <div class="fabricName">{[{ fabric.name }]}</div>
+                                        </div>
+                                        <div ng-switch-default>
+                                            <div class="fabricName">{[{ fabric.name }]}</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item" ng-show="!filteredFabric.length">No fabrics. Alter your search filter or company.</div>
+                            </div>
+                        </div>
+                        <div class="rowLinks">
+                            <a class="" href="" ng-click="addOption(row);">Add Option</a>
+                        </div>
+                    </div>
+                    <div ng-show="row.fabricSelect.loading"><i class="fa fa-circle-o-notch fa-spin fa-2x"></i></div>
+                </div>
+            </div>
+            <div class="col-md-2" ng-show="row.canDelete">
+                <a href="" class="btn btn-danger btn-sm btn-block"
+                    ng-show="!row.deleting"
+                    ng-click="deleteRow(row);">
+                    Remove
+                </a>
+                <div ng-show="row.deleting"><i class="fa fa-circle-o-notch fa-spin fa-2x"></i></div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <bestline-option-input-rows order-options="row.options" api="row.optionApi" settings="row.optionSettings"></bestline-option-input-rows>
+        </div>
+    </div>
+</div>

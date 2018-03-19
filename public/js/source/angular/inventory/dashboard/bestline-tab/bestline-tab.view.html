@@ -1,0 +1,9 @@
+<div ng-controller="bestlineTabCtrl as vmBestline">
+	<div class="alert alert-danger" ng-if="vmBestline.apiErrors.length > 0">
+		<p ng-repeat="error in vmBestline.apiErrors">
+			{[{ error }]}
+		</p>
+	</div>
+	<div ng-show="vmBestline.loading"><span class="fa fa-circle-o-notch fa-spin b-margin b-top"></span></div>
+	<div bestline-fabric-table fabric-table-rows="vmBestline.allFabrics" fabric-table-options="vmBestline.fabricTableOptions" ng-show="!vmBestline.loading"></div>
+</div>

@@ -1,0 +1,159 @@
+﻿2013-11-21 23:07:48.833 -0800	orders.fp7	0	Conversion started.
+2013-11-21 23:07:48.944 -0800	orders.fp7	0	Version: Pro 5.0 - 6.0.
+2013-11-21 23:07:50.514 -0800	orders.fp7	0	8 file references were converted.
+2013-11-21 23:07:51.075 -0800	orders.fp7	0	6 relationships were converted.
+2013-11-21 23:07:51.325 -0800	orders.fp7	0	6 calculations were converted.
+2013-11-21 23:07:51.501 -0800	orders.fp7	0	0 container objects were converted.
+2013-11-21 23:07:51.501 -0800	orders.fp7	0	6 layout images were converted.
+2013-11-21 23:07:51.533 -0800	orders.fp7	0	60 fields were converted.
+2013-11-21 23:07:51.553 -0800	orders.fp7	0	27 records were converted.
+2013-11-21 23:07:51.604 -0800	orders.fp7	0	8 indexes recreated.
+2013-11-21 23:07:51.606 -0800	orders.fp7	0	2 access privileges were converted.
+2013-11-21 23:07:51.678 -0800	orders.fp7	0	5 value lists were converted.
+2013-11-21 23:07:58.071 -0800	orders.fp7	0	7 layouts were converted.
+2013-11-21 23:07:58.219 -0800	orders.fp7	0	Converted function Status ( CurrentRecordID ) to Get ( RecordID ) in: Create Invoice Random.
+2013-11-21 23:07:58.228 -0800	orders.fp7	0	12 scripts were converted.
+2013-11-21 23:07:58.300 -0800	orders.fp7	0	Deleting unneeded file reference: ordersbugs.
+2013-11-21 23:07:58.301 -0800	orders.fp7	0	Deleting unneeded file reference: ordersbugs 2.
+2013-11-21 23:07:58.437 -0800	orders.fp7	0	Conversion completed.
+2013-11-21 23:10:40.890 -0800	optionSpecs.fp7	0	Conversion started.
+2013-11-21 23:10:40.890 -0800	optionSpecs.fp7	0	Version: Pro 5.0 - 6.0.
+2013-11-21 23:10:41.098 -0800	optionSpecs.fp7	0	11 file references were converted.
+2013-11-21 23:10:41.122 -0800	optionSpecs.fp7	0	2 relationships were converted.
+2013-11-21 23:10:41.142 -0800	optionSpecs.fp7	0	8 calculations were converted.
+2013-11-21 23:10:41.166 -0800	optionSpecs.fp7	0	0 container objects were converted.
+2013-11-21 23:10:41.166 -0800	optionSpecs.fp7	0	1 layout images were converted.
+2013-11-21 23:10:41.178 -0800	optionSpecs.fp7	0	39 fields were converted.
+2013-11-21 23:10:41.178 -0800	optionSpecs.fp7	0	41 records were converted.
+2013-11-21 23:10:41.185 -0800	optionSpecs.fp7	0	3 indexes recreated.
+2013-11-21 23:10:41.187 -0800	optionSpecs.fp7	0	2 access privileges were converted.
+2013-11-21 23:10:41.197 -0800	optionSpecs.fp7	0	7 value lists were converted.
+2013-11-21 23:10:41.315 -0800	optionSpecs.fp7	0	2 layouts were converted.
+2013-11-21 23:10:41.430 -0800	optionSpecs.fp7	0	10 scripts were converted.
+2013-11-21 23:10:41.444 -0800	optionSpecs.fp7	0	Deleting unneeded file reference: RuNHome.
+2013-11-21 23:10:41.444 -0800	optionSpecs.fp7	0	Deleting unneeded file reference: PMRuNHome.
+2013-11-21 23:10:41.445 -0800	optionSpecs.fp7	0	Deleting unneeded file reference: PMRoleButtons_.
+2013-11-21 23:10:41.446 -0800	optionSpecs.fp7	0	Deleting unneeded file reference: PMRoles_.
+2013-11-21 23:10:41.446 -0800	optionSpecs.fp7	0	Deleting unneeded file reference: PMRoles_ 2.
+2013-11-21 23:10:41.447 -0800	optionSpecs.fp7	0	Deleting unneeded file reference: Main.
+2013-11-21 23:10:41.447 -0800	optionSpecs.fp7	0	Deleting unneeded file reference: Main 2.
+2013-11-21 23:10:41.455 -0800	optionSpecs.fp7	0	Conversion completed.
+2013-11-21 23:10:50.780 -0800	options.fp7	0	Conversion started.
+2013-11-21 23:10:50.780 -0800	options.fp7	0	Version: Pro 5.0 - 6.0.
+2013-11-21 23:10:50.836 -0800	options.fp7	0	2 file references were converted.
+2013-11-21 23:10:50.874 -0800	options.fp7	0	2 relationships were converted.
+2013-11-21 23:10:51.035 -0800	options.fp7	0	5 calculations were converted.
+2013-11-21 23:10:51.086 -0800	options.fp7	0	2 container objects were converted.
+2013-11-21 23:10:51.086 -0800	options.fp7	0	0 layout images were converted.
+2013-11-21 23:10:51.103 -0800	options.fp7	0	44 fields were converted.
+2013-11-21 23:10:51.104 -0800	options.fp7	0	76 records were converted.
+2013-11-21 23:10:51.111 -0800	options.fp7	0	3 indexes recreated.
+2013-11-21 23:10:51.113 -0800	options.fp7	0	2 access privileges were converted.
+2013-11-21 23:10:51.114 -0800	options.fp7	0	0 value lists were converted.
+2013-11-21 23:10:51.320 -0800	options.fp7	0	1 layouts were converted.
+2013-11-21 23:10:51.342 -0800	options.fp7	0	Verify Windows Print Setup settings: Duplicate Shade.
+2013-11-21 23:10:51.361 -0800	options.fp7	0	Verify Windows Print settings: Duplicate Shade.
+2013-11-21 23:10:51.363 -0800	options.fp7	0	2 scripts were converted.
+2013-11-21 23:10:51.385 -0800	options.fp7	0	Conversion completed.
+2013-11-21 23:11:01.672 -0800	invoices.fp7	0	Conversion started.
+2013-11-21 23:11:01.673 -0800	invoices.fp7	0	Version: Pro 5.0 - 6.0.
+2013-11-21 23:11:01.731 -0800	invoices.fp7	0	4 file references were converted.
+2013-11-21 23:11:01.788 -0800	invoices.fp7	0	1 relationships were converted.
+2013-11-21 23:11:01.839 -0800	invoices.fp7	0	31 calculations were converted.
+2013-11-21 23:11:01.865 -0800	invoices.fp7	0	0 container objects were converted.
+2013-11-21 23:11:01.866 -0800	invoices.fp7	0	2 layout images were converted.
+2013-11-21 23:11:01.876 -0800	invoices.fp7	0	67 fields were converted.
+2013-11-21 23:11:01.876 -0800	invoices.fp7	0	18 records were converted.
+2013-11-21 23:11:01.892 -0800	invoices.fp7	0	6 indexes recreated.
+2013-11-21 23:11:01.894 -0800	invoices.fp7	0	2 access privileges were converted.
+2013-11-21 23:11:01.912 -0800	invoices.fp7	0	3 value lists were converted.
+2013-11-21 23:11:01.950 -0800	invoices.fp7	0	3 layouts were converted.
+2013-11-21 23:11:01.952 -0800	invoices.fp7	0	Verify Windows Print Setup settings: GotoInvoiceView.
+2013-11-21 23:11:01.953 -0800	invoices.fp7	0	Verify Windows Print settings: GotoInvoiceView.
+2013-11-21 23:11:01.957 -0800	invoices.fp7	0	2 scripts were converted.
+2013-11-21 23:11:01.980 -0800	invoices.fp7	0	Deleting unneeded file reference: shades.
+2013-11-21 23:11:01.997 -0800	invoices.fp7	0	Conversion completed.
+2013-11-21 23:11:11.374 -0800	contacts.fp7	0	Conversion started.
+2013-11-21 23:11:11.374 -0800	contacts.fp7	0	Version: Pro 5.0 - 6.0.
+2013-11-21 23:11:11.435 -0800	contacts.fp7	0	0 file references were converted.
+2013-11-21 23:11:11.459 -0800	contacts.fp7	0	0 relationships were converted.
+2013-11-21 23:11:11.471 -0800	contacts.fp7	0	2 calculations were converted.
+2013-11-21 23:11:11.486 -0800	contacts.fp7	0	0 container objects were converted.
+2013-11-21 23:11:11.486 -0800	contacts.fp7	0	0 layout images were converted.
+2013-11-21 23:11:11.498 -0800	contacts.fp7	0	41 fields were converted.
+2013-11-21 23:11:11.499 -0800	contacts.fp7	0	36 records were converted.
+2013-11-21 23:11:11.506 -0800	contacts.fp7	0	5 indexes recreated.
+2013-11-21 23:11:11.507 -0800	contacts.fp7	0	2 access privileges were converted.
+2013-11-21 23:11:11.508 -0800	contacts.fp7	0	0 value lists were converted.
+2013-11-21 23:11:11.533 -0800	contacts.fp7	0	3 layouts were converted.
+2013-11-21 23:11:11.534 -0800	contacts.fp7	0	0 scripts were converted.
+2013-11-21 23:11:11.566 -0800	contacts.fp7	0	Conversion completed.
+2013-11-21 23:11:21.604 -0800	parts.fp7	0	Conversion started.
+2013-11-21 23:11:21.604 -0800	parts.fp7	0	Version: Pro 5.0 - 6.0.
+2013-11-21 23:11:21.663 -0800	parts.fp7	0	0 file references were converted.
+2013-11-21 23:11:21.673 -0800	parts.fp7	0	0 relationships were converted.
+2013-11-21 23:11:21.679 -0800	parts.fp7	0	1 calculations were converted.
+2013-11-21 23:11:21.689 -0800	parts.fp7	0	0 container objects were converted.
+2013-11-21 23:11:21.690 -0800	parts.fp7	0	0 layout images were converted.
+2013-11-21 23:11:21.692 -0800	parts.fp7	0	20 fields were converted.
+2013-11-21 23:11:21.693 -0800	parts.fp7	0	10 records were converted.
+2013-11-21 23:11:21.699 -0800	parts.fp7	0	3 indexes recreated.
+2013-11-21 23:11:21.706 -0800	parts.fp7	0	2 access privileges were converted.
+2013-11-21 23:11:21.707 -0800	parts.fp7	0	0 value lists were converted.
+2013-11-21 23:11:21.718 -0800	parts.fp7	0	1 layouts were converted.
+2013-11-21 23:11:21.719 -0800	parts.fp7	0	0 scripts were converted.
+2013-11-21 23:11:21.742 -0800	parts.fp7	0	Conversion completed.
+2013-11-21 23:11:43.064 -0800	shadeSpecs.fp7	0	Conversion started.
+2013-11-21 23:11:43.068 -0800	shadeSpecs.fp7	0	Version: Pro 5.0 - 6.0.
+2013-11-21 23:11:43.153 -0800	shadeSpecs.fp7	0	11 file references were converted.
+2013-11-21 23:11:43.176 -0800	shadeSpecs.fp7	0	2 relationships were converted.
+2013-11-21 23:11:43.193 -0800	shadeSpecs.fp7	0	6 calculations were converted.
+2013-11-21 23:11:43.220 -0800	shadeSpecs.fp7	0	0 container objects were converted.
+2013-11-21 23:11:43.220 -0800	shadeSpecs.fp7	0	1 layout images were converted.
+2013-11-21 23:11:43.229 -0800	shadeSpecs.fp7	0	27 fields were converted.
+2013-11-21 23:11:43.229 -0800	shadeSpecs.fp7	0	27 records were converted.
+2013-11-21 23:11:43.233 -0800	shadeSpecs.fp7	0	3 indexes recreated.
+2013-11-21 23:11:43.235 -0800	shadeSpecs.fp7	0	2 access privileges were converted.
+2013-11-21 23:11:43.267 -0800	shadeSpecs.fp7	0	6 value lists were converted.
+2013-11-21 23:11:43.280 -0800	shadeSpecs.fp7	0	2 layouts were converted.
+2013-11-21 23:11:43.296 -0800	shadeSpecs.fp7	0	9 scripts were converted.
+2013-11-21 23:11:43.310 -0800	shadeSpecs.fp7	0	Deleting unneeded file reference: RuNHome.
+2013-11-21 23:11:43.311 -0800	shadeSpecs.fp7	0	Deleting unneeded file reference: PMRuNHome.
+2013-11-21 23:11:43.312 -0800	shadeSpecs.fp7	0	Deleting unneeded file reference: PMRoleButtons_.
+2013-11-21 23:11:43.312 -0800	shadeSpecs.fp7	0	Deleting unneeded file reference: PMRoles_.
+2013-11-21 23:11:43.313 -0800	shadeSpecs.fp7	0	Deleting unneeded file reference: PMRoles_ 2.
+2013-11-21 23:11:43.314 -0800	shadeSpecs.fp7	0	Deleting unneeded file reference: Main.
+2013-11-21 23:11:43.314 -0800	shadeSpecs.fp7	0	Deleting unneeded file reference: Main 2.
+2013-11-21 23:11:43.336 -0800	shadeSpecs.fp7	0	Conversion completed.
+2013-11-21 23:11:49.185 -0800	shades.fp7	0	Conversion started.
+2013-11-21 23:11:49.185 -0800	shades.fp7	0	Version: Pro 5.0 - 6.0.
+2013-11-21 23:11:49.241 -0800	shades.fp7	0	6 file references were converted.
+2013-11-21 23:11:49.292 -0800	shades.fp7	0	4 relationships were converted.
+2013-11-21 23:11:49.346 -0800	shades.fp7	1212	Calculation parsing error: Width Plus Calc.
+2013-11-21 23:11:49.352 -0800	shades.fp7	0	20 calculations were converted.
+2013-11-21 23:11:49.409 -0800	shades.fp7	0	0 container objects were converted.
+2013-11-21 23:11:49.410 -0800	shades.fp7	0	2 layout images were converted.
+2013-11-21 23:11:49.440 -0800	shades.fp7	0	53 fields were converted.
+2013-11-21 23:11:49.441 -0800	shades.fp7	0	47 records were converted.
+2013-11-21 23:11:49.446 -0800	shades.fp7	0	3 indexes recreated.
+2013-11-21 23:11:49.448 -0800	shades.fp7	0	2 access privileges were converted.
+2013-11-21 23:11:49.496 -0800	shades.fp7	0	3 value lists were converted.
+2013-11-21 23:11:49.528 -0800	shades.fp7	0	3 layouts were converted.
+2013-11-21 23:11:49.546 -0800	shades.fp7	0	12 scripts were converted.
+2013-11-21 23:11:49.576 -0800	shades.fp7	0	Deleting unneeded file reference: shadesbugs.
+2013-11-21 23:11:49.593 -0800	shades.fp7	0	Conversion completed.
+2013-11-21 23:12:07.712 -0800	Main.fp7	0	Conversion started.
+2013-11-21 23:12:07.729 -0800	Main.fp7	0	Version: Pro 5.0 - 6.0.
+2013-11-21 23:12:07.830 -0800	Main.fp7	0	9 file references were converted.
+2013-11-21 23:12:07.857 -0800	Main.fp7	0	3 relationships were converted.
+2013-11-21 23:12:07.864 -0800	Main.fp7	0	2 calculations were converted.
+2013-11-21 23:12:07.931 -0800	Main.fp7	0	0 container objects were converted.
+2013-11-21 23:12:07.931 -0800	Main.fp7	0	3 layout images were converted.
+2013-11-21 23:12:07.941 -0800	Main.fp7	0	20 fields were converted.
+2013-11-21 23:12:07.942 -0800	Main.fp7	0	12 records were converted.
+2013-11-21 23:12:07.944 -0800	Main.fp7	0	2 indexes recreated.
+2013-11-21 23:12:07.946 -0800	Main.fp7	0	2 access privileges were converted.
+2013-11-21 23:12:07.948 -0800	Main.fp7	0	1 value lists were converted.
+2013-11-21 23:12:07.992 -0800	Main.fp7	0	3 layouts were converted.
+2013-11-21 23:12:08.039 -0800	Main.fp7	0	9 scripts were converted.
+2013-11-21 23:12:08.069 -0800	Main.fp7	0	Conversion completed.

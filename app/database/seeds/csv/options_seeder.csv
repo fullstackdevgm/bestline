@@ -1,0 +1,332 @@
+name,pricing_type,min_charge,pricing_value,price_as_fabric,tier_formula,assembler_note,seamstress_note,embellisher_note,is_embellishment_option,is_interlining_option,parent_name,data
+Arch,parent,,,0,,,,,0,0,,
+Back Flap,parent,,,0,,,,,0,0,,
+Ball Trim,parent,,,0,,,,,1,0,,
+Banding,parent,,,0,,,,,1,0,,
+Bands,parent,,,0,,,,,0,0,,
+Batteries,parent,,,0,,,,,0,0,,
+Bead Chain,parent,,,0,,,,,0,0,,
+Bead Trim,parent,,,0,,,,,0,0,,
+Blackout,parent,,,0,,,,,0,1,,
+Bottom Up,parent,,,0,,,,,0,0,,
+Bow,parent,,,0,,,,,0,0,,
+Button,parent,,,0,,,,,0,0,,
+Cleat,parent,,,0,,,,,0,0,,
+Concave,parent,,,0,,,,,0,0,,
+Continuous Cord,parent,,,0,,,,,0,0,,
+Cording,parent,,,0,,,,,0,0,,
+Cordless Hardware,parent,,,0,,,,,0,0,,
+Cutout,parent,,,0,,,,,0,0,,
+Cutout Shade,parent,,,0,,,,,0,0,,
+Difficult,parent,,,0,,,,,0,0,,
+Discount,parent,,,0,,,,,0,0,,
+Flange,parent,,,0,,,,,0,0,,
+Folds,parent,,,0,,,,,0,0,,
+Fringe,parent,,,0,,,,,0,0,,
+Front Slat,parent,,,0,,,,,0,0,,
+Gimp,parent,,,0,,,,,0,0,,
+Hand Sew,parent,,,0,,,,,0,0,,
+Handling,parent,,,0,,,,,0,0,,
+Headerboard,parent,,,0,,,,,0,0,,
+Hourly Labor,parent,,,0,,,,,0,0,,
+Interlining,parent,,,0,,,,,0,1,,
+Knots,parent,,,0,,,,,0,0,,
+Line Skirt,parent,,,0,,,,,0,0,,
+Lining,parent,,,0,,,,,0,0,,
+Memory Stitch,parent,,,0,,,,,0,0,,
+Motorization,parent,,,0,,,,,0,0,,
+Nail Heads,parent,,,0,,,,,0,0,,
+Oversize,parent,,,0,,,,,0,0,,
+Peak Top,parent,,,0,,,,,0,0,,
+Piecing,parent,,,0,,,,,0,0,,
+Pillow,parent,,,0,,,,,0,0,,
+Pleats,parent,,,0,,,,,0,0,,
+Poufs,parent,,,0,,,,,0,0,,
+Railroading,parent,,,0,,,,,0,0,,
+Restring,parent,,,0,,,,,0,0,,
+Rings,parent,,,0,,,,,0,0,,
+Rod,parent,,,0,,,,,0,0,,
+Rosettes,parent,,,0,,,,,0,0,,
+Ruffle Gathered,parent,,,0,,,,,0,0,,
+Ruffle Pleated,parent,,,0,,,,,0,0,,
+Side Tabs,parent,,,0,,,,,0,0,,
+Skirt,parent,,,0,,,,,0,0,,
+Slanted Top,parent,,,0,,,,,0,0,,
+Slanted Top Drapery,parent,,,0,,,,,0,0,,
+Small Spacing,parent,,,0,,,,,0,0,,
+Straps,parent,,,0,,,,,0,0,,
+Stringing,parent,,,0,,,,,0,0,,
+Surcharge,parent,,,0,,,,,0,0,,
+Tab Top,parent,,,0,,,,,0,0,,
+Take Apart,parent,,,0,,,,,0,0,,
+Tassel Trim,parent,,,0,,,,,0,0,,
+Tie Backs,parent,,,0,,,,,0,0,,
+Ties,parent,,,0,,,,,0,0,,
+Ties With Bows,parent,,,0,,,,,0,0,,
+Top Down Bottom Up,parent,,,0,,,,,0,0,,
+Trim,parent,,,0,,,,,1,0,,
+Valance Application,parent,,,0, ,,,,0,0,,
+Velcro,parent,,,0,,,,,0,0,,
+Welting,parent,,,0,,,,,0,0,,
+Arch Top,percent,,0.35,0,,Arch Top,,,0,0,Arch,size_top;
+Back Flap,flat,12,4,0,,Attached to back of board,Lining Valance,,0,0,Back Flap,size;
+Ball Trim - Bottom,w1,16,4,0,,,,,0,0,Ball Trim,size_bottom;
+Ball Trim - Inset Bottom,w1,16,4,0,,,,,0,0,Ball Trim,size_bottom;inset_size_bottom;
+Ball Trim - Inset Sides,l2,16,4,0,,,,,0,0,Ball Trim,size_sides;inset_size_sides;
+"Ball Trim - Inset Sides, Bottom",l2w1,16,4,0,,,,,0,0,Ball Trim,size_bottom;size_sides;inset_size_sides;inset_size_bottom;
+"Ball Trim - Inset Sides, Bottom, Top",l2w2,16,4,0,,,,,0,0,Ball Trim,size_bottom;size_sides;size_top;inset_size_sides;inset_size_bottom;inset_size_top;
+Ball Trim - Sides,l2,16,4,0,,,,,0,0,Ball Trim,size_sides;
+"Ball Trim - Sides, Bottom",l2w1,16,4,0,,,,,0,0,Ball Trim,size_bottom;size_sides;
+"Ball Trim - Sides, Bottom, Top",l2w2,16,4,0,,,,,0,0,Ball Trim,size_bottom;size_sides;size_top;
+Banding - Bottom,w1,28,7,0,,,,,1,0,Banding,size_bottom;
+Banding - Inset Bottom,w1,28,7,0,,,,,1,0,Banding,size_bottom;inset_size_bottom;
+Banding - Inset Sides,l2,56,7,0,,,,,1,0,Banding,size_sides;inset_size_sides;
+"Banding - Inset Sides, Bottom",l2w1,84,7,0,,,,,1,0,Banding,size_bottom;size_sides;inset_size_sides;inset_size_bottom;
+"Banding - Inset Sides, Bottom, Top",l2w2,112,7,0,,,,,1,0,Banding,size_bottom;size_sides;size_top;inset_size_sides;inset_size_bottom;inset_size_top;
+Banding - Sides,l2,56,7,0,,,,,1,0,Banding,size_sides;
+"Banding - Sides, Bottom",l2w1,84,7,0,,,,,1,0,Banding,size_bottom;size_sides;
+"Banding - Sides, Bottom, Top",l2w2,112,7,0,,,,,1,0,Banding,size_bottom;size_sides;size_top;
+Oversized Banding,percent,14,0.5,0,,,,,0,0,Banding,
+RM-Banding Wrapped Bottom (se004),w1,28,7,0,,,,,0,0,Banding,
+RM-Banding Wrapped Sides  (se004),l2,56,7,0,,,,,0,0,Banding,
+"RM-Banding Wrapped Sides, Bottom (se004)",l2w1,84,7,0,,,,,0,0,Banding,
+Bands - Bottom,flat,,22,0,,,,,0,0,Bands,size_bottom;
+Bands - Inset Bottom,flat,,22,0,,,,,0,0,Bands,size_bottom;inset_size_bottom;
+Bands - Inset Sides,flat,,22,0,,,,,0,0,Bands,size_sides;inset_size_sides;
+"Bands - Inset Sides, Bottom",flat,,22,0,,,,,0,0,Bands,size_bottom;size_sides;inset_size_sides;inset_size_bottom;
+"Bands - Inset Sides, Bottom, Top",flat,,22,0,,,,,0,0,Bands,size_bottom;size_sides;size_top;inset_size_sides;inset_size_bottom;inset_size_top;
+Bands - Sides,flat,,22,0,,,,,0,0,Bands,size_sides;
+"Bands - Sides, Bottom",flat,,22,0,,,,,0,0,Bands,size_bottom;size_sides;
+"Bands - Sides, Bottom, Top",flat,,22,0,,,,,0,0,Bands,size_bottom;size_sides;size_top;
+Batteries 8 - Pack (replacements),flat,30,30,0,,,,,0,0,Batteries,
+Battery Reloadable Tube & 8 - Pack,flat,55,55,0,,,,,0,0,Batteries,
+Bead Chain - Antique Brass,flat,6,6,0,,,,,0,0,Bead Chain,size;
+Bead Chain - Brass,flat,6,6,0,,,,,0,0,Bead Chain,size;
+Bead Chain - Bronze,flat,6,6,0,,,,,0,0,Bead Chain,size;
+Bead Chain - Gold,flat,6,6,0,,,,,0,0,Bead Chain,size;
+Bead Chain - Silver,flat,6,6,0,,,,,0,0,Bead Chain,size;
+Bead Trim - Bottom,w1,16,4,0,,,,,0,0,Bead Trim,size_bottom;
+Bead Trim - Inset Bottom,w1,16,4,0,,,,,0,0,Bead Trim,size_bottom;inset_size_bottom;
+Bead Trim - Inset Sides,l2,16,4,0,,,,,0,0,Bead Trim,size_sides;inset_size_sides;
+"Bead Trim - Inset Sides, Bottom",l2w1,16,4,0,,,,,0,0,Bead Trim,size_bottom;size_sides;inset_size_sides;inset_size_bottom;
+"Bead Trim - Inset Sides, Bottom, Top",l2w2,16,4,0,,,,,0,0,Bead Trim,size_bottom;size_sides;size_top;inset_size_sides;inset_size_bottom;inset_size_top;
+Bead Trim - Sides,l2,16,4,0,,,,,0,0,Bead Trim,size_sides;
+"Bead Trim - Sides, Bottom",l2w1,16,4,0,,,,,0,0,Bead Trim,size_bottom;size_sides;
+"Bead Trim - Sides, Bottom, Top",l2w2,16,4,0,,,,,0,0,Bead Trim,size_bottom;size_sides;size_top;
+Blackout Fabric,yard,,9,1,,,,,0,0,Blackout,
+Blackout Fabric and Application,yard,,14,1,,,Blackout Application,,0,0,Blackout,
+Blackout Strips,sqft,18,1.5,0,,Blackout Strips,,,0,0,Blackout,
+Button Applied,flat,,1,0,,,,,0,0,Button,size;
+Button Made and Applied,flat,,3.5,0,,,,,0,0,Button,size;
+Antique Brass Cleat,flat,,2,0,,,,,0,0,Cleat,
+Brass Cleat,flat,,2,0,,,,,0,0,Cleat,
+Concaved,percent,,0.35,0,,,,,0,0,Concave,
+Continuous Cord (sub),tier,,,0,a:4:{i:72;d:60;i:108;d:85;i:144;d:110;i:9999;d:135;},,,,0,0,Continuous Cord,
+Continuous Cord - TD/BU,tier,,,0,a:3:{i:72;d:100;i:144;d:150;i:9999;d:250;},,,,0,0,Continuous Cord,
+Cording - Bottom,w1,,5,0,,,,,0,0,Cording,size_bottom;
+Cording - Inset Bottom,w1,,5,0,,,,,0,0,Cording,size_bottom;inset_size_bottom;
+Cording - Inset Sides,l2,,5,0,,,,,0,0,Cording,size_sides;inset_size_sides;
+"Cording - Inset Sides, Bottom",l2w1,,5,0,,,,,0,0,Cording,size_bottom;size_sides;inset_size_sides;inset_size_bottom;
+"Cording - Inset Sides, Bottom, Top",l2w2,,5,0,,,,,0,0,Cording,size_bottom;size_sides;size_top;inset_size_sides;inset_size_bottom;inset_size_top;
+Cording - Sides,l2,,5,0,,,,,0,0,Cording,size_sides;
+"Cording - Sides, Bottom",l2w1,,5,0,,,,,0,0,Cording,size_bottom;size_sides;
+"Cording - Sides, Bottom, Top",l2w2,,5,0,,,,,0,0,Cording,size_bottom;size_sides;size_top;
+Cordless Hardware over 60,flat,,75,0,,Cordless Needs Center Support,,,0,0,Cordless Hardware,
+Cordless Hardware under 60,flat,,50,0,,,,,0,0,Cordless Hardware,
+Cutout (Drape),percent,,0.4,0,,,,,0,0,Cutout,size;
+Cutout (Headerboard),flat,,15,0,,,,,0,0,Cutout,size;
+Cutout (Shade),flat,,40,0,,,,,0,0,Cutout,size;
+Cutout (Valance),percent,,40,0,,,,,0,0,Cutout,size;
+Cutout Shade - Bottom,w1,22,5.5,0,,,,,0,0,Cutout Shade,size_bottom;
+Cutout Shade - Inset Bottom,w1,22,5.5,0,,,,,0,0,Cutout Shade,size_bottom;inset_size_bottom;
+Cutout Shade - Inset Sides,l2,44,5.5,0,,,,,0,0,Cutout Shade,size_sides;inset_size_sides;
+"Cutout Shade - Inset Sides, Bottom",l2w1,66,5.5,0,,,,,0,0,Cutout Shade,size_bottom;size_sides;inset_size_sides;inset_size_bottom;
+"Cutout Shade - Inset Sides, Bottom, Top",l2w2,88,5.5,0,,,,,0,0,Cutout Shade,size_bottom;size_sides;size_top;inset_size_sides;inset_size_bottom;inset_size_top;
+Cutout Shade - Sides,l2,44,5.5,0,,,,,0,0,Cutout Shade,size_sides;
+"Cutout Shade - Sides, Bottom",l2w1,66,5.5,0,,,,,0,0,Cutout Shade,size_bottom;size_sides;
+"Cutout Shade - Sides, Bottom, Top",l2w2,88,5.5,0,,,,,0,0,Cutout Shade,size_bottom;size_sides;size_top;
+Difficult Fabric,percent,,0.3,0,,,,,0,0,Difficult,
+Flange - Bottom,w1,24,6,0,,,,,0,0,Flange,size_bottom;
+Flange - Inset Bottom,w1,24,6,0,,,,,0,0,Flange,size_bottom;inset_size_bottom;
+Flange - Inset Sides,l2,48,6,0,,,,,0,0,Flange,size_sides;inset_size_sides;
+"Flange - Inset Sides, Bottom",l2w1,72,6,0,,,,,0,0,Flange,size_bottom;size_sides;inset_size_sides;inset_size_bottom;
+"Flange - Inset Sides, Bottom, Top",l2w2,96,6,0,,,,,0,0,Flange,size_bottom;size_sides;size_top;inset_size_sides;inset_size_bottom;inset_size_top;
+Flange - Sides,l2,48,6,0,,,,,0,0,Flange,size_sides;
+"Flange - Sides, Bottom",l2w1,72,6,0,,,,,0,0,Flange,size_bottom;size_sides;
+"Flange - Sides, Bottom, Top",l2w2,96,6,0,,,,,0,0,Flange,size_bottom;size_sides;size_top;
+Add'l Folds,flat,0,0,0,,Tie up to ,,,0,0,Folds,number;
+Fringe Trim Bottom,w1,16,4,0,,,,,0,0,Fringe,size;
+Fringe Trim Bottom Valance,w1,16,4,0,,,,,0,0,Fringe,
+Front Slat Top Pockets,w1,4,1,0,,,,,0,0,Front Slat,
+Gimp - Bottom,w1,15,3,0,,,,,0,0,Gimp,size_bottom;
+Gimp - Inset Bottom,w1,15,3,0,,,,,0,0,Gimp,size_bottom;inset_size_bottom;
+Gimp - Inset Sides,l2,30,3,0,,,,,0,0,Gimp,size_sides;inset_size_sides;
+"Gimp - Inset Sides, Bottom",l2w1,45,3,0,,,,,0,0,Gimp,size_bottom;size_sides;inset_size_sides;inset_size_bottom;
+"Gimp - Inset Sides, Bottom, Top",l2w2,60,3,0,,,,,0,0,Gimp,size_bottom;size_sides;size_top;inset_size_sides;inset_size_bottom;inset_size_top;
+Gimp - Sides,l2,30,3,0,,,,,0,0,Gimp,size_sides;
+"Gimp - Sides, Bottom",l2w1,45,3,0,,,,,0,0,Gimp,size_bottom;size_sides;
+"Gimp - Sides, Bottom, Top",l2w2,60,3,0,,,,,0,0,Gimp,size_bottom;size_sides;size_top;
+Hand Sew - Embellishment,l2w1,,2.5,0,,,,,0,0,Hand Sew,
+Hand Sew - Hems,sqft,,1.5,0,,,,,0,0,Hand Sew,
+Hand Sew - Rings,sqft,,1.5,0,,,,,0,0,Hand Sew,
+Handling Surcharge,sqft,15,1.25,0,,,,,0,0,Handling,number;
+Headerboard (sub),w1,,3.5,0,,,,,0,0,Headerboard,size;
+Headerboard Mitered,w1,,10,0,,,,,0,0,Headerboard,degrees;
+Hourly Labor Charge,flat,,60,0,,,,,0,0,Hourly Labor,number;
+Bump Interlining Apply - COM,sqft,36,3,0,,,,,0,0,Interlining,
+Interlining Fabric,yard,8,8,1,,,,,0,0,Interlining,
+Interlining  Application,yard,6,6,1,,,,,0,0,Interlining,
+Interlining Fabric and Application,yard,14,14,1,,,,,0,0,Interlining,
+Interlining Banding,percent,0,0.2,0,,,,Interline Banding,0,0,Interlining,
+Knots - Bottom,flat,,5,0,,,,,0,0,Knots,size_bottom;
+Knots - Inset Bottom,flat,,5,0,,,,,0,0,Knots,size_bottom;inset_size_bottom;
+Knots - Inset Sides,flat,,5,0,,,,,0,0,Knots,size_sides;inset_size_sides;
+"Knots - Inset Sides, Bottom",flat,,5,0,,,,,0,0,Knots,size_bottom;size_sides;inset_size_sides;inset_size_bottom;
+"Knots - Inset Sides, Bottom, Top",flat,,5,0,,,,,0,0,Knots,size_bottom;size_sides;size_top;inset_size_sides;inset_size_bottom;inset_size_top;
+Knots - Sides,flat,,5,0,,,,,0,0,Knots,size_sides;
+"Knots - Sides, Bottom",flat,,5,0,,,,,0,0,Knots,size_bottom;size_sides;
+"Knots - Sides, Bottom, Top",flat,,5,0,,,,,0,0,Knots,size_bottom;size_sides;size_top;
+Line back of skirt,flat,,10,0,,,,,0,0,Line Skirt,
+"116"" Lining & Application - WW",yard,,13.5,0,,,,,0,0,Lining,
+COM Lining Application - WW,yard,,6,0,,,,,0,0,Lining,
+Memory Stitch - Draperies,flat,15,10,0,,,,,0,0,Memory Stitch,
+Motorization - 16 channel Transmitter,flat,,290,0,,,,,0,0,Motorization,assembler_note;
+Motorization - LT30 Wire Free Battery,flat,,350,0,,,,,0,0,Motorization,
+Motorization - Telis 1 RTS Transmitter,flat,,80,0,,,,,0,0,Motorization,
+Motorization - Telis 4 RTS Transmitter,flat,,110,0,,,,,0,0,Motorization,assembler_note;
+Motorization (COM) Apply,tier,,,0,a:3:{i:72;d:100;i:110;d:145;i:9999;d:185;},COM Motor,,,0,0,Motorization,
+Motorization-Sonesse 30 RTS,tier,,,0,a:5:{i:72;d:700;i:84;d:725;i:96;d:750;i:108;d:775;i:9999;d:800;},,,,0,0,Motorization,
+Motorization-Sonesse 30 WT,tier,,,0,a:5:{i:72;d:700;i:84;d:725;i:96;d:750;i:108;d:775;i:9999;d:800;},,,,0,0,Motorization,
+Motorization-Sonesse 40 RST,tier,,,0,a:7:{i:72;d:725;i:84;d:750;i:96;d:775;i:108;d:800;i:120;d:825;i:134;d:850;i:9999;d:875;},,,,0,0,Motorization,
+Motorization-Sonesse 40 WT,tier,,,0,a:7:{i:72;d:725;i:84;d:750;i:96;d:775;i:108;d:800;i:120;d:825;i:134;d:850;i:9999;d:875;},,,,0,0,Motorization,
+Motorization-Sonesse 50 RTS,tier,,,0,a:9:{i:72;d:725;i:84;d:750;i:96;d:775;i:108;d:800;i:120;d:825;i:134;d:850;i:146;d:875;i:158;d:900;i:9999;d:875;},,,,0,0,Motorization,
+Motorization-Sonesse 50 WT,tier,,,0,a:9:{i:72;d:725;i:84;d:750;i:96;d:775;i:108;d:800;i:120;d:825;i:134;d:850;i:146;d:875;i:158;d:900;i:9999;d:875;},,,,0,0,Motorization,
+Nail Heads - Apply,flat,,1,0,,,,,0,0,Nail Heads,
+Oversize - Length,percent,,0.2,0,,,,,0,0,Oversize,
+Oversize - Width,percent,,0.2,0,,,,,0,0,Oversize,
+Peak Top,percent,,0.35,0,,Peak Top,,,0,0,Peak Top,
+Piecing,percent,,0.2,0,,,,,0,0,Piecing,
+Piecing - Draperies,percent,,0.35,0,,,,,0,0,Piecing,
+Pillowcase,percent,,0.25,0,,,,,0,0,Pillow,
+Pillowcase - Draperies,percent,,0.25,0,,,,,0,0,Pillow,
+Center Pleat,flat,,5,0,,,,,0,0,Pleats,number;
+Contrast Pleat,percent,,0.6,0,,,,,0,0,Pleats,number;
+Pleat Additional - Center,flat,,5,0,,,,,0,0,Pleats,number;
+Add'l Poufs,percent,,0.2,0,,,,,0,0,Poufs,number;
+Small Poufs,percent,,0.2,0,,,,,0,0,Poufs,
+"Restring - BU Continuous Cord over 72""",flat,,55,0,,,,,0,0,Restring,
+"Restring - BU Continuous Cord up to 72""",flat,,45,0,,,,,0,0,Restring,
+"Restring - TDBU Clutch up to 72"" over 8 yrs.",flat,,55,0,,,,,0,0,Restring,
+"Restring - TDBU Continuous Cord over 72""",tier,,70,0,a:2:{i:72;d:70;i:9999;d:90;},,,,0,0,Restring,
+"Restring - TDBU Continuous Cord up to 72""",flat,,55,0,,,,,0,0,Restring,
+"Restring BU -Cord Lock  over 60""",flat,,55,0,,,,,0,0,Restring,
+"Restring BU -Cord Lock  up to 60""",flat,,30,0,,,,,0,0,Restring,
+Restring -Continuous Cord old-8yrs plus,tier,,35,0,a:3:{i:72;d:40;i:110;d:55;i:9999;d:60;},,,,0,0,Restring,
+"Restring -Continuous Cord over 72""",tier,,33,0,a:2:{i:144;d:33;i:9999;d:45;},,,,0,0,Restring,
+"Restring -Continuous Cord up to 72""",flat,25,,0,,,,,0,0,Restring,
+"Restring TDBU -Cord Lock  over 60""",flat,,65,0,,,,,0,0,Restring,
+"Restring TDBU -Cord Lock  up to 60""",flat,,35,0,,,,,0,0,Restring,
+"Restring-Cord Lock or Standard over 60""",flat,,22,0,,,,,0,0,Restring,
+"Restring-Cord Lock or Standard up to 60""",flat,,15,0,,,,,0,0,Restring,
+Rings Decorative  -Apply to top of shade,flat,,2,0,,,,,0,0,Rings,
+Plastic Rods Inserted Into Shade,flat,,10,0,,Plastic Rods,,,0,0,Rod,number;
+Rosettes - Bottom,flat,,30,0,,,,,0,0,Rosettes,size_bottom;
+Rosettes - Inset Bottom,flat,,30,0,,,,,0,0,Rosettes,size_bottom;inset_size_bottom;
+Rosettes - Inset Sides,flat,,30,0,,,,,0,0,Rosettes,size_sides;inset_size_sides;
+"Rosettes - Inset Sides, Bottom",flat,,30,0,,,,,0,0,Rosettes,size_bottom;size_sides;inset_size_sides;inset_size_bottom;
+"Rosettes - Inset Sides, Bottom, Top",flat,,30,0,,,,,0,0,Rosettes,size_bottom;size_sides;size_top;inset_size_sides;inset_size_bottom;inset_size_top;
+Rosettes - Sides,flat,,30,0,,,,,0,0,Rosettes,size_sides;
+"Rosettes - Sides, Bottom",flat,,30,0,,,,,0,0,Rosettes,size_bottom;size_sides;
+"Rosettes - Sides, Bottom, Top",flat,,30,0,,,,,0,0,Rosettes,size_bottom;size_sides;size_top;
+Ruffle Gathered - Bottom,w1,38,9.5,0,,,,,0,0,Ruffle Gathered,size_bottom;
+Ruffle Gathered - Inset Bottom,w1,38,9.5,0,,,,,0,0,Ruffle Gathered,size_bottom;inset_size_bottom;
+Ruffle Gathered - Inset Sides,l2,76,9.5,0,,,,,0,0,Ruffle Gathered,size_sides;inset_size_sides;
+"Ruffle Gathered - Inset Sides, Bottom",l2w1,110,9.5,0,,,,,0,0,Ruffle Gathered,size_bottom;size_sides;inset_size_sides;inset_size_bottom;
+"Ruffle Gathered - Inset Sides, Bottom, Top",l2w2,148,9.5,0,,,,,0,0,Ruffle Gathered,size_bottom;size_sides;size_top;inset_size_sides;inset_size_bottom;inset_size_top;
+Ruffle Gathered - Sides,l2,76,9.5,0,,,,,0,0,Ruffle Gathered,size_sides;
+"Ruffle Gathered - Sides, Bottom",l2w1,110,9.5,0,,,,,0,0,Ruffle Gathered,size_bottom;size_sides;
+"Ruffle Gathered - Sides, Bottom, Top",l2w2,148,9.5,0,,,,,0,0,Ruffle Gathered,size_bottom;size_sides;size_top;
+Ruffle Pleated - Bottom,w1,60,15,0,,,,,0,0,Ruffle Pleated,size_bottom;
+Ruffle Pleated - Inset Bottom,w1,60,15,0,,,,,0,0,Ruffle Pleated,size_bottom;inset_size_bottom;
+Ruffle Pleated - Inset Sides,l2,120,15,0,,,,,0,0,Ruffle Pleated,size_sides;inset_size_sides;
+"Ruffle Pleated - Inset Sides, Bottom",l2w1,180,15,0,,,,,0,0,Ruffle Pleated,size_bottom;size_sides;inset_size_sides;inset_size_bottom;
+"Ruffle Pleated - Inset Sides, Bottom, Top",l2w2,240,15,0,,,,,0,0,Ruffle Pleated,size_bottom;size_sides;size_top;inset_size_sides;inset_size_bottom;inset_size_top;
+Ruffle Pleated - Sides,l2,120,15,0,,,,,0,0,Ruffle Pleated,size_sides;
+"Ruffle Pleated - Sides, Bottom",l2w1,180,15,0,,,,,0,0,Ruffle Pleated,size_bottom;size_sides;
+"Ruffle Pleated - Sides, Bottom, Top",l2w2,240,15,0,,,,,0,0,Ruffle Pleated,size_bottom;size_sides;size_top;
+Side Tab Left,flat,,3,0,,,,,0,0,Side Tabs,
+Side Tab Right,flat,,3,0,,,,,0,0,Side Tabs,
+"Side Tabs (Pr.) - Up to 7"" drop",flat,,6,0,,,,,0,0,Side Tabs,
+"Side Tabs (Pr.) over 7"" drop",flat,,10,0,,,,,0,0,Side Tabs,
+"Side Tabs Left - Up to 7"" drop",flat,,3,0,,,,,0,0,Side Tabs,
+"Side Tabs Right - Up to 7"" drop",flat,,3,0,,,,,0,0,Side Tabs,
+Scallop Skirt,w1,40,10,0,,,,,0,0,Skirt,
+Scallop Skirt - Valance,percent,35,0.2,0,,,,,0,0,Skirt,
+Slanted Top - Bottom,percent,,0.25,0,,,,,0,0,Slanted Top,size_bottom;
+Slanted Top - Sides,percent,,0.25,0,,,,,0,0,Slanted Top,size_sides;
+"Slanted Top - Sides, Bottom",percent,,0.25,0,,,,,0,0,Slanted Top,size_bottom;size_sides;
+"Slanted Top - Sides, Bottom, Top",percent,,0.25,0,,,,,0,0,Slanted Top,size_bottom;size_sides;size_top;
+Slanted Top Drapery - Bottom,percent,,0.5,0,,,,,0,0,Slanted Top Drapery,size_bottom;
+Slanted Top Drapery - Sides,percent,,0.5,0,,,,,0,0,Slanted Top Drapery,size_sides;
+"Slanted Top Drapery - Sides, Bottom",percent,,0.5,0,,,,,0,0,Slanted Top Drapery,size_bottom;size_sides;
+"Slanted Top Drapery - Sides, Bottom, Top",percent,,0.5,0,,,,,0,0,Slanted Top Drapery,size_bottom;size_sides;size_top;
+Small spacing upcharge,percent,,0.4,0,,,,,0,0,Small Spacing,
+Straps(Pair),flat,,20,0,,,,,0,0,Straps,
+Stringing-Colored Cord,flat,,10,0,,,,,0,0,Stringing,
+Surcharge,percent,,0.1,0,,,,,0,0,Surcharge,
+Tab Top,flat,,6,0,,,,,0,0,Tab Top,number;
+Tabs Top of Board,flat,,5,0,,,,,0,0,Tab Top,number;
+Take apart charge -15,flat,,15,0,,,,,0,0,Take Apart,
+Take apart charge-10,flat,,10,0,,,,,0,0,Take Apart,
+Take apart charge-20,flat,,20,0,,,,,0,0,Take Apart,
+Take apart charge-25,flat,,25,0,,,,,0,0,Take Apart,
+Take apart charge-30,flat,,30,0,,,,,0,0,Take Apart,
+Take apart charge-35,flat,,35,0,,,,,0,0,Take Apart,
+Take apart charge-40,flat,,40,0,,,,,0,0,Take Apart,
+Tassel Trim - Bottom,w1,16,4,0,,,,,0,0,Tassel Trim,size_bottom;
+Tassel Trim - Inset Bottom,w1,16,4,0,,,,,0,0,Tassel Trim,size_bottom;inset_size_bottom;
+Tassel Trim - Inset Sides,l2,32,4,0,,,,,0,0,Tassel Trim,size_sides;inset_size_sides;
+"Tassel Trim - Inset Sides, Bottom",l2w1,48,4,0,,,,,0,0,Tassel Trim,size_bottom;size_sides;inset_size_sides;inset_size_bottom;
+"Tassel Trim - Inset Sides, Bottom, Top",l2w2,64,4,0,,,,,0,0,Tassel Trim,size_bottom;size_sides;size_top;inset_size_sides;inset_size_bottom;inset_size_top;
+Tassel Trim - Sides,l2,32,4,0,,,,,0,0,Tassel Trim,size_sides;
+"Tassel Trim - Sides, Bottom",l2w1,48,4,0,,,,,0,0,Tassel Trim,size_bottom;size_sides;
+"Tassel Trim - Sides, Bottom, Top",l2w2,64,4,0,,,,,0,0,Tassel Trim,size_bottom;size_sides;size_top;
+Tie Backs,flat,,20,0,,,,,0,0,Tie Backs,
+Ties - Bottom,flat,,28,0,,,,,0,0,Ties,size_bottom;
+Ties - Inset Bottom,flat,,28,0,,,,,0,0,Ties,size_bottom;inset_size_bottom;
+Ties - Inset Sides,flat,,28,0,,,,,0,0,Ties,size_sides;inset_size_sides;
+"Ties - Inset Sides, Bottom",flat,,28,0,,,,,0,0,Ties,size_bottom;size_sides;inset_size_sides;inset_size_bottom;
+"Ties - Inset Sides, Bottom, Top",flat,,28,0,,,,,0,0,Ties,size_bottom;size_sides;size_top;inset_size_sides;inset_size_bottom;inset_size_top;
+Ties - Sides,flat,,28,0,,,,,0,0,Ties,size_sides;
+"Ties - Sides, Bottom",flat,,28,0,,,,,0,0,Ties,size_bottom;size_sides;
+"Ties - Sides, Bottom, Top",flat,,28,0,,,,,0,0,Ties,size_bottom;size_sides;size_top;
+Ties With Bows - Bottom,flat,,28,0,,,,,0,0,Ties With Bows,size_bottom;
+Ties With Bows - Inset Bottom,flat,,28,0,,,,,0,0,Ties With Bows,size_bottom;inset_size_bottom;
+Ties With Bows - Inset Sides,flat,,28,0,,,,,0,0,Ties With Bows,size_sides;inset_size_sides;
+"Ties With Bows - Inset Sides, Bottom",flat,,28,0,,,,,0,0,Ties With Bows,size_bottom;size_sides;inset_size_sides;inset_size_bottom;
+"Ties With Bows - Inset Sides, Bottom, Top",flat,,28,0,,,,,0,0,Ties With Bows,size_bottom;size_sides;size_top;inset_size_sides;inset_size_bottom;inset_size_top;
+Ties With Bows - Sides,flat,,28,0,,,,,0,0,Ties With Bows,size_sides;
+"Ties With Bows - Sides, Bottom",flat,,28,0,,,,,0,0,Ties With Bows,size_bottom;size_sides;
+"Ties With Bows - Sides, Bottom, Top",flat,,28,0,,,,,0,0,Ties With Bows,size_bottom;size_sides;size_top;
+Trim - Bottom,w1,16,4,0,,,,,1,0,Trim,size_bottom;
+Trim - Inset Bottom,w1,16,4,0,,,,,1,0,Trim,size_bottom;inset_size_bottom;
+Trim - Inset Sides,l2,32,4,0,,,,,1,0,Trim,size_sides;inset_size_sides;
+"Trim - Inset Sides, Bottom",l2w1,48,4,0,,,,,1,0,Trim,size_bottom;size_sides;inset_size_sides;inset_size_bottom;
+"Trim - Inset Sides, Bottom, Top",l2w2,64,4,0,,,,,1,0,Trim,size_bottom;size_sides;size_top;inset_size_sides;inset_size_bottom;inset_size_top;
+Trim - Sides,l2,32,4,0,,,,,1,0,Trim,size_sides;
+"Trim - Sides, Bottom",l2w1,48,4,0,,,,,1,0,Trim,size_bottom;size_sides;
+"Trim - Sides, Bottom, Top",l2w2,64,4,0,,,,,1,0,Trim,size_bottom;size_sides;size_top;
+Attached Valance,w1,16,4,0,,Valance - Attached," Valance top pattern 3/4"" higher then shade top pattern",,0,0,Valance Application,
+Cord Forward Valance,w1,16,4,0,,"Cord forward, shade back, valance front",,,0,0,Valance Application,
+Top Down Bottom Up w/Valance,percent,37.8,0.35,0,,Top Down Bottom Up w/Valance,Top Down Bottom Up w/Valance,,0,0,Top Down Bottom Up,
+TDBU/BU Valance,w1,16,4,0,,,,,0,0,Valance Application,
+Velcro application,w1,8,2,0,,,,,0,0,Velcro,
+Velcro Mount,w1,4,1,0,,,,,0,0,Velcro,
+Welting - Bottom,w1,24,6,0,,,,,0,0,Welting,size_bottom;
+Welting - Inset Bottom,w1,24,6,0,,,,,0,0,Welting,size_bottom;inset_size_bottom;
+Welting - Inset Sides,l2,48,6,0,,,,,0,0,Welting,size_sides;inset_size_sides;
+"Welting - Inset Sides, Bottom",l2w1,72,6,0,,,,,0,0,Welting,size_bottom;size_sides;inset_size_sides;inset_size_bottom;
+"Welting - Inset Sides, Bottom, Top",l2w2,96,6,0,,,,,0,0,Welting,size_bottom;size_sides;size_top;inset_size_sides;inset_size_bottom;inset_size_top;
+Welting - Sides,l2,48,6,0,,,,,0,0,Welting,size_sides;
+"Welting - Sides, Bottom",l2w1,72,6,0,,,,,0,0,Welting,size_bottom;size_sides;
+"Welting - Sides, Bottom, Top",l2w2,96,6,0,,,,,0,0,Welting,size_bottom;size_sides;size_top;

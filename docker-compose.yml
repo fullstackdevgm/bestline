@@ -1,0 +1,42 @@
+version: '2'
+
+services:
+
+  bl-php-service:
+    container_name: bl-php-container
+    image: bl-php-image
+    build:
+      context: .
+      dockerfile: ./docker/bl-php/Dockerfile.bl-php
+    entrypoint: /var/www/docker/bl-php/start.sh
+    depends_on:
+      - bl-mysql-service
+    environment:
+      DB_HOST: bl-mysql-service
+    volumes:
+      - ./:/var/www/html
+    ports:
+      - "8000:80"
+    networks:
+      - default
+
+  bl-mysql-service:
+    container_name: bl-mysql-container
+    image: bl-mysql-image
+    build:
+      context: .
+      dockerfile: ./docker/bl-mysql/Dockerfile.bl-mysql
+    # volumes:
+    #   - "./.data/db:/var/lib/mysql"
+    environment:
+      MYSQL_ROOT_PASSWORD: 123
+      MYSQL_DATABASE: bestline
+    ports:
+      - "3306:3306"
+    networks:
+      - default
+
+# volumes:
+#   some-volume:
+networks:
+  default:

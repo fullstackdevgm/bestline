@@ -1,0 +1,45 @@
+Actual Option Price	NUMBER	1
+Actual Option Price 2	NUMBER	1
+Actual Option Price Copy	NUMBER	1
+Creation_Date	DATE	1
+Creation_Time	TIME	1
+Creation_User	TEXT	1
+gNumber_1	NUMBER	1
+gNumber_2	NUMBER	1
+gNumber_3	NUMBER	1
+gNumber_4	NUMBER	1
+gNumber_5	NUMBER	1
+gText_1	TEXT	1
+gText_2	TEXT	1
+gText_3	TEXT	1
+gText_4	TEXT	1
+gText_5	TEXT	1
+ID	TEXT	1
+ifDecorative	TEXT	1
+ifSideTabs	NUMBER	1
+Modification_Date	DATE	1
+Modification_Time	TIME	1
+Modification_User	TEXT	1
+NOTES FOR JILL	TEXT	1
+One	NUMBER	1
+Option Add Price	NUMBER	1
+Option Add Price Calc	NUMBER	1
+Option Add Price Reason	TEXT	1
+Option Minimum Value	NUMBER	1
+Option Name	TEXT	1
+Option Number	TEXT	1
+Option Type	TEXT	1
+Option Value	NUMBER	1
+Quantity	NUMBER	1
+Shade FK	TEXT	1
+Tier1	NUMBER	1
+Tier1 Value	NUMBER	1
+Tier2	NUMBER	1
+Tier2 Value	NUMBER	1
+Tier3	NUMBER	1
+Tier3 Value	NUMBER	1
+Tier4	NUMBER	1
+Tier4 Value	NUMBER	1
+Tier5	NUMBER	1
+Tier5 Value	NUMBER	1
+Total Option Price	NUMBER	1

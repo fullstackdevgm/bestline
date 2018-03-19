@@ -1,0 +1,35 @@
+ID	TEXT	1
+Creation_Date	DATE	1
+Modification_Date	DATE	1
+Creation_Time	TIME	1
+Modification_Time	TIME	1
+Creation_User	TEXT	1
+Modification_User	TEXT	1
+One	NUMBER	1
+gText_1	TEXT	1
+gText_2	TEXT	1
+gText_3	TEXT	1
+gText_4	TEXT	1
+gText_5	TEXT	1
+gNumber_1	NUMBER	1
+gNumber_2	NUMBER	1
+gNumber_3	NUMBER	1
+gNumber_4	NUMBER	1
+gNumber_5	NUMBER	1
+Fabric Name	TEXT	1
+Fabric Width	NUMBER	1
+Color	TEXT	1
+Part_Category	TEXT	1
+If_Lining	TEXT	1
+Hardware_Concat	TEXT	1
+If_OtherFabric	TEXT	1
+Surcharge	NUMBER	1
+Price	NUMBER	1
+constantVendor	TEXT	1
+Vendor	TEXT	1
+bookNoShadeCost	TEXT	1
+bookFabricType	TEXT	1
+constantFabric	TEXT	1
+bookFabricSortNumber	NUMBER	1
+constantFaceFabric	TEXT	1
+faceFabricDescription	TEXT	1

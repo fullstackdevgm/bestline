@@ -1,0 +1,26 @@
+<div class="row">
+	<div class="col-md-12">
+		<div class="col-md-12">
+			<h3>You're about to checkout these order lines:</h3>
+			<p>
+				<span ng-repeat="orderLine in vmCheckout.orderLines">{[{ orderLine.order.sidemark }]} - #{[{ orderLine.id }]}, Width: {[{ orderLine.width }]}, Height: {[{ orderLine.height }]}<br/></span>
+			</p>
+			<h3>Who are you?</h3>
+			<div class="clearfix row">
+				<div class="col-md-4" ng-repeat="user in vmCheckout.users">
+					<button class="btn btn-block btn-primary" type="button" ng-click="vmCheckout.checkout(user);">{[{ user.first_name }]} {[{ user.last_name }]}</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="col-md-12 text-right">
+		<div class="col-md-12">
+			<p  ng-show="!vmCheckout.loading">
+				<button class="btn btn-secondary" ng-click="vmCheckout.cancel()">Cancel</button>
+			<p>
+			<h3 ng-show="vmCheckout.loading">
+				<span><i class="fa fa-circle-o-notch fa-spin"></i></span>
+			</h3>
+		</div>
+	</div>
+</div>

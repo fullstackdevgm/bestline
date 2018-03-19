@@ -1,0 +1,246 @@
+<div class="well" style="background-color: white;"
+    ng-repeat="orderLine in step2.order.order_lines"
+    ng-controller="OrderLineController as lineController"
+    ng-init="lineController.lineInit(step2.order, orderLine, step2.selectOptions)">
+
+    <div smooth-scroll scroll-if="{[{ orderLine.scrollTo }]}" offset="80"></div>
+
+    <div ng-if="lineController.apiErrors.length > 0">
+        <div bestline-api-errors="lineController.apiErrors"></div>
+    </div>
+
+    <div class="row" ng-form="orderLineForm">
+        <div class="col-md-5">
+            <div class="row">
+                <div class="col-md-8">
+                    <h5 class='text-info'>Order Line #{[{ orderLine.line_number }]}</h5>
+                </div>
+                <div class="col-md-4 text-right">
+                    <h5>
+                        <a class="text-danger"
+                            ng-show="!orderLine.deleting"
+                            ng-click="lineController.delete(orderLine)">
+                            <i class="fa fa-fw fa-trash"></i>Delete
+                        </a>
+                        <div ng-show="orderLine.deleting"><i class="fa fa-circle-o-notch fa-spin fa-2x"></i></div>
+                    </h5>
+                </div>
+            </div>
+            <div class="orderLineInputs">
+                <div class="row">
+                    <div class="col-md-12 form-group">
+                        <label>Mount</label>
+                        <select class="form-control input-sm"
+                            ng-model="orderLine.mount_id"
+                            ng-options="mount.id as mount.description for mount in step2.selectOptions.mounts">
+                            <option value="">Select Mount...</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="shadeInfo">
+                <div class="row">
+                    <div class="col-md-8">
+                        <h5 class="text-info">Shade - {[{ step2.order.product.name }]}</h5>
+                    </div>
+                    <div class="col-md-4 text-right">
+                        <h5 ng-show="!orderLine.has_shade"><a href="" ng-click="orderLine.has_shade = true"><i class="fa fa-fw fa-plus-square"></i> Add Shade</a></h5>
+                        <h5 ng-show="orderLine.has_shade"><a href=""  ng-click="lineController.removeShade(orderLine)"><i class="fa fa-fw fa-times-circle"></i> Remove Shade</a></h5>
+                    </div>
+                </div>
+                <div class="shadeInputs" ng-show="orderLine.has_shade">
+                    <div class="row">
+                        <div class="col-md-3 form-group">
+                            <label>Width</label>
+                            <input ng-model="orderLine.width" ng-blur="lineController.calculateValanceValues(orderLine); lineController.calculate(orderLine);" type="text" class="form-control input-sm"/>
+                        </div>
+                        <div class="col-md-3 form-group">
+                            <label>Height</label>
+                            <input ng-model="orderLine.height" ng-blur="lineController.calculate(orderLine)" type="text" class="form-control input-sm"/>
+                        </div>
+                        <div class="col-md-3 form-group">
+                            <label>Return</label>
+                            <input ng-model="orderLine.return" ng-blur="lineController.calculate(orderLine)" type="text" class="form-control input-sm"/>
+                        </div>
+                        <div class="col-md-3 form-group">
+                            <label>Headerboard</label>
+                            <input ng-model="orderLine.headerboard" ng-blur="lineController.calculateValanceValues(orderLine); lineController.calculate(orderLine)" type="text" class="form-control input-sm">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3 form-group">
+                            <label>Hardware</label>
+                            <select class="form-control input-sm"
+                                ng-model="orderLine.hardware_id"
+                                ng-options="hardware.id as hardware.description for hardware in step2.selectOptions.hardware"
+                                ng-change="lineController.onHardwareChange(orderLine.hardware_id, orderLine)">
+                            </select>
+                        </div>
+                        <div class="col-md-3 form-group">
+                            <label>Pull Type</label>
+                            <select class="form-control input-sm ol_tassel_input "
+                                ng-model="orderLine.pull_type_id"
+                                ng-change="lineController.onPullTypeChange(orderLine)"
+                                ng-options="pullType.id as pullType.description for pullType in step2.selectOptions.pull_types | filter:lineController.filterByHardwareId">
+                                <option value="">Select Pull Type...</option>
+                            </select>
+                        </div>
+                        <div class="col-md-3 form-group">
+                            <label>Cord Pos</label>
+                            <select class="form-control input-sm"
+                                ng-model="orderLine.cord_position_id"
+                                ng-options="cordPosition.id as cordPosition.description for cordPosition in step2.selectOptions.cord_positions">
+                            </select>
+                        </div>
+                        <div class="col-md-3 form-group">
+                            <label>Cord Length</label>
+                            <input ng-model="orderLine.cord_length" type="text" name="cord_length" class="form-control input-sm"/>
+                        </div>
+                    </div>
+                    <div class="row" ng-show="step2.order.product.is_poufy">
+                        <div class="col-md-6 form-group">
+                            <label>Adjustment</label>
+                            <select class="form-control input-sm"
+                                ng-model="orderLine.height_adjustment_option_id"
+                                ng-options="adjustmentId*1 as adjustment.name for (adjustmentId , adjustment) in step2.selectOptions.height_adjustment">
+                                <option value="">Select Adjustment...</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="valanceInfo">
+                <div class="row">
+                    <div class="col-md-8">
+                        <h5 class="text-info">Valance</h5>
+                    </div>
+                    <div class="col-md-4 text-right">
+                        <h5 ng-show="!orderLine.has_valance"><a ng-click="lineController.addValance(orderLine)" href=""><i class="fa fa-fw fa-plus-square"></i> Add Valance</a></h5>
+                        <h5 ng-show="orderLine.has_valance"><a ng-click="lineController.removeValance(orderLine)" href=""><i class="fa fa-fw fa-times-circle"></i> Remove Valance</a></h5>
+                    </div>
+                </div>
+                <div ng-show="orderLine.has_valance">
+                    <div class="row">
+                        <div class="col-md-12" ng-show="!lineController.valanceHasAttachementOption(orderLine)">
+                            <h6>How is the Valance attached?</h6>
+                            <div class="list-group">
+                              <a href="" class="list-group-item" ng-click="lineController.addValanceCordForwardOption(orderLine)">Cord Forward</a>
+                              <a href="" class="list-group-item" ng-click="lineController.addValanceAttachedOption(orderLine)">Attached</a>
+                              <a href="" class="list-group-item" ng-click="lineController.addValanceTdbuOption(orderLine)">TDBU/BU</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div ng-show="lineController.valanceHasAttachementOption(orderLine)">
+                        <div class="row">
+                            <div class="col-md-4 form-group">
+                                <label>Valance Type:</label>
+                                <select class="form-control input-sm"
+                                    ng-model="orderLine.valance_type_id"
+                                    ng-options="valanceType.id as valanceType.name for valanceType in step2.selectOptions.valance_types">
+                                    <option value="">Select Valance Type...</option>
+                                </select>
+                            </div>
+                            <div class="col-md-4 form-group">
+                                <label>Width:</label>
+                                <input ng-model="orderLine.valance_width" ng-blur="lineController.calculate(orderLine)" type="text" class="form-control input-sm"/>
+                            </div>
+                            <div class="col-md-4 form-group">
+                                <label>Height:</label>
+                                <input ng-model="orderLine.valance_height" ng-blur="lineController.calculate(orderLine)" type="text" class="form-control input-sm"/>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 form-group">
+                               <label>Return:</label>
+                               <input ng-model="orderLine.valance_return" ng-blur="lineController.calculate(orderLine)" type="text" class="form-control input-sm"/>
+                            </div>
+                            <div class="col-md-6 form-group">
+                                <label>Headerboard:</label>
+                                <input ng-model="orderLine.valance_headerboard" ng-blur="lineController.calculate(orderLine)" type="text" class="form-control input-sm"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-5">
+            <div class="row">
+                <div class="col-md-8">
+                    <h5 class="text-info">Options</h5>
+                </div>
+                <div class="col-md-4 text-right">
+                    <h5><a ng-click="lineController.addOption(orderLine)" href=""><i class="fa fa-fw fa-plus-square"></i> Add Option</a></h5>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <bestline-option-input-rows order-options="orderLine.options" api="orderLine.optionsApi" settings="lineController.optionsSettings"></bestline-option-input-rows>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-2">
+            <h5 class="text-info">
+                Pricing
+                <span ng-show="orderLine.calculating"><i class="fa fa-circle-o-notch fa-spin"></i></span>
+                <a class="text-muted pull-right" title="" href="" ng-click="lineController.calculate(orderLine)">Calculate</a>
+            </h5>
+            <div ng-hide="orderLine.calculating">
+                <div class="row">
+                    <div class="col-md-3">
+                        Shade:
+                    </div>
+                    <div class="col-md-9 form-group">
+                        <input ng-model="orderLine.shade_price" type="text" readonly data-prefix="$" class="form-control input-sm"/>
+                    </div>
+                </div>
+                <div class="alert alert-warning text-center" ng-if="orderLine.shade_price_saved && orderLine.shade_price_saved !== orderLine.shade_price">
+                    <i class="fa fa-exclamation-triangle text-warning"></i> Changed From ${[{ orderLine.shade_price_saved }]}
+                </div>
+                <div class="row">
+                    <div class="col-md-3">
+                        Valance:
+                    </div>
+                    <div class="col-md-9 form-group">
+                        <input ng-model="orderLine.valance_price" type="text" readonly class="form-control input-sm"/>
+                    </div>
+                </div>
+                <div class="alert alert-warning text-center" ng-if="orderLine.valance_price_saved && orderLine.valance_price_saved !== orderLine.valance_price">
+                    <i class="fa fa-exclamation-triangle text-warning"></i> Changed From ${[{ orderLine.valance_price_saved }]}
+                </div>
+                <div class="row">
+                    <div class="col-md-3">
+                        Fabric:
+                    </div>
+                    <div class="col-md-9 form-group">
+                        <input ng-model="orderLine.fabric_price" type="text" readonly class="form-control input-sm"/>
+                    </div>
+                </div>
+                <div class="alert alert-warning text-center" ng-if="orderLine.fabric_price_saved && orderLine.fabric_price_saved !== orderLine.fabric_price">
+                    <i class="fa fa-exclamation-triangle text-warning"></i> Changed From ${[{ orderLine.fabric_price_saved }]}
+                </div>
+                <div class="row">
+                    <div class="col-md-3">
+                        Options:
+                    </div>
+                    <div class="col-md-9 form-group">
+                        <input ng-model="orderLine.options_price" type="text" readonly class="form-control input-sm"/>
+                    </div>
+                </div>
+                <div class="alert alert-warning text-center" ng-if="orderLine.options_price_saved && orderLine.options_price_saved !== orderLine.options_price">
+                    <i class="fa fa-exclamation-triangle text-warning"></i> Changed From ${[{ orderLine.options_price_saved }]}
+                </div>
+                <div class="row">
+                    <div class="col-md-3">
+                        Total:
+                    </div>
+                    <div class="col-md-9 form-group">
+                        <input ng-model="orderLine.total_price" type="text" readonly class="form-control input-sm">
+                    </div>
+                </div>
+                <div class="alert alert-warning text-center" ng-if="orderLine.total_price_saved && orderLine.total_price_saved !== orderLine.total_price">
+                    <i class="fa fa-exclamation-triangle text-warning"></i> Changed From ${[{ orderLine.total_price_saved }]}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

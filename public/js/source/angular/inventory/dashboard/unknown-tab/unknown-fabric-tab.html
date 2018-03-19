@@ -1,0 +1,9 @@
+<div ng-controller="unknownFabricTabController as vmUnknown">
+	<div class="alert alert-danger" ng-if="vmUnknown.apiErrors.length > 0">
+		<p ng-repeat="error in vmUnknown.apiErrors">
+			{[{ error }]}
+		</p>
+	</div>
+	<div ng-show="vmUnknown.loading"><span class="fa fa-circle-o-notch fa-spin b-margin b-top"></span></div>
+	<div bestline-fabric-table fabric-table-rows="vmUnknown.unknownFabrics" fabric-table-options="vmUnknown.fabricTableOptions" ng-show="!vmUnknown.loading"></div>
+</div>
